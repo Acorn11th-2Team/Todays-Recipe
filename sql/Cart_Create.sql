@@ -1,5 +1,7 @@
---��ٱ��� ���̺�
+-- 기존에 cart 테이블이 있다면 삭제
 drop table cart purge;
+
+-- cart 테이블 생성
 create table cart
 (  num NUMBER(6) PRIMARY KEY,
     userid VARCHAR2(10),

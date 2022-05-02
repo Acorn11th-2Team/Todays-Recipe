@@ -25,6 +25,6 @@
    
    create sequence orderInfo_seq;
    
--- MODIFY: дц╥Ё ╨╞╟Ф
+-- К█╟Л²╢М└╟М≤∙Л▀² Л┬≤Л═∙
 ALTER TABLE orderInfo
 MODIFY ( paymethod VARCHAR2(30) );

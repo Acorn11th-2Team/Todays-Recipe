@@ -1,23 +1,20 @@
--- cart¿¡ userid FK Ãß°¡
-alter table cart
-add CONSTRAINT cart_userid_fk FOREIGN KEY(userid)
-REFERENCES member(userid) ON DELETE CASCADE;
 
--- goodsÅ×ÀÌºí¿¡ gStock(Àç°í) Ç×¸ñ Ãß°¡
+
+-- goodsí…Œì´ë¸”ì— gStock(ì¬ê³ ) í•­ëª© ì¶”ê°€
 ALTER TABLE goods
 add gStock VARCHAR(20);
 
--- Notice(°øÁö»çÇ×) Å×ÀÌºí »ı¼º
+-- Notice(ê³µì§€ì‚¬í•­) í…Œì´ë¸” ìƒì„±
 create table Notice
 (  num NUMBER(6) PRIMARY KEY,
     writeDay DATE  DEFAULT SYSDATE,
     title varchar2(500),
     contents varchar2(3900)
 );   
--- °øÁö»çÇ× °Ô½ÃÆÇ ¹øÈ£ ½ÃÄö½º »ı¼º
+-- ê³µì§€ì‚¬í•­ ê²Œì‹œíŒ ë²ˆí˜¸ ì‹œí€€ìŠ¤ ìƒì„±
 create sequence notice_seq;
 
--- QA(1:1¹®ÀÇ) Å×ÀÌºí »ı¼º
+-- QA(1:1ë¬¸ì˜) í…Œì´ë¸” ìƒì„±
 create table QA
 (  num NUMBER(6) PRIMARY KEY,
     category varchar2(20),
@@ -31,11 +28,9 @@ alter table QA
 add CONSTRAINT QA_userid_fk FOREIGN KEY(userid)
 REFERENCES member(userid) ON DELETE CASCADE;
 
--- 1:1¹®ÀÇ °Ô½ÃÆÇ ¹øÈ£ ½ÃÄö½º »ı¼º
+-- 1:1ë¬¸ì˜ ê²Œì‹œíŒ ë²ˆí˜¸ ì‹œí€€ìŠ¤ ìƒì„±
 create sequence QA_seq;
 
--- QA(1:1¹®ÀÇ) Å×ÀÌºí ´äº¯ ¼Ó¼º Ãß°¡
+-- QA(1:1ë¬¸ì˜) í…Œì´ë¸” ë‹µë³€ ì†ì„± ì¶”ê°€
 ALTER TABLE QA
 add answer VARCHAR(3900);
-
-
