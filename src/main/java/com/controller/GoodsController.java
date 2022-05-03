@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -42,9 +43,27 @@ public class GoodsController {
 		
 		oDTO.setUserid(dto.getUserid());
 		oDTO.setNum(orderNum);
-		service.orderDone(oDTO, orderNum);
-		xxx.addFlashAttribute("oDTO", oDTO);
-		return "redirect:../orderDone";
+		// 재고 개수를 가져옴
+		int Stock = service.getgStock(oDTO);	// 주문하려는 상품의 재고
+		int gAmount = oDTO.getgAmount();	// 주문하려는 양
+		String gCode = oDTO.getgCode();	// 주문하려는 제품코드
+		int AfterStock = Stock - gAmount;	// 주문완료 후 남은 재고의 양
+		
+		HashMap map = new HashMap();
+		
+		map.put("gCode", gCode);
+		map.put("gStock", AfterStock);
+		if(AfterStock >= 0) {	// 재고가 있는 경우
+			service.orderDone(oDTO, orderNum, map);
+			xxx.addFlashAttribute("oDTO", oDTO);
+			return "redirect:../orderDone";
+		}
+		else {	// 재고가 없는 경우
+			session.setAttribute("mesg", "재고가 없습니다");
+			session.setAttribute("gStock", Stock);
+			return "redirect:../loginCheck/cartList";
+		}
+		
 	}
 	
 	@RequestMapping("/loginCheck/orderConfirm")

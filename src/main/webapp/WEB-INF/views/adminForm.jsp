@@ -7,10 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>관리자 전용 페이지 입니다..</h1>
-<jsp:include page="admin/top.jsp" flush="true"></jsp:include><BR>
+<div style="float: right;">
+	<jsp:include page="admin/top.jsp" flush="true" ></jsp:include><BR>
+</div>
+<br>
+<br>
+<img src="images/Main_Logo.png" style="display: block; margin: 0 auto;">
+<div align="center">
 <jsp:include page="admin/menu.jsp" flush="true"></jsp:include>
-<hr>
+</div>
+<hr style="border: solid 0.5px gray;">
+
 <jsp:include page="admin/adminForm.jsp"></jsp:include>
 </body>
 </html>

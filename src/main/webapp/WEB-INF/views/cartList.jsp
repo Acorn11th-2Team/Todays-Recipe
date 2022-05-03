@@ -7,10 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>장바구니 목록 화면입니다</h1>
-<jsp:include page="common/top.jsp" flush="true" /><br>
-<jsp:include page="common/menu.jsp" flush="true" />
-<hr>
+<div style="float: right;">
+	<jsp:include page="common/top.jsp" flush="true" ></jsp:include><BR>
+</div>
+<br>
+<br>
+<img src="images/Main_Logo.png" style="display: block; margin: 0 auto;">
+<div align="center">
+<jsp:include page="common/menu.jsp" flush="true"></jsp:include>
+</div>
+<hr style="border: solid 0.5px gray;">
 <jsp:include page="cart/cartList.jsp" flush="true" />
 </body>
 </html>

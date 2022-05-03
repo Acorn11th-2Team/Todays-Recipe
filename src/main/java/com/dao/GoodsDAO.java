@@ -1,6 +1,7 @@
 package com.dao;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -67,6 +68,15 @@ public class GoodsDAO implements GoodsDAO_Interface {
 		
 	}
 
+	@Override
+	public int getgStock(OrderDTO oDTO) throws Exception {
+		return template.selectOne("CartMapper.getgStock", oDTO);
+	}
+	
+	@Override
+	public void setgStock(HashMap map) throws Exception {
+		int n = template.update("CartMapper.setgStock", map);
+	}
 
 
 

@@ -1,6 +1,7 @@
 package com.dao;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -27,5 +28,9 @@ public interface GoodsDAO_Interface {
 	void cartDelete(int num) throws Exception;
 
 	void delAllCart(ArrayList<String> list) throws Exception;
+
+	int getgStock(OrderDTO oDTO) throws Exception;
+
+	void setgStock(HashMap map) throws Exception;
 
 }

@@ -1,8 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<a href="goodsList?gCategory=Vegetable">채소</a>&nbsp;
-<a href="goodsList?gCategory=Fruit">과일·견과·쌀</a>&nbsp;
-<a href="goodsList?gCategory=Seafood">수산·해산·건어물</a>&nbsp;
-<a href="goodsList?gCategory=Meat">정육·계란</a>&nbsp;
-<a href="goodsList?gCategory=Noodle">면·양념·오일</a>&nbsp;
+<a href="goodsList?gCategory=Vegetable" style="text-decoration: none;">
+	<img src="images/Vegetable.png" style="width:200px; height: 30px; border: 10 solid; ">
+</a>
+<a href="goodsList?gCategory=Fruit" style="text-decoration: none;">
+	<img src="images/Fruit.png" style="width:200px; height: 30px;">
+</a>
+<a href="goodsList?gCategory=Seafood" style="text-decoration: none;">
+	<img src="images/Seafood.png" style="width:200px; height: 30px;">
+</a>
+<a href="goodsList?gCategory=Meat" style="text-decoration: none;">
+	<img src="images/Meat.png" style="width:200px; height: 30px;">
+</a>
+<a href="goodsList?gCategory=Noodle" style="text-decoration: none;">
+	<img src="images/Noodle.png" style="width:200px; height: 30px;">
+</a>
 <BR>

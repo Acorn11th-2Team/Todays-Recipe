@@ -1,6 +1,7 @@
 package com.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,11 +20,11 @@ public class GoodsService {
 GoodsDAO_Interface dao;//////////인터페이스 타입 
 
 @Transactional
-public void orderDone(OrderDTO oDTO, int orderNum) throws Exception {
+public void orderDone(OrderDTO oDTO, int orderNum, HashMap map) throws Exception {
 
 	dao.orderDone(oDTO); //주문정보저장
 	dao.cartDelete(orderNum); //카트에서 삭제 두 처리를 tx 처리함 root-context.xml에 
-	
+	dao.setgStock(map);
 }
 public CartDTO orderConfirmByNum(int num) throws Exception{
 	CartDTO dto = dao.orderConfirmByNum(num);
@@ -61,6 +62,10 @@ public void delAllCart(ArrayList<String> list) throws Exception{
 	dao.delAllCart(list);
 	
 }
+public int getgStock(OrderDTO oDTO) throws Exception {
+	return dao.getgStock(oDTO);
+}
+
 
 
 

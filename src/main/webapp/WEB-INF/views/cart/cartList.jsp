@@ -2,6 +2,12 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<c:if test="${!empty mesg }">
+	<script>
+		alert('${mesg}\n남은재고는 ${gStock}개 입니다');
+	</script>
+</c:if>
+<% session.removeAttribute("mesg"); %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 function totalXXX() {

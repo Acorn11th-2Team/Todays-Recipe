@@ -11,9 +11,9 @@
 				<tr>
 					<td height="5"></td>
 				</tr>
-				<tr>
+				<!-- <tr>
 					<td height="1" colspan="8" bgcolor="CECECE"></td>
-				</tr>
+				</tr> -->
 				<tr>
 					<td height="10"></td>
 				</tr>
@@ -34,41 +34,19 @@
 									<td height="10">
 								</tr>
 								<tr>
-									<td class="td_default" align="center"><a class="a_black"
-										href="goodsRetrieve?gCode=${dto.gCode }"> ${dto.gName }<br>
-									</a> <font color="gray"> -------------------- </font></td>
+									<td class="td_default" align="left"><font size="4.5">
+										${dto.gName } ${dto.gWeight }</font></h3>
+									</td>
 
 								</tr>
-								<tr>
-									<td height="10">
-								</tr>
-								<c:if test="${dto.gWeight != null}">
-									<tr>
-										<td class="td_gray" align="center">판매단위: ${dto.gUnit }</td>
-									</tr>
-								
-									<tr>
-										<td class="td_gray" align="center">중량/용량: ${dto.gWeight }</td>
-									</tr>
-								</c:if>
-								<c:if test="${dto.gWeight == null}">
-									<tr>
-										<td height="6">
-									</tr>
-									<tr>
-										<td class="td_gray" align="center">판매단위: ${dto.gUnit }</td>
-									</tr>
-									<tr>
-										<td height="6">
-									</tr>
 
-								</c:if>
 								<tr>
-									<td height="10">
+									<td class="td_default" align="left"><strong>
+										${dto.gPrice }원</strong></td>
 								</tr>
 								<tr>
-									<td class="td_red" align="center"><font color="red"><strong>
-												${dto.gPrice }</strong></font></td>
+
+									<td height="10">
 								</tr>
 							</table>
 						</td>

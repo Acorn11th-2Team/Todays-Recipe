@@ -56,8 +56,8 @@
 					</tr> -->
 
 					<tr>
-						<td rowspan="14"><img src="images/items/${goodsRetrieve.gImage }.png"
-							border="0" align="center" width="300" height="420"/></td>
+						<td rowspan="16"><img src="images/items/${goodsRetrieve.gImage }.png"
+							border="0" align="center" width="300" height="450"/></td>
 					</tr>
 					<tr>
 						<td class="td_default" colspan="3">
@@ -108,6 +108,17 @@
 							style='padding-left: 30px'><b> 무료배송</b> </font> <font size="2">(도서
 								산간지역 별도 배송비 추가)</font></td>
 					</tr>
+					<tr>
+						<td colspan="3"><hr style="border: solid 0.5px gray;"></td>
+					</tr>
+					
+					<tr>
+						<td class="td_title">재고</td>
+						<td class="td_default" colspan="2" style='padding-left: 30px'>
+							${goodsRetrieve.gStock }개
+						</td>
+					</tr>
+					
 					<tr>
 						<td colspan="3"><hr style="border: solid 0.5px gray;"></td>
 					</tr>

@@ -1,6 +1,7 @@
 package com.dao;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -63,6 +64,17 @@ public class GoodsDAO_mySQL_Impl implements GoodsDAO_Interface{
 
 	@Override
 	public void delAllCart(ArrayList<String> list) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getgStock(OrderDTO oDTO) throws Exception {
+		return 0;
+	}
+	
+	@Override
+	public void setgStock(HashMap map) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}

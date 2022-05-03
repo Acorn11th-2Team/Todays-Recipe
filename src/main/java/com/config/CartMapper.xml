@@ -89,4 +89,17 @@ end;
 	 from cart
 	 where num=#{num}
 	</select>
+	
+	<select id="getgStock" parameterType="OrderDTO" resultType="int">
+		select gStock
+		from goods
+		where gCode = #{gCode}
+	</select>
+	
+	
+	<update id="setgStock" parameterType="Hashmap">
+		update goods
+		set gStock = #{gStock}
+		where gCode = #{gCode}
+	</update>
 </mapper>

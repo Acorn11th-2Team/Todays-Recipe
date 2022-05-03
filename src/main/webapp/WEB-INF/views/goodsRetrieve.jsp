@@ -9,10 +9,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>상품자세히보기화면입니다.</h1>
-<jsp:include page="common/top.jsp" flush="true"></jsp:include><BR>
+<div style="float: right;">
+	<jsp:include page="common/top.jsp" flush="true" ></jsp:include><BR>
+</div>
+<br>
+<br>
+<img src="images/Main_Logo.png" style="display: block; margin: 0 auto;">
+<div align="center">
 <jsp:include page="common/menu.jsp" flush="true"></jsp:include>
-<hr>
+</div>
+<hr style="border: solid 0.5px gray;">
 <jsp:include page="goods/goodsRetrieve.jsp" flush="true"></jsp:include>
 </body>
 </html>
