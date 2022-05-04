@@ -51,7 +51,7 @@
 							</table>
 						</td>
 						<!-- 한 줄에4개씩 -->
-					<c:if test="${status.count%4 ==0 }">
+					<c:if test="${status.count%3 ==0 }">
 						<tr>
 							<td height="10"></td>
 						</tr>

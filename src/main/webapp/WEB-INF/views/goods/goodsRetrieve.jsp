@@ -43,7 +43,7 @@
 	     <input	type="hidden" name="gName" value="${goodsRetrieve.gName }"> 
 	     <input	type="hidden" name="gPrice" value="${goodsRetrieve.gPrice }">
 
-	<table width="100%" cellspacing="0" cellpadding="0">
+	<table align="center" cellspacing="0" cellpadding="0">
 		<tr>
 			<td height="10">
 		</tr>

@@ -17,7 +17,9 @@
 		</div>
 		<br>
 		<br>
-		<img src="images/Main_Logo.png" style="display: block; margin: 0 auto;">
+		<a href="goodsList?gCategory=Vegetable" style="text-decoration: none;">
+			<img src="images/Main_Logo.png" style="display: block; margin: 0 auto;">		
+		</a>
 		<div align="center">
 		<jsp:include page="common/menu.jsp" flush="true"></jsp:include>
 		</div>

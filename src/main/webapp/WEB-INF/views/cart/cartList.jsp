@@ -89,7 +89,7 @@ $(function() {
  
 </script>
 
-<table width="90%" cellspacing="0" cellpadding="0" border="0">
+<table align="center" cellspacing="0" cellpadding="0" border="0">
 
 	<tr>
 		<td height="30">
@@ -199,11 +199,10 @@ $(function() {
 	</tr>
 
 	<tr>
-		<td align="center" colspan="5"><a class="a_black"
-			href="javascript:orderAllConfirm(myForm)"> 전체 주문하기 </a>&nbsp;&nbsp;&nbsp;&nbsp; 
+		<td align="right" colspan="5">
 			<button onclick="orderAllConfirm(myForm)">전체 주문하기</button>
 			<button id="delAllCart">전체 삭제하기</button>
-			<a class="a_black" href="goodsList?gCategory=top"> 계속 쇼핑하기 </a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a class="a_black" href="goodsList?gCategory=Vegetable"> 계속 쇼핑하기 </a>
 		</td>
 	</tr>
 	<tr>
