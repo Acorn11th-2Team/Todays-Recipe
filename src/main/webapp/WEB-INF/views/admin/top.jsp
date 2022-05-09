@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<a href="">공지사항</a>&nbsp;
-<a href="">1:1문의</a>&nbsp;
+<a href="goodsList?gCategory=Vegetable" style="text-decoration: none;">
+	<font face="Andale Mono">로그아웃</font>
+</a>
+
 
