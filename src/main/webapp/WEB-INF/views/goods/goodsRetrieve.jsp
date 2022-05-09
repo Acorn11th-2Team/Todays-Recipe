@@ -3,6 +3,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 
@@ -68,7 +70,7 @@
 					
 					<tr>
 						<td class="td_red" colspan="3" >
-							<h2>${goodsRetrieve.gPrice }원</h2>
+							<h2><fmt:formatNumber value="${goodsRetrieve.gPrice}" pattern="#,###"/>원</h2>
 						</td>
 					</tr>
 					<tr>
@@ -115,7 +117,7 @@
 					<tr>
 						<td class="td_title">재고</td>
 						<td class="td_default" colspan="2" style='padding-left: 30px'>
-							${goodsRetrieve.gStock }개
+							<fmt:formatNumber value="${goodsRetrieve.gStock }" pattern="#,###"/>개
 						</td>
 					</tr>
 					
@@ -126,11 +128,18 @@
 
 					<tr>
 						<td class="td_title">주문수량</td>
-						<td style="padding-left: 30px"><input type="text"
-							name="gAmount" value="1" id="gAmount"
-							style="text-align: right; height: 18px"> <img
-							src="images/up.png" id="up"> <img src="images/down.png"
-							id="down"></td>
+						
+						<td style="padding-left: 30px">
+							<span class="gAmount">
+								<input type="text"
+								name="gAmount" value="1" id="gAmount"
+								style="text-align: right; height: 18px"> 
+							</span>
+							<img src="images/minus.png"
+							width="30" height="30" id="down">
+							<img src="images/plus.png"
+							width="30" height="30" id="up">
+						</td>
 					</tr>
 					<tr>
 						<td colspan="3"><hr style="border: solid 0.5px gray;"></td>

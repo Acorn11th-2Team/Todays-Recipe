@@ -3,6 +3,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <table width="100%" cellspacing="0" cellpadding="0">
 	<tr>
 		<td>
@@ -42,7 +43,8 @@
 
 								<tr>
 									<td class="td_default" align="left"><strong>
-										${dto.gPrice }원</strong></td>
+										<fmt:formatNumber value="${dto.gPrice }" pattern="#,###"/>원</strong>
+									</td>
 								</tr>
 								<tr>
 
