@@ -30,6 +30,11 @@ public CartDTO orderConfirmByNum(int num) throws Exception{
 	CartDTO dto = dao.orderConfirmByNum(num);
 	return dto;
 }
+
+public List<CartDTO> orderConfirmByCheck(ArrayList<String> list) throws Exception {
+	List<CartDTO> dto_list = dao.orderConfirmByCheck(list);
+	return dto_list;
+}
 public List<CartDTO> cartList(String userid) throws Exception{
 	List<CartDTO> list= dao.cartList(userid);
 	return list;
@@ -65,6 +70,7 @@ public void delAllCart(ArrayList<String> list) throws Exception{
 public int getgStock(OrderDTO oDTO) throws Exception {
 	return dao.getgStock(oDTO);
 }
+
 
 
 

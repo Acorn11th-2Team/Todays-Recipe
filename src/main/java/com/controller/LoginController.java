@@ -38,6 +38,7 @@ public String login(@RequestParam Map<String, String> map, Model model, HttpSess
 	System.out.println((map.get("userid")));
 	System.out.println((map.get("passwd")));
 	if(map.get("userid").equals("admin") && map.get("passwd").equals("admin")) {	// 관리자 인 경우
+		session.setAttribute("login", dto);
 		return "adminForm";	//context-servlet.xml에 저장
 	}else {
 		if(dto!= null ) {

@@ -30,6 +30,13 @@ $(function() {
 		location.href="loginCheck/orderConfirm?num="+num;		
 	});
 	
+	//전체주문하기
+	$("#orderAllBtn").on("click",function(){
+		console.log("주문하기 버튼 클릭 됨")
+		$("form").attr("action", "loginCheck/orderAllCart");
+		$("form").submit();	
+	});
+	
 	//전체삭제
 	$("#delAllCart").on("click", function() {
 		$("form").attr("action", "loginCheck/delAllCart");
@@ -37,6 +44,12 @@ $(function() {
 	})
 	//전체선택
 	$("#allCheck").on("click", function() {
+		var result= this.checked;
+		$(".check").each(function(idx, data) {
+			this.checked= result;
+		});
+	});
+	$("#allCheck2").on("click", function() {
 		var result= this.checked;
 		$(".check").each(function(idx, data) {
 			this.checked= result;
@@ -174,8 +187,7 @@ $(function() {
 	
 	
 		<form name="myForm">
-		    
-		    
+
 	<!-- 반복시작 -->
 	<c:forEach var="x" items="${cartList}">
 			<tr>
@@ -224,16 +236,17 @@ $(function() {
 					style='padding-left: 5px'><span id="sum${x.num}" class="sum">
 					<fmt:formatNumber value="${x.gPrice * x.gAmount}" pattern="#,###"/>원
 					</span></td>
-				<td><input type="button" value="주문" class="orderBtn"
-					data-num="${x.num}"></td>
+<%-- 				<td><input type="button" value="주문" class="orderBtn"
+					data-num="${x.num}"></td> --%>
 				<td class="td_default" align="center" width="30"
 					style='padding-left: 10px'>
-					<input type="button" value="삭제" class="deleteBtn"
-					data-num="${x.num }"></td>
+					<img src="images/x.png" class="deleteBtn"
+					data-num="${x.num }" width="20" height="20">
+				</td>
 				<td height="10"></td>
 			</tr>
 			
-
+			
 	 <!-- 반복끝 --> 
 	</c:forEach>
 		</form>
@@ -241,20 +254,30 @@ $(function() {
 			<td height="10">
 		</tr>
 		<tr>
-			<td colspan="10">
-			총합 : <span id="totalSum"></span>
+			<td colspan="10" align="right">
+			총합 : <span id="totalSum" ></span>
 				<hr size="1" color="CCCCCC">
 			</td>
 		</tr>
 		<tr>
-			<td height="30">
+			<td height="10">
 		</tr>
 	
 		<tr>
-			<td align="right" colspan="5">
-				<button onclick="orderAllConfirm(myForm)">전체 주문하기</button>
-				<button id="delAllCart">전체 삭제하기</button>
-				<a class="a_black" href="goodsList?gCategory=Vegetable"> 계속 쇼핑하기 </a>
+			<td class="td_default" align="left">
+				<input type="checkbox"
+				name="allCheck2" id="allCheck2"> 
+			</td>
+			<td colspan="2">
+				<strong>&nbsp;전체선택</strong>
+				&nbsp;|&nbsp;
+				<button id="delAllCart" style="border: none; background: none">선택 삭제</button>
+			</td>
+
+			<td colspan="7" align="right">
+				<button id="orderAllBtn" style="border: none; background: none">
+					<img src="images/order.png" width="300" height="60">
+				</button>
 			</td>
 		</tr>
 		<tr>

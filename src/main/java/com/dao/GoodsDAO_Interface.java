@@ -33,4 +33,6 @@ public interface GoodsDAO_Interface {
 
 	void setgStock(HashMap map) throws Exception;
 
+	List<CartDTO> orderConfirmByCheck(ArrayList<String> list) throws Exception;
+
 }

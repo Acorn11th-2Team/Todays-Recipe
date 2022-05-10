@@ -28,7 +28,7 @@ a:active { /*클릭하는 순간*/
 		<font face="Andale Mono">로그인</font>
 	</a>
 	&nbsp;|&nbsp;
-	<a href="" style="text-decoration: none;">
+	<a href="serviceCenter" style="text-decoration: none;">
 		<font face="Andale Mono">고객센터</font>
 	</a>&nbsp;
 </c:if>
@@ -45,5 +45,9 @@ a:active { /*클릭하는 순간*/
 	&nbsp;|&nbsp;
 	<a href="loginCheck/cartList" style="text-decoration: none;">
 		<font face="Andale Mono">장바구니</font>
+	</a>
+	&nbsp;|&nbsp;
+		<a href="loginCheck/serviceCenter" style="text-decoration: none;">
+		<font face="Andale Mono">고객센터</font>
 	</a>&nbsp;
 </c:if>

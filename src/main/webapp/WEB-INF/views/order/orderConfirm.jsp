@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <script>
 	function sameAddress(n){
 		console.log(n,n.checked);
@@ -27,14 +27,15 @@
 
 
 <form name="myForm" method="get" action="loginCheck/orderDone">
-<input type="hidden" name="gCode" value="${cDTO.gCode}">
-<input type="hidden" name="gName" value="${cDTO.gName}">
-<input type="hidden" name="gPrice" value="${cDTO.gPrice}">
-<input type="hidden" name="gAmount" value="${cDTO.gAmount}">
-<input type="hidden" name="gImage" value="${cDTO.gImage}">
-<input type="hidden" name="orderNum" value="${cDTO.num}">
+	<input type="hidden" name="cart_list" value="${cDTO_list}">
+	<input type="hidden" name="mDTO" value="${mDTO}">
+	<%-- <input type="hidden" name="gCode" value="${cDTO.gCode}">
+	<input type="hidden" name="gName" value="${cDTO.gName}">
+	<input type="hidden" name="gPrice" value="${cDTO.gPrice}">
+	<input type="hidden" name="gAmount" value="${cDTO.gAmount}">
+	<input type="hidden" name="gImage" value="${cDTO.gImage}">
+	<input type="hidden" name="orderNum" value="${cDTO.num}"> --%>
 	<table width="80%" cellspacing="0" cellpadding="0">
-
 		<tr>
 			<td height="30">
 		</tr>
@@ -73,7 +74,8 @@
 							<hr size="1" color="CCCCCC">
 						</td>
 					</tr>
-
+					<!-- 반복시작 -->
+					<c:forEach var="cDTO" items="${cDTO_list}">
 					<tr>
 						<td class="td_default" width="80">${cDTO.num}</td>
 						<td class="td_default" width="80"><img
@@ -94,6 +96,7 @@
 						<td class="td_default" align="right">총 결제 금액 :</td>
 						<td class="td_default" align='right'>${cDTO.gAmount * cDTO.gPrice  }원</td>
 					</tr>
+					</c:forEach>
 				</table> <tr>
 			<td>
 					<hr size="1" color="CCCCCC">
@@ -101,7 +104,11 @@
 			</tr>
 
 		</td>
-	</tr><!--  고객 정보 시작-->
+	</tr>
+	
+	
+	
+	<!--  고객 정보 시작-->
 		<tr>
 		<td height="30">
 	

@@ -54,4 +54,14 @@ public class MemberController {
 		model.addAttribute("success", "회원가입성공");
 		return "main";
 	}
+	
+	  @RequestMapping(value = "/loginCheck/serviceCenter") 
+	  public String login_serviceCenter() throws Exception {
+		return "serviceCenter";  
+	  }
+	  
+	  @RequestMapping(value = "/serviceCenter") 
+	  public String serviceCenter() throws Exception {
+		return "serviceCenter";  
+	  }
 }

@@ -90,6 +90,17 @@ end;
 	 where num=#{num}
 	</select>
 	
+	<select id="cartByCheck" parameterType="List" 
+	resultType="CartDTO">
+	 select num,userid,gCode,gPrice,gAmount,gName,gImage
+	 from cart
+	 where num IN
+	 <foreach collection="list" item="item" open="("
+			separator="," close=")">
+	 	#{item}
+	 </foreach>
+	</select>
+	
 	<select id="getgStock" parameterType="OrderDTO" resultType="int">
 		select gStock
 		from goods

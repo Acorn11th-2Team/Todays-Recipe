@@ -36,34 +36,30 @@ public class GoodsController {
 			return "error/error";
 		}
 	@RequestMapping("/loginCheck/orderDone")
-	public String orderDone(OrderDTO oDTO,
-			int orderNum, HttpSession session, RedirectAttributes xxx) throws Exception{
-		System.out.println(oDTO+"\t"+orderNum);
-		MemberDTO dto=(MemberDTO)session.getAttribute("login");
-		
-		oDTO.setUserid(dto.getUserid());
-		oDTO.setNum(orderNum);
-		// 재고 개수를 가져옴
-		int Stock = service.getgStock(oDTO);	// 주문하려는 상품의 재고
-		int gAmount = oDTO.getgAmount();	// 주문하려는 양
-		String gCode = oDTO.getgCode();	// 주문하려는 제품코드
-		int AfterStock = Stock - gAmount;	// 주문완료 후 남은 재고의 양
-		
-		HashMap map = new HashMap();
-		
-		map.put("gCode", gCode);
-		map.put("gStock", AfterStock);
-		if(AfterStock >= 0) {	// 재고가 있는 경우
-			service.orderDone(oDTO, orderNum, map);
-			xxx.addFlashAttribute("oDTO", oDTO);
-			return "redirect:../orderDone";
-		}
-		else {	// 재고가 없는 경우
-			session.setAttribute("mesg", "재고가 없습니다");
-			session.setAttribute("gStock", Stock);
-			return "redirect:../loginCheck/cartList";
-		}
-		
+	@ResponseBody
+	public String orderDone(@RequestParam("cart_list")List<CartDTO> cart_list, @RequestParam("mDTO") MemberDTO mDTO,
+			HttpSession session, RedirectAttributes xxx) throws Exception{
+		System.out.println("컨트롤러 들어옴");
+		System.out.println(cart_list);
+		System.out.println(mDTO);
+		/*
+		 * MemberDTO dto=(MemberDTO)session.getAttribute("login");
+		 * 
+		 * oDTO.setUserid(dto.getUserid()); oDTO.setNum(orderNum); // 재고 개수를 가져옴 int
+		 * Stock = service.getgStock(oDTO); // 주문하려는 상품의 재고 int gAmount =
+		 * oDTO.getgAmount(); // 주문하려는 양 String gCode = oDTO.getgCode(); // 주문하려는 제품코드
+		 * int AfterStock = Stock - gAmount; // 주문완료 후 남은 재고의 양
+		 * 
+		 * HashMap map = new HashMap();
+		 * 
+		 * map.put("gCode", gCode); map.put("gStock", AfterStock); if(AfterStock >= 0) {
+		 * // 재고가 있는 경우 service.orderDone(oDTO, orderNum, map);
+		 * xxx.addFlashAttribute("oDTO", oDTO); return "redirect:../orderDone"; } else {
+		 * // 재고가 없는 경우 session.setAttribute("mesg", "재고가 없습니다");
+		 * session.setAttribute("gStock", Stock); return
+		 * "redirect:../loginCheck/cartList"; }
+		 */
+		return "";
 	}
 	
 	@RequestMapping("/loginCheck/orderConfirm")
@@ -75,6 +71,21 @@ public class GoodsController {
 		CartDTO cart= service.orderConfirmByNum(num); //장바구니 정보가져오기 
 		xxx.addFlashAttribute("mDTO", mDTO);  //request에 회원정보저장
 		xxx.addFlashAttribute("cDTO", cart); //request에 카트정보저장	
+		return "redirect:../orderConfirm"; //servlet-context에 등록
+	}
+	
+	@RequestMapping(value = "/loginCheck/orderAllCart")
+	public String orderAllCart(@RequestParam("check") ArrayList<String> list, HttpSession session, 
+			RedirectAttributes xxx) throws Exception{
+		MemberDTO mDTO=(MemberDTO)session.getAttribute("login");
+		String userid= mDTO.getUserid();
+		mDTO= mService.myPage(userid); //사용자 정보 가져오기 
+		List<CartDTO> cart_list= service.orderConfirmByCheck(list); //장바구니 정보가져오기 
+		System.out.println(cart_list);
+		
+		xxx.addFlashAttribute("mDTO", mDTO); //request에 회원정보저장
+		xxx.addFlashAttribute("cDTO_list", cart_list); //request에 카트정보저장
+		 		
 		return "redirect:../orderConfirm"; //servlet-context에 등록
 	}
 	

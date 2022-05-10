@@ -17,6 +17,7 @@
 <mvc:view-controller path="/orderConfirm" view-name="orderConfirm"/><!-- orderConfirm.jsp -->
 <mvc:view-controller path="/orderDone" view-name="orderDone"/><!-- orderDone.jsp -->
 <mvc:view-controller path="/adminForm" view-name="adminForm"/>
+<mvc:view-controller path="/serviceCenter" view-name="serviceCenter"/>
 
 <mvc:resources location="/WEB-INF/views/images/" mapping="/images/**"/>
 <mvc:resources location="/WEB-INF/views/css/" mapping="/css/**"/>

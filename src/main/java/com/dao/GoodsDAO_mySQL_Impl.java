@@ -79,4 +79,10 @@ public class GoodsDAO_mySQL_Impl implements GoodsDAO_Interface{
 		
 	}
 
+	@Override
+	public List<CartDTO> orderConfirmByCheck(ArrayList<String> list) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

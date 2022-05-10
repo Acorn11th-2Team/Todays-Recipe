@@ -31,6 +31,12 @@ public class GoodsDAO implements GoodsDAO_Interface {
 	}
 	
 	@Override
+	public List<CartDTO> orderConfirmByCheck(ArrayList<String> list) throws Exception {
+		List<CartDTO> dto_list = template.selectList("CartMapper.cartByCheck", list);
+		return dto_list;
+	}
+	
+	@Override
 	public List<CartDTO> cartList(String userid)throws Exception{
 		List<CartDTO> list = template.selectList("CartMapper.cartList", userid);
 		return list;
@@ -77,6 +83,8 @@ public class GoodsDAO implements GoodsDAO_Interface {
 	public void setgStock(HashMap map) throws Exception {
 		int n = template.update("CartMapper.setgStock", map);
 	}
+
+
 
 
 
