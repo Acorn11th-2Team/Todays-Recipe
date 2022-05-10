@@ -1,3 +1,6 @@
+<%@page import="com.dto.MemberDTO"%>
+<%@page import="com.dto.CartDTO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -25,10 +28,16 @@
 	}
 </script>	
 
-
+<% 	List<CartDTO> list_CartDTO = (List<CartDTO>)request.getAttribute("cDTO_list");
+	MemberDTO mDTO = (MemberDTO)request.getAttribute("mDTO");
+%>
+<% 		
+	session.setAttribute("list_CartDTO", list_CartDTO);
+	session.setAttribute("mDTO", mDTO);
+%>
 <form name="myForm" method="get" action="loginCheck/orderDone">
-	<input type="hidden" name="cart_list" value="${cDTO_list}">
-	<input type="hidden" name="mDTO" value="${mDTO}">
+	<%-- <input type="hidden" name="cart_list" value=<%= list_CartDTO%>>
+	<input type="hidden" name="mDTO" value="${mDTO}"> --%>
 	<%-- <input type="hidden" name="gCode" value="${cDTO.gCode}">
 	<input type="hidden" name="gName" value="${cDTO.gName}">
 	<input type="hidden" name="gPrice" value="${cDTO.gPrice}">

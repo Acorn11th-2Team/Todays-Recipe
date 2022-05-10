@@ -35,4 +35,10 @@ public interface GoodsDAO_Interface {
 
 	List<CartDTO> orderConfirmByCheck(ArrayList<String> list) throws Exception;
 
+	void orderAllDone(List<OrderDTO> list_OrderDTO) throws Exception;
+
+	void cartAllDelete(List<Integer> list_num) throws Exception;
+
+	void setAllgStock(List<HashMap> list_map) throws Exception;
+
 }

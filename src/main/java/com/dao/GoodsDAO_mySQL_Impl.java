@@ -19,6 +19,12 @@ public class GoodsDAO_mySQL_Impl implements GoodsDAO_Interface{
 		// TODO Auto-generated method stub
 		//mysql 연동   Mapper id 
 	}
+	
+	@Override
+	public void orderAllDone(List<OrderDTO> list_OrderDTO) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
 
 	@Override
 	public CartDTO orderConfirmByNum(int num) throws Exception {
@@ -63,7 +69,7 @@ public class GoodsDAO_mySQL_Impl implements GoodsDAO_Interface{
 	}
 
 	@Override
-	public void delAllCart(ArrayList<String> list) {
+	public void delAllCart(ArrayList<String> list) throws Exception{
 		// TODO Auto-generated method stub
 		
 	}
@@ -84,5 +90,19 @@ public class GoodsDAO_mySQL_Impl implements GoodsDAO_Interface{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public void cartAllDelete(List<Integer> list_num) throws Exception{
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setAllgStock(List<HashMap> list_map) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 
 }

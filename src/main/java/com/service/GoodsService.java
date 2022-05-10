@@ -70,6 +70,16 @@ public void delAllCart(ArrayList<String> list) throws Exception{
 public int getgStock(OrderDTO oDTO) throws Exception {
 	return dao.getgStock(oDTO);
 }
+public void orderAllDone(List<OrderDTO> list_OrderDTO, List<Integer> list_num, List<HashMap> list_map) throws Exception{
+	dao.orderAllDone(list_OrderDTO); //주문정보저장
+	dao.cartAllDelete(list_num); //카트에서 삭제 두 처리를 tx 처리함 root-context.xml에 
+	
+	for (HashMap hashMap : list_map) {
+		dao.setgStock(hashMap);
+	}
+	
+	
+}
 
 
 

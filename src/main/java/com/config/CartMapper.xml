@@ -16,7 +16,7 @@ end;
 		into orderinfo	
 		    (num,userid,gCode,gName,gPrice,gAmount,
  			 gImage,orderName,post,addr1,addr2,phone,payMethod)
-       values( myorderseq(), #{item.userid},#{item.gCode},
+       values( #{item.num}, #{item.userid},#{item.gCode},
        #{item.gName},#{item.gPrice},#{item.gAmount},
               #{item.gImage},#{item.orderName},
               #{item.post},#{item.addr1},#{item.addr2},
@@ -113,4 +113,5 @@ end;
 		set gStock = #{gStock}
 		where gCode = #{gCode}
 	</update>
+	
 </mapper>

@@ -57,7 +57,7 @@ public class MemberController {
 	
 	  @RequestMapping(value = "/loginCheck/serviceCenter") 
 	  public String login_serviceCenter() throws Exception {
-		return "serviceCenter";  
+		return "redirect:../serviceCenter";  
 	  }
 	  
 	  @RequestMapping(value = "/serviceCenter") 

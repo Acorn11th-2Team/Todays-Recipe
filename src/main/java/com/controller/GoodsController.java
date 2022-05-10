@@ -37,29 +37,68 @@ public class GoodsController {
 		}
 	@RequestMapping("/loginCheck/orderDone")
 	@ResponseBody
-	public String orderDone(@RequestParam("cart_list")List<CartDTO> cart_list, @RequestParam("mDTO") MemberDTO mDTO,
-			HttpSession session, RedirectAttributes xxx) throws Exception{
+	public String orderDone( String payMethod, HttpSession session, RedirectAttributes xxx) throws Exception{
 		System.out.println("컨트롤러 들어옴");
-		System.out.println(cart_list);
+		
+
+		List<CartDTO> list_CartDTO = (List<CartDTO>) session.getAttribute("list_CartDTO");
+		System.out.println(list_CartDTO);
+		MemberDTO mDTO = (MemberDTO)session.getAttribute("mDTO");
 		System.out.println(mDTO);
-		/*
-		 * MemberDTO dto=(MemberDTO)session.getAttribute("login");
-		 * 
-		 * oDTO.setUserid(dto.getUserid()); oDTO.setNum(orderNum); // 재고 개수를 가져옴 int
-		 * Stock = service.getgStock(oDTO); // 주문하려는 상품의 재고 int gAmount =
-		 * oDTO.getgAmount(); // 주문하려는 양 String gCode = oDTO.getgCode(); // 주문하려는 제품코드
-		 * int AfterStock = Stock - gAmount; // 주문완료 후 남은 재고의 양
-		 * 
-		 * HashMap map = new HashMap();
-		 * 
-		 * map.put("gCode", gCode); map.put("gStock", AfterStock); if(AfterStock >= 0) {
-		 * // 재고가 있는 경우 service.orderDone(oDTO, orderNum, map);
-		 * xxx.addFlashAttribute("oDTO", oDTO); return "redirect:../orderDone"; } else {
-		 * // 재고가 없는 경우 session.setAttribute("mesg", "재고가 없습니다");
-		 * session.setAttribute("gStock", Stock); return
-		 * "redirect:../loginCheck/cartList"; }
-		 */
-		return "";
+		
+		List<OrderDTO> list_OrderDTO = new ArrayList<OrderDTO>();
+		int i = 0;
+		for (CartDTO cDTO : list_CartDTO) {
+			OrderDTO oDTO = new OrderDTO();
+			oDTO.setNum(cDTO.getNum());
+			oDTO.setUserid(mDTO.getUserid());
+			oDTO.setgCode(cDTO.getgCode());
+			oDTO.setgName(mDTO.getUsername());
+			oDTO.setgPrice(cDTO.getgPrice());
+			oDTO.setgAmount(cDTO.getgAmount());
+			oDTO.setgImage(cDTO.getgImage());
+			oDTO.setOrderName(mDTO.getUsername());
+			oDTO.setPost(mDTO.getPost());
+			oDTO.setAddr1(mDTO.getAddr1());
+			oDTO.setAddr2(mDTO.getAddr2());
+			oDTO.setPhone(mDTO.getPhone1()+mDTO.getPhone2()+mDTO.getPhone3());
+			oDTO.setPayMethod(payMethod);
+			list_OrderDTO.add(oDTO);
+		}
+		System.out.println(list_OrderDTO);
+		
+		List<HashMap> list_map = new ArrayList<HashMap>();
+		List<Integer> list_num = new  ArrayList<Integer>();
+		// 재고 파악
+		
+		for (OrderDTO oDTO : list_OrderDTO) {
+			
+			HashMap map = new HashMap();
+			
+			int Stock = service.getgStock(oDTO); // 주문하려는 상품의 재고 
+			int gAmount = oDTO.getgAmount(); // 주문하려는 양 
+			String gCode = oDTO.getgCode(); // 주문하려는 제품코드
+			int AfterStock = Stock - gAmount; // 주문완료 후 남은 재고의 양
+			
+			map.put("gCode", oDTO.getgCode());
+			map.put("gStock", AfterStock);
+			
+			list_map.add(map);
+			list_num.add(oDTO.getNum());
+			
+			if(AfterStock < 0) {	// 재고가 없는 경우
+				session.setAttribute("mesg", oDTO.getgCode() + "상품의 재고가 없습니다");
+				session.setAttribute("gStock", Stock); 
+				return "redirect:../loginCheck/cartList"; 
+			}
+		}
+		
+		
+		
+		System.out.println(list_map);
+		service.orderAllDone(list_OrderDTO, list_num, list_map);
+		xxx.addFlashAttribute("list_OrderDTO", list_OrderDTO); 
+		return "redirect:../orderDone"; 
 	}
 	
 	@RequestMapping("/loginCheck/orderConfirm")
