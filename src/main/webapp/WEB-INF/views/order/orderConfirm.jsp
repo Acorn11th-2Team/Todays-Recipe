@@ -4,6 +4,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
 <script>
 	function sameAddress(n){
 		console.log(n,n.checked);
@@ -35,82 +37,77 @@
 	session.setAttribute("list_CartDTO", list_CartDTO);
 	session.setAttribute("mDTO", mDTO);
 %>
+
 <form name="myForm" method="get" action="loginCheck/orderDone">
-	<%-- <input type="hidden" name="cart_list" value=<%= list_CartDTO%>>
-	<input type="hidden" name="mDTO" value="${mDTO}"> --%>
-	<%-- <input type="hidden" name="gCode" value="${cDTO.gCode}">
-	<input type="hidden" name="gName" value="${cDTO.gName}">
-	<input type="hidden" name="gPrice" value="${cDTO.gPrice}">
-	<input type="hidden" name="gAmount" value="${cDTO.gAmount}">
-	<input type="hidden" name="gImage" value="${cDTO.gImage}">
-	<input type="hidden" name="orderNum" value="${cDTO.num}"> --%>
-	<table width="80%" cellspacing="0" cellpadding="0">
+  <div class="wrap">
+	<table width="80%" cellspacing="0" cellpadding="0" align="center">
 		<tr>
 			<td height="30">
 		</tr>
 
 		<tr>
-			<td><b>주문상품 확인</b></td>
+			<td align="center">
+				<font size="5"><b>주문서</b></font>
+			</td>
 		</tr>
 
 		<tr>
 			<td height="15">
 		</tr>
-
+		
 		<tr>
+			<td><b>주문상품</b></td>
+		</tr>
+		
+		<tr>
+		
 			<td>
-				<hr size="1" color="CCCCCC">
+				<hr size="2" color="CCCCCC">
 			</td>
 		</tr>
 
-		<tr>
-			<td height="5">
-		</tr>
 
 		<tr>
 			<td>
 				<table width="100%" cellspacing="0" cellpadding="0">
-					<tr>
-						<td class="td_default" align="center"><strong>주문번호</strong></td>
-						<td class="td_default" align="center" colspan="2"><strong>상품정보</strong></td>
-						<td class="td_default" align="center"><strong>판매가</strong></td>
-						<td class="td_default" align="center" colspan="2"><strong>수량</strong></td>
 
-					</tr>
 
-					<tr>
-						<td colspan="4">
-							<hr size="1" color="CCCCCC">
-						</td>
-					</tr>
+					<c:set var = "total" value="0" />
 					<!-- 반복시작 -->
 					<c:forEach var="cDTO" items="${cDTO_list}">
 					<tr>
-						<td class="td_default" width="80">${cDTO.num}</td>
+						<td height="10">
+					</tr>
+					
+					<tr>
 						<td class="td_default" width="80"><img
 							src="images/items/${cDTO.gImage}.png" border="0" align="center"
 							width="80" /></td>
 						<td class="td_default" width="300" style='padding-left: 30px'>
 						${cDTO.gName}
 						</td>
-						<td class="td_default" align="center" width="110">${cDTO.gPrice}
+						<td class="td_default" align="right" width="90">${cDTO.gAmount}개</td>
+						<td class="td_default" align='right'>
+							<fmt:formatNumber value="${cDTO.gAmount * cDTO.gPrice  }" pattern="#,###"/>원
 						</td>
-						<td class="td_default" align="center" width="90">${cDTO.gAmount}</td>
-
 					</tr>
-
-
 					<tr>
-						<td height="30"></td>
-						<td class="td_default" align="right">총 결제 금액 :</td>
-						<td class="td_default" align='right'>${cDTO.gAmount * cDTO.gPrice  }원</td>
+						<td height="10">
 					</tr>
+					<tr>
+						<td colspan="5">
+							<hr size="1" color="CCCCCC">
+						</td>
+					</tr>
+						<c:set var = "total" value="${total + cDTO.gAmount * cDTO.gPrice}" />
 					</c:forEach>
-				</table> <tr>
-			<td>
-					<hr size="1" color="CCCCCC">
-				</td>
-			</tr>
+					<tr>
+						<td colspan="5" align="right">
+							총결제금액: <fmt:formatNumber value="${total}" pattern="#,###"/>원
+							
+						</td>
+					</tr>
+				</table>
 
 		</td>
 	</tr>
@@ -124,9 +121,13 @@
 		</tr>
 
 	<tr>
-		<td><b>고객 정보</b></td>
+		<td><b>주문자 정보</b></td>
 	</tr>
-
+	<tr>
+		<td>
+			<hr size="2" color="CCCCCC">
+		</td>
+	</tr>
 	<tr>
 		<td height="15">
 	
@@ -135,15 +136,14 @@
 
 	<tr>
 		<td>
-			<table width="100%" cellspacing="0" cellpadding="0" border="1"
-					style="border-collapse:collapse" bordercolor="#CCCCCC">
+			<table width="100%" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="125" height="35" class="td_default">
 						
 						이 름
 					</td>
 					<td height="35" class="td_default">
-						<input class="input_default" type="text" id="mname" size="20"
+						<input class="input_default" type="text" id="mname" size="20" style="border:none;"
 							maxlength="20" value="${mDTO.username}"></input>
 					</td>
 				</tr>
@@ -153,7 +153,7 @@
 						우편번호
 					</td>
 					<td height="35" class="td_default">
-						<input class="input_default" type="text" id="mpost1" size="4"
+						<input class="input_default" type="text" id="mpost1" size="4" style="border:none;"
 							maxlength="3" value="${mDTO.post}" readonly></input>
 						
 					</td>
@@ -164,9 +164,9 @@
 						주 소
 					</td>
 					<td height="35" class="td_default">
-						<input class="input_default" type="text" id="maddress1" size="35"
+						<input class="input_default" type="text" id="maddress1" size="35" style="border:none;"
 							maxlength="200" value="${mDTO.addr1}" readonly></input><br>
-						<input class="input_default" type="text" id="maddress2" size="35"
+						<input class="input_default" type="text" id="maddress2" size="35" style="border:none;"
 							maxlength="200" value="${mDTO.addr2}" readonly></input>
 					</td>
 				</tr>
@@ -176,7 +176,7 @@
 						휴대전화
 					</td>
 					<td height="35" class="td_default">
-						<input class="input_default" type="text" id="mphone" size="15"
+						<input class="input_default" type="text" id="mphone" size="15" style="border:none;"
 							maxlength="15" value="${mDTO.phone1}${mDTO.phone2}${mDTO.phone3}"></input>
 						
 					</td>
@@ -203,9 +203,13 @@
 		</tr>
 
 	<tr>
-		<td><b>배송지 정보</b></td>
+		<td><b>배송 정보</b></td>
 	</tr>
-
+	<tr>
+		<td>
+			<hr size="2" color="CCCCCC">
+		</td>
+	</tr>
 	<tr>
 		<td height="15">
 	
@@ -214,16 +218,17 @@
 
 	<tr>
 		<td>
-			<table width="100%" cellspacing="0" cellpadding="0" border="1"
-					style="border-collapse:collapse" bordercolor="#CCCCCC">
+			<table width="100%" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="125" height="35" class="td_default">
 						
 						이 름
 					</td>
 					<td height="35" class="td_default">
+						<span class="username">
 						<input class="input_default" type="text" id="orderName"
 							name="orderName" size="20" maxlength="20" value=""></input>
+						</span>
 					</td>
 				</tr>
 				<tr>
@@ -232,14 +237,16 @@
 						우편번호
 					</td>
 					<td height="35" class="td_default">
-<!-- 다음주소 시작-->
-	<input type="text" name="post" id="sample4_postcode" placeholder="우편번호">
-<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
-<input type="text" name="addr1" id="sample4_roadAddress" placeholder="도로명주소">
-<input type="text" name="addr2" id="sample4_jibunAddress" placeholder="지번주소">
-<span id="guide" style="color:#999"></span>
-<br>
-<!-- 다음주소 끝 -->
+						<!-- 다음주소 시작-->
+						<sapn class="post">
+							<input type="text" name="post" id="sample4_postcode" placeholder="우편번호">
+							<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
+							<input type="text" name="addr1" id="sample4_roadAddress" placeholder="도로명주소">
+							<input type="text" name="addr2" id="sample4_jibunAddress" placeholder="지번주소">
+						</sapn>
+						<span id="guide" style="color:#999"></span>
+						<br>
+						<!-- 다음주소 끝 -->
 					</td>
 				</tr>
 				
@@ -249,9 +256,10 @@
 						휴대전화
 					</td>
 					<td height="35" class="td_default">
-						<input class="input_default" type="text" id="phone"
-							name="phone" size="15" maxlength="15" value=""></input>
-					
+						<span class="phone">
+							<input class="input_default" type="text" id="phone"
+								name="phone" size="15" maxlength="15" value=""></input>
+						</span>
 					</td>
 				</tr>
 			</table>							
@@ -264,24 +272,27 @@
 	
 		</tr>
 	<tr>
-		<td><b>결제수단</b></td>
+		<td><b>결제 수단</b></td>
 	</tr>
-
+	<tr>
+		<td>
+			<hr size="2" color="CCCCCC">
+		</td>
+	</tr>
 	<tr>
 		<td height="15">
 	
 		</tr>
 	<tr>
 		<td>
-			<table width="100%" cellspacing="0" cellpadding="0" border="1"
-					style="border-collapse:collapse" bordercolor="#CCCCCC">
+			<table width="100%" cellspacing="0" cellpadding="0">
 				<tr>
 					<td width="125" height="35" class="td_default">
-						<input type="radio" name="payMethod" value="신용카드" checked>신용카드</input>
+						<input type="radio" name="payMethod" value="신용카드" checked>신용카드</input>&nbsp;&nbsp;
 						
-						<input type="radio" name="payMethod" value="계좌이체">계좌이체</input>
+						<input type="radio" name="payMethod" value="계좌이체">계좌이체</input>&nbsp;&nbsp;
 						
-						<input type="radio" name="payMethod" value="무통장 입금">무통장 입금</input>
+						<input type="radio" name="payMethod" value="무통장 입금">무통장 입금</input>&nbsp;&nbsp;
 					</td>
 					
 				</tr>
@@ -293,18 +304,23 @@
 	<tr>
 		<td height="30">
 	
-		</tr>
+	</tr>
 
 
 	<tr>
-		<td class="td_default" align="center">
-			<input type='button' value='취소' onclick="javascript:history.back()">	
-			<input type='submit' value='결제하기'>
+		<td class="td_default" align="right">
+			<span class="submit">
+				<input type='button' value='취소' onclick="javascript:history.back()">	&nbsp;&nbsp;&nbsp;
+				<input type='submit' value='결제하기'>
+			</span>
 		</td>
 	</tr>
-
+	<tr>
+		<td height="30">
+	
+	</tr>
 </table>
-
+</div>
 </form>
 
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>

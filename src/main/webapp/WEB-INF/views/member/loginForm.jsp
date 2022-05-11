@@ -21,10 +21,10 @@
                 <h4>비밀번호</h4>
                 <input type="text" name="passwd" placeholder="Password">
             </div>
-            <div class="submit">
+            <span class="submit">
                 <input type="submit" value="로그인">
                 <input type="reset" value="취소">
-            </div>
+            </span>
         </div>
     </div>
 </form>

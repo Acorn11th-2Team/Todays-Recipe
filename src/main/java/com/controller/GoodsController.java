@@ -36,10 +36,9 @@ public class GoodsController {
 			return "error/error";
 		}
 	@RequestMapping("/loginCheck/orderDone")
-	@ResponseBody
-	public String orderDone( String payMethod, HttpSession session, RedirectAttributes xxx) throws Exception{
+	public String orderDone(@RequestParam("payMethod") String payMethod, HttpSession session, RedirectAttributes xxx) throws Exception{
 		System.out.println("컨트롤러 들어옴");
-		
+		System.out.println("결제수단: " +  payMethod );
 
 		List<CartDTO> list_CartDTO = (List<CartDTO>) session.getAttribute("list_CartDTO");
 		System.out.println(list_CartDTO);
@@ -53,7 +52,7 @@ public class GoodsController {
 			oDTO.setNum(cDTO.getNum());
 			oDTO.setUserid(mDTO.getUserid());
 			oDTO.setgCode(cDTO.getgCode());
-			oDTO.setgName(mDTO.getUsername());
+			oDTO.setgName(cDTO.getgName());
 			oDTO.setgPrice(cDTO.getgPrice());
 			oDTO.setgAmount(cDTO.getgAmount());
 			oDTO.setgImage(cDTO.getgImage());
@@ -67,12 +66,13 @@ public class GoodsController {
 		}
 		System.out.println(list_OrderDTO);
 		
+		
 		List<HashMap> list_map = new ArrayList<HashMap>();
 		List<Integer> list_num = new  ArrayList<Integer>();
 		// 재고 파악
 		
 		for (OrderDTO oDTO : list_OrderDTO) {
-			
+			System.out.println("결제수단: " + oDTO.getPayMethod());
 			HashMap map = new HashMap();
 			
 			int Stock = service.getgStock(oDTO); // 주문하려는 상품의 재고 

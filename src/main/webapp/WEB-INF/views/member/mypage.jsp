@@ -68,9 +68,11 @@
             </div>
             
             <div class="submit">
-                <input type="submit" value="수정">
+                <input type="submit" value="수정">&nbsp;&nbsp;
                 <input type="reset" value="취소">
             </div>
+            <br>
+            <br>
         </div>
     </div>
 

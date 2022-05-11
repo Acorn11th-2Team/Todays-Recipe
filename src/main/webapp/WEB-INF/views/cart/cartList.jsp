@@ -180,7 +180,7 @@ $(function() {
 		
 		<tr>
 			<td colspan="100%">
-				<hr size="1" color="CCCCCC">
+				<hr size="2" color="CCCCCC">
 			</td>
 		</tr>
 	
@@ -254,9 +254,8 @@ $(function() {
 			<td height="10">
 		</tr>
 		<tr>
-			<td colspan="10" align="right">
-			총합 : <span id="totalSum" ></span>
-				<hr size="1" color="CCCCCC">
+			<td colspan="100%">
+				<hr size="2" color="CCCCCC">
 			</td>
 		</tr>
 		<tr>

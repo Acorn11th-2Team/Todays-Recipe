@@ -5,8 +5,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>	    
-	>>>${orderAllDone}
-<c:set var="xxx" value="${orderAllDone}" />
+<%-- 	>>>${list_OrderDTO} --%>
+<c:set var="xxx" value="${list_OrderDTO}" />
 <c:set var="userid" value="${xxx[0].userid}" />
 <c:set var="orderName" value="${xxx[0].orderName}" />
 <c:set var="post" value="${xxx[0].post}" />
@@ -14,23 +14,17 @@
 <c:set var="addr2" value="${xxx[0].addr2}" />
 <c:set var="phone" value="${xxx[0].phone}" />
 <c:set var="orderDay" value="${xxx[0].orderday}" />
-
-<table width="70%" cellspacing="0" cellpadding="0">
-
-	<tr>
-		<td height="30">
-	</tr>
-
-	<tr>
-		<td><b>주문완료</b></td>
-	</tr>
+<div class="wrap">
+<table width="70%" cellspacing="0" cellpadding="0" align="center">
 
 	<tr>
 		<td height="30">
 	</tr>
 
 	<tr>
-		<td align="center"><b>주문해주셔서 감사합니다.</b></td>
+		<td align="center">
+			<font size="5"><b>주문해주셔서 감사합니다.</b>
+		</td>
 	</tr>
 
 	<tr>
@@ -38,8 +32,9 @@
 	</tr>
 
 	<tr>
-		<td class="td_default" align="center"><b>${userid}</b> 님의 주문이
-			안전하게 처리되었습니다.</td>
+		<td class="td_default" align="center">
+			<b>${userid}</b> 님의 주문이 안전하게 처리되었습니다.
+		</td>
 	</tr>
 
 	<tr>
@@ -47,18 +42,24 @@
 	</tr>
 
 	<tr>
-		<td class="td_default"><b>상품 및 배송정보</b>
+		<td class="td_default">
+			<b>상품 및 배송정보</b>
 		</td>
 	</tr>
-
+	
+	<tr>
+		<td>
+			<hr size="2" color="CCCCCC">
+		</td>
+	</tr>
+	
 	<tr>
 		<td height="15">
 	</tr>
 
 	<tr>
 		<td>
-			<table width="100%" border="1" style="border-collapse: collapse"
-				bordercolor="#CCCCCC">
+			<table width="100%">
 				<tr>
 					<td class="td_default" width="150" height="35"> 받으시는 분</td>
 					<td class="td_default" height="35">${orderName}</td>
@@ -76,41 +77,41 @@
 				</tr>
 			</table>
 	</tr>
-	</td>
 
 	<tr>
 		<td height="20">
 	</tr>
-
+	<tr>
+		<td class="td_default">
+			<b>상품 및 배송정보</b>
+		</td>
+	</tr>
+	
 	<tr>
 		<td>
-			<table width="100%" border="1" style="border-collapse: collapse"
-				bordercolor="#CCCCCC">
-				<tr>
-					<td width="250" class="td_default" height="35" align="center"><strong>상품명</strong></td>
-					<td width="100" class="td_default" height="35" align="center"><strong>판매가</strong></td>
-					<td class="td_default" width="50" height="35" align="center"><strong>수량</strong></td>
-					<td class="td_default" width="100" height="35" align="center"><strong>합계</strong></td>
-				</tr>
+			<hr size="2" color="CCCCCC">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table width="100%">
 
- 		
    <!--  변수 선언 -->
     <c:set var="totalSum" value="0" />
-	<c:forEach var="xxx" items="${orderAllDone}" varStatus="status">
+	<c:forEach var="xxx" items="${list_OrderDTO}" varStatus="status">
     <!-- 누적 -->
 		<c:set var="totalSum" value="${totalSum + xxx.gPrice * xxx.gAmount }" />		
 				<tr>
 					<td height="35" class="td_default">
 						<span class="a_default">${xxx.gName} </span>
 					</td>
-					<td height="35" class="td_default" align="center">
-						<span  id = "price1">${xxx.gPrice}</span>원
+					<td colspan="3" height="35" class="td_default" align="right">
+						<span id = "num1">${xxx.gAmount}</span>개
 					</td>
-					<td height="35" class="td_default" align="center">
-						<span id = "num1">${xxx.gAmount}</span>권
-					</td>
-					<td height="35" class="td_default" align="center">
-						<span>${xxx.gPrice * xxx.gAmount}</span>원
+					<td height="35" class="td_default" align="right">
+						<span>
+							<fmt:formatNumber value="${xxx.gPrice * xxx.gAmount}" pattern="#,###"/>원
+						</span>
 					</td>
 				</tr>
 			
@@ -134,18 +135,19 @@
 
 	<tr>
 		<td>
-			<table width="100%" border="1" style="border-collapse: collapse"
-				bordercolor="#CCCCCC">
+			<table width="100%">
 				<tr>
 					<td class="td_default" width="150" height="35"> 결제금액</td>
-					<td class="td_default" height="35" align = 'right'> 
-					<input type = 'text' id = 'total' value = '${totalSum}' readonly>원
+					<td class="td_default" height="35" align = 'left'>
+						<span class="totalsum">
+							<fmt:formatNumber value="${totalSum}" pattern="#,###"/>원
+						</span> 
 					</td>
 				</tr>
 				<tr>
 					<td class="td_default" width="150" height="35"> 결제수단</td>
-					<td class="td_default" height="35" align = 'right'> 
-					<span>${xxx.payMethod}</span>
+					<td class="td_default" height="35" align = 'left'> 
+					${list_OrderDTO[0].payMethod}
 					</td>
 				</tr>
 			</table>
@@ -163,8 +165,11 @@
 	</tr>
 
 	<tr>
-		<td class="td_default" align="center"><a class="a_default"
-			href="OrderListDetailServlet?mem_id=guest">주문조회 페이지로 이동</a></td>
+		<td class="td_default" align="center">
+			<span class="submit">
+				<a class="a_default" href="goodsList?gCategory=Vegetable">계속해서 쇼핑하기</a>
+			</span>
+		</td>
 	</tr>
 
 	<tr>
@@ -172,3 +177,4 @@
 	</tr>
 
 </table>
+</div>
