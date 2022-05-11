@@ -43,7 +43,7 @@
 
 	<tr>
 		<td class="td_default">
-			<b>상품 및 배송정보</b>
+			<b>배송정보</b>
 		</td>
 	</tr>
 	
@@ -51,10 +51,6 @@
 		<td>
 			<hr size="2" color="CCCCCC">
 		</td>
-	</tr>
-	
-	<tr>
-		<td height="15">
 	</tr>
 
 	<tr>
@@ -83,7 +79,7 @@
 	</tr>
 	<tr>
 		<td class="td_default">
-			<b>상품 및 배송정보</b>
+			<b>주문 상품</b>
 		</td>
 	</tr>
 	
@@ -128,9 +124,10 @@
 	<tr>
 		<td class="td_default"><b>결제정보</b></td>
 	</tr>
-
 	<tr>
-		<td height="15">
+		<td>
+			<hr size="2" color="CCCCCC">
+		</td>
 	</tr>
 
 	<tr>
