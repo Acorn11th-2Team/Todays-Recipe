@@ -48,13 +48,59 @@ $(function() {
 		$(".check").each(function(idx, data) {
 			this.checked= result;
 		});
+		$(".allCheck2").each(function(idx, data) {
+			this.checked= result;
+		});
+
 	});
+	
+	//전체선택2
 	$("#allCheck2").on("click", function() {
 		var result= this.checked;
 		$(".check").each(function(idx, data) {
 			this.checked= result;
 		});
+
+		$(".allCheck").each(function(idx, data) {
+			this.checked= result;
+		});
+		
 	});
+	
+	// 체크 버튼 처리
+	$(".check").on("click", function() {
+		$(this).toggleClass('is-checked');
+		$(".check").each(function(idx, data) {
+			if(this.checked == false){ // false가 한개라도 있으면(전체가 선택되지 않으면 => cnt > 0)
+				$(".allCheck").each(function(idx, data) {
+					this.checked= false;
+				});
+				$(".allCheck2").each(function(idx, data) {
+					this.checked= false;
+				});
+			}
+			
+		});
+		
+		var cnt = 0;
+		$(".check").each(function(idx, data) {
+			if(this.checked == false){
+				cnt ++; // false가 한개라도 있으면(전체가 선택되지 않으면 => cnt > 0)
+			}
+			
+		});
+		
+		if(cnt == 0){	// 전체선택 일때
+			$(".allCheck").each(function(idx, data) {
+				this.checked= true;
+			});
+			$(".allCheck2").each(function(idx, data) {
+				this.checked= true;
+			});
+		}
+
+	});
+	
 	//삭제버튼 이벤트처리
 	$(".deleteBtn").on("click", function () {
 		console.log("deleteBtn 클릭 ");
@@ -163,8 +209,7 @@ $(function() {
 	
 		<tr>
 			<td class="td_default" align="left">
-				<input type="checkbox"
-				name="allCheck" id="allCheck"> 
+				<input class="allCheck" type="checkbox" name="allCheck" id="allCheck"> 
 			</td>
 			<td>
 				<strong>&nbsp;전체선택</strong>
@@ -263,9 +308,8 @@ $(function() {
 		</tr>
 	
 		<tr>
-			<td class="td_default" align="left">
-				<input type="checkbox"
-				name="allCheck2" id="allCheck2"> 
+			<td  align="left">
+				<input class="allCheck2" type="checkbox" name="allCheck2" id="allCheck2"> 
 			</td>
 			<td colspan="2">
 				<strong>&nbsp;전체선택</strong>

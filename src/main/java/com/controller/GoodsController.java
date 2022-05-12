@@ -36,7 +36,12 @@ public class GoodsController {
 			return "error/error";
 		}
 	@RequestMapping("/loginCheck/orderDone")
-	public String orderDone(@RequestParam("payMethod") String payMethod, HttpSession session, RedirectAttributes xxx) throws Exception{
+	public String orderDone(@RequestParam("payMethod") String payMethod, HttpSession session, RedirectAttributes xxx,
+					@RequestParam("orderName") String orderName,		
+					@RequestParam("post") String postcode,
+					@RequestParam("addr1") String roadAddress,
+					@RequestParam("addr2") String jibunAddress,
+					@RequestParam("phone") String phone ) throws Exception{
 		System.out.println("컨트롤러 들어옴");
 		System.out.println("결제수단: " +  payMethod );
 
@@ -56,11 +61,11 @@ public class GoodsController {
 			oDTO.setgPrice(cDTO.getgPrice());
 			oDTO.setgAmount(cDTO.getgAmount());
 			oDTO.setgImage(cDTO.getgImage());
-			oDTO.setOrderName(mDTO.getUsername());
-			oDTO.setPost(mDTO.getPost());
-			oDTO.setAddr1(mDTO.getAddr1());
-			oDTO.setAddr2(mDTO.getAddr2());
-			oDTO.setPhone(mDTO.getPhone1()+mDTO.getPhone2()+mDTO.getPhone3());
+			oDTO.setOrderName(orderName);
+			oDTO.setPost(postcode);
+			oDTO.setAddr1(roadAddress);
+			oDTO.setAddr2(jibunAddress);
+			oDTO.setPhone(phone);
 			oDTO.setPayMethod(payMethod);
 			list_OrderDTO.add(oDTO);
 		}

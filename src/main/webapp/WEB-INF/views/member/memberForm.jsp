@@ -19,9 +19,101 @@
 			 error:function(xhr,status,error){}
 		  });//end ajax
 	  });//end on
+	  
+	  $('#signup').submit(function() {
+		    console.log($('#result').text());
+			// 아이디 중복 검사
+			if ($('#result').text() == "아이디 중복") {
+	            alert('아이디 중복');
+	            $('#userid').focus();
+	            return false;
+	        }
+			
+			// 비밀번호 확인 불일치
+			if ($('#passwd').val() != $('#passwd2').val()) {
+	            alert('비밀번호 불일치');
+	            $('#passwd').focus();
+	            return false;
+	        }
+		  
+			// 빈칸 누락 예외처리
+	        if ($('#userid').val() == '') {
+	            alert('아이디를 입력하세요');
+	            $('#userid').focus();
+	            return false;
+	        }
+	        if ($('#passwd').val() == '') {
+	            alert('비밀번호를 입력하세요.');
+	            $('#passwd').focus();
+	            return false;
+	        }
+	        if ($('#passwd2').val() == '') {
+	            alert('비밀번호 확인을 입력하세요.');
+	            $('#passwd2').focus();
+	            return false;
+	        }
+	        if ($('#passwd2').val() == '') {
+	            alert('비밀번호 확인을 입력하세요.');
+	            $('#passwd2').focus();
+	            return false;
+	        }
+	        if ($('#username').val() == '') {
+	            alert('이름을 입력하세요.');
+	            $('#username').focus();
+	            return false;
+	        }
+	        if ($('#sample4_postcode').val() == '') {
+	            alert('우편번호 입력하세요.');
+	            $('#sample4_postcode').focus();
+	            return false;
+	        }
+	        if ($('#sample4_roadAddress').val() == '') {
+	            alert('도로명 주소를 입력하세요.');
+	            $('#sample4_roadAddress').focus();
+	            return false;
+	        }
+	        if ($('#sample4_jibunAddress').val() == '') {
+	            alert('지번 주소를 입력하세요.');
+	            $('#sample4_jibunAddress').focus();
+	            return false;
+	        }
+	        if ($('#phone1').val() == '') {
+	            alert('전화번호를 입력하세요.');
+	            $('#phone1').focus();
+	            return false;
+	        }
+	        if ($('#phone2').val() == '') {
+	            alert('전화번호를 입력하세요.');
+	            $('#phone2').focus();
+	            return false;
+	        }
+	        if ($('#phone3').val() == '') {
+	            alert('전화번호를 입력하세요.');
+	            $('#phone3').focus();
+	            return false;
+	        }
+	        if ($('#email1').val() == '') {
+	            alert('이메일을 입력하세요.');
+	            $('#email1').focus();
+	            return false;
+	        }
+	        if ($('#email2').val() == '') {
+	            alert('이메일을 입력하세요.');
+	            $('#email2').focus();
+	            return false;
+	        }
+	    });
+	  
+	  
    });//end ready
-  </script> 
-<form action="memberAdd" method="get">
+
+   if( $("#userid").val() == ""){
+		  alert("아이디를 입력하세요"); 
+   }
+   
+   
+</script> 
+<form action="memberAdd" method="get" id="signup">
 	<div class="wrap">
         <div class="login">
             <h2>회원가입</h2>
@@ -41,7 +133,7 @@
             </div>
             <div class="username">
                 <h4>이름</h4>
-                <input type="text" name="username" placeholder="Name">
+                <input type="text" name="username" id="username" placeholder="Name">
             </div>
             <div class="post" style="display:inline;">
                 <h4>우편번호</h4>
@@ -56,11 +148,11 @@
             </div>
             <div class="phone">
                 <h4>전화번호</h4>
-				<select name="phone1">
+				<select name="phone1" id="phone1">
 				  <option value="010">010</option>
 				  <option value="011">011</option>
 				</select>&nbsp;-&nbsp;
-				<input type="text" name="phone2" >&nbsp;-&nbsp;<input type="text" name="phone3" >
+				<input type="text" name="phone2" id="phone2" >&nbsp;-&nbsp;<input type="text" name="phone3" id="phone3">
             </div>
             <div class="email">
                 <h4>이메일</h4>
