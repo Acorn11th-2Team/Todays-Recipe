@@ -21,8 +21,7 @@
 	  });//end on
 	  
 	  $('#signup').submit(function() {
-		    console.log($('#result').text());
-			// 아이디 중복 검사
+		    console.log($('#result').text());			// 아이디 중복 검사
 			if ($('#result').text() == "아이디 중복") {
 	            alert('아이디 중복');
 	            $('#userid').focus();
@@ -106,10 +105,6 @@
 	  
 	  
    });//end ready
-
-   if( $("#userid").val() == ""){
-		  alert("아이디를 입력하세요"); 
-   }
    
    
 </script> 

@@ -6,6 +6,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 	function sameAddress(n){
 		console.log(n,n.checked);
@@ -28,6 +29,36 @@
 			 document.getElementById("phone").value="";
 		}
 	}
+	$(document).ready(function(){
+		$('#orderConfirmForm').submit(function() {
+			if ($('#orderName').val() == '') {
+	            alert('배송받는분의 이름을 입력하세요');
+	            $('#orderName').focus();
+	            return false;
+	        }
+			if ($('#sample4_postcode').val() == '') {
+	            alert('배송지의 우편번호를 입력하세요');
+	            $('#sample4_postcode').focus();
+	            return false;
+	        }
+			if ($('#sample4_roadAddress').val() == '') {
+	            alert('배송지의 도로명주소를 입력하세요');
+	            $('#sample4_roadAddress').focus();
+	            return false;
+	        }
+			if ($('sample4_jibunAddress').val() == '') {
+	            alert('배송지의 지번주소를 입력하세요');
+	            $('#orderName').focus();
+	            return false;
+	        }
+			if ($('#phone').val() == '') {
+	            alert('배송관련 연락을 받으실 휴대전화 번호를 입력하세요');
+	            $('#phone').focus();
+	            return false;
+	        }
+		});
+	});
+	
 </script>	
 
 <% 	List<CartDTO> list_CartDTO = (List<CartDTO>)request.getAttribute("cDTO_list");
@@ -38,7 +69,7 @@
 	session.setAttribute("mDTO", mDTO);
 %>
 
-<form name="myForm" method="get" action="loginCheck/orderDone">
+<form name="myForm" method="get" action="loginCheck/orderDone" id="orderConfirmForm">
   <div class="wrap">
 	<table width="80%" cellspacing="0" cellpadding="0" align="center">
 		<tr>
