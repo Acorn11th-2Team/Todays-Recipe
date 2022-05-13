@@ -126,7 +126,6 @@ $(function() {
 					@
 				<td><input type="text" name=email2 id="email2${dto.userid}"
 					value="${dto.email2}" style="width: 90px; height: 15px;"></td>
-
 				<td><input type="button" value="수정" class="updateBtn"
 					data-userid="${dto.userid}"></td>
 				<td><input type="button" value="제거" class="removeBtn"

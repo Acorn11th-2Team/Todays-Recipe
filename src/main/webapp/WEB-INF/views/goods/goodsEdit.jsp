@@ -19,7 +19,7 @@
 						gCode : gCode
 					},
 					success : function(data, status, xhr) {
-						alert(gCode+"품번의 항목이 삭제되었습니다.");
+						alert(gCode+"품번의 항목이 삭제되었습니다");
 						console.log("success");
 						//dom삭제 
 						xxx.parents().filter("tr").remove();
@@ -44,11 +44,10 @@
 			var gWeight = $("#gWeight" + gCode).val();
 			var gPrice = $("#gPrice" + gCode).val();
 			var gStock = $("#gStock" + gCode).val();
-			if ((gCode == "") || (gCategory == "") || (gName == "")
-					|| (gUnit == "")) {
+			if ((gCode == "") || (gCategory == "") || (gName == "")	|| (gUnit == "")) {
 				alert("필수 항목은 빈칸으로 둘 수 없습니다");
 				return false;
-			} else if((gPrice == "0") || (gStock == "0")) {
+			} else if ((gPrice == "0") || (gStock == "0")) {
 				alert("가격과 수량을 확인해주세요");
 				return false;
 			} else {
@@ -68,11 +67,11 @@
 							gStock : gStock
 						},
 						success : function(data, status, xhr) {
-							alert(gCode+"품번의 항목이 수정되었습니다.");
+							alert(gCode+"품번의 항목이 수정되었습니다");
 							console.log("success");
 						},
 						error : function(xhr, status, error) {
-							alert("오류. 기입된 항목을 다시 확인하세요.");
+							alert("오류. 기입된 항목을 다시 확인하세요");
 							console.log(error);
 						}//end error			
 					});//end ajax
@@ -101,9 +100,9 @@
 				return false;
 			} else {
 				if (confirm("추가하려는 항목의 정보가 다음이 맞습니까?"+
-					"\n품번: "+CodePrefix+gCode+"  |  상품명:"+gName+
-					"\n단위: "+gUnit+"  |  중량/용량: "+gUnit+
-					"\n가격: "+gPrice+"  |  재고: "+gStock+) == true) {
+					"\n품번: "+CodePrefix+gCode+"    |  상품명: "+gName+
+					"\n단위: "+gUnit+"    |  중량/용량: "+gUnit+
+					"\n가격: "+gPrice+"    |  재고: "+gStock) == true) {
 						$.ajax({
 						url : "goodsAdd",
 						type : "get",
@@ -119,12 +118,12 @@
 							gStock : gStock		
 						},
 						success : function(data, status, xhr) {
-							alert(CodePrefix+gCode+"품번의 항목이 추가되었습니다.");
+							alert(CodePrefix+gCode+"품번의 항목이 추가되었습니다");
 							console.log("success");
 							window.location.reload();
 						},
 						error : function(xhr, status, error) {
-							alert("항목 추가에 실패하였습니다. 입력된 항목을 확인해주세요.");
+							alert("항목 추가에 실패하였습니다. 입력된 항목을 확인해주세요");
 							console.log(error);
 						}//end error		
 					});//end ajax
