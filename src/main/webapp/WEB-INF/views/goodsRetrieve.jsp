@@ -26,7 +26,7 @@
 		</div>
 		<hr style="border: solid 0.5px gray;">
 		<div align="center">
-		<jsp:include page="goods/goodsRetrieve.jsp" flush="true"></jsp:include>
+			<jsp:include page="goods/goodsRetrieve.jsp" flush="true"></jsp:include>
 		</div>
 	</body>
 </html>

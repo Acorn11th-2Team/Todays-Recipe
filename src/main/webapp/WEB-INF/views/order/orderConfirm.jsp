@@ -36,6 +36,12 @@
 	            $('#orderName').focus();
 	            return false;
 	        }
+			// 이름 길이 예외처리
+			if ($('#orderName').val().length < 2 || $('#orderName').val().length > 5) {
+	            alert('이름이 유효하지 않습니다');
+	            $('#phone').focus();
+	            return false;
+	        }
 			if ($('#sample4_postcode').val() == '') {
 	            alert('배송지의 우편번호를 입력하세요');
 	            $('#sample4_postcode').focus();
@@ -56,6 +62,13 @@
 	            $('#phone').focus();
 	            return false;
 	        }
+			// 휴대폰 번호 길이 예외처리
+			if ($('#phone').val().length != 11) {
+	            alert('휴대전화 번호가 유효하지 않습니다');
+	            $('#phone').focus();
+	            return false;
+	        }
+			
 		});
 	});
 	

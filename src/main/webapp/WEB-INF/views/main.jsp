@@ -7,8 +7,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
-		<c:if test="${!empty success }">
-			<script>alert("${success}")</script>
+		<c:if test="${!empty success }"> <!-- 회원가입 성공 후 -->
+			<script>
+				alert("${success}")
+				location.href="/shopMiniMallProject_chul/"
+			</script>
+			
 		</c:if>
 	</head>
 	<body>

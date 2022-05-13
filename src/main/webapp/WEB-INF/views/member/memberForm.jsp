@@ -61,6 +61,7 @@
 	            $('#username').focus();
 	            return false;
 	        }
+	        
 	        if ($('#sample4_postcode').val() == '') {
 	            alert('우편번호 입력하세요.');
 	            $('#sample4_postcode').focus();
@@ -81,16 +82,19 @@
 	            $('#phone1').focus();
 	            return false;
 	        }
+	        
 	        if ($('#phone2').val() == '') {
 	            alert('전화번호를 입력하세요.');
 	            $('#phone2').focus();
 	            return false;
 	        }
+
 	        if ($('#phone3').val() == '') {
 	            alert('전화번호를 입력하세요.');
 	            $('#phone3').focus();
 	            return false;
 	        }
+
 	        if ($('#email1').val() == '') {
 	            alert('이메일을 입력하세요.');
 	            $('#email1').focus();
