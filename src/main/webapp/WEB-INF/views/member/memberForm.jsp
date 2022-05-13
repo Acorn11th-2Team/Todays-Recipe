@@ -106,7 +106,11 @@
 	            return false;
 	        }
 	    });
-	  
+		
+	// 이메일 선택 입력
+	  $("#emailSelect").on("click", function () {
+		$("#email2").val($("#emailSelect").val());
+	})
 	  
    });//end ready
    

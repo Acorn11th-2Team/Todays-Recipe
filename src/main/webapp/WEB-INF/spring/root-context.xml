@@ -29,7 +29,9 @@
 			<list>
 				<value>classpath:com/config/CartMapper.xml</value>
 				<value>classpath:com/config/GoodsMapper.xml</value>
-				<value>classpath:com/config/MemberMapper.xml</value>				
+				<value>classpath:com/config/MemberMapper.xml</value>
+				<!-- QA -->
+				<value>classpath:com/config/QaMapper.xml</value>				
 			</list>		
 		</property>
 		<property name="typeAliases">
@@ -37,7 +39,9 @@
 				<value>com.dto.CartDTO</value>
 				<value>com.dto.GoodsDTO</value>
 				<value>com.dto.MemberDTO</value>
-				<value>com.dto.OrderDTO</value>				
+				<value>com.dto.OrderDTO</value>
+				<!-- QA -->
+				<value>com.dto.QaDTO</value>				
 			</list>		
 		</property>
 	</bean>	

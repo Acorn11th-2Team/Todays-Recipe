@@ -16,6 +16,7 @@ public boolean preHandle(HttpServletRequest request, HttpServletResponse respons
 	System.out.println("preHandle");
 	HttpSession session = request.getSession();
 	if(session.getAttribute("login") == null) {
+		session.setAttribute("mesg", "로그인이 필요한 작업입니다.");
 		response.sendRedirect("../loginForm");//servlet-context.xml 
 		return false;  //주의
 	}else {

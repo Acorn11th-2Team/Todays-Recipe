@@ -2,4 +2,4 @@
     pageEncoding="UTF-8"%>
 
 <a href="">공지사항</a>&nbsp;
-<a href="">1:1문의</a>&nbsp;
+<a href="loginCheck/user_qaList">1:1문의</a>&nbsp;
