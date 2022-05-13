@@ -31,7 +31,8 @@
 				<value>classpath:com/config/GoodsMapper.xml</value>
 				<value>classpath:com/config/MemberMapper.xml</value>
 				<!-- QA -->
-				<value>classpath:com/config/QaMapper.xml</value>				
+				<value>classpath:com/config/QaMapper.xml</value>
+				<value>classpath:com/config/NoticeMapper.xml</value> <!-- Notice -->			
 			</list>		
 		</property>
 		<property name="typeAliases">
@@ -41,7 +42,9 @@
 				<value>com.dto.MemberDTO</value>
 				<value>com.dto.OrderDTO</value>
 				<!-- QA -->
-				<value>com.dto.QaDTO</value>				
+				<value>com.dto.QaDTO</value>
+				<value>com.dto.NoticeDTO</value> <!-- Notice -->
+				<value>com.dto.NoticePagingDTO</value>	<!-- Notice -->			
 			</list>		
 		</property>
 	</bean>	
