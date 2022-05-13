@@ -103,6 +103,21 @@ public class GoodsDAO_mySQL_Impl implements GoodsDAO_Interface{
 		
 	}
 
+
+	@Override
+	public void goodsRemove(String gCode) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public void goodsUpdate(GoodsDTO dto) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public void goodsAdd(GoodsDTO dto) {
+		// TODO Auto-generated method stub
+	}
 	
 
 }

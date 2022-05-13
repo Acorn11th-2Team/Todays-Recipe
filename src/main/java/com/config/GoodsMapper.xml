@@ -13,9 +13,29 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<select id="goodsList" resultType="GoodsDTO" 
 	parameterType="string">
-	select *
-	from goods
-	where gCategory= #{gCategory}	
+		select *
+		from goods
+		where gCategory= #{gCategory}	
 	</select>
+	
+	<delete id="goodsRemove" parameterType="string">
+		delete from goods
+		where
+		gCode= #{gCode}
+	</delete>
 
+	<insert id="goodsAdd" parameterType="GoodsDTO">
+		insert into goods
+		(gCode,gCategory,gName,gPrice,gImage,gUnit,gWeight,gStock)
+		values
+		(#{gCode},#{gCategory},#{gName},#{gPrice},#{gImage},#{gUnit},#{gWeight},#{gStock})
+	</insert>
+
+	<update id="goodsUpdate" parameterType="GoodsDTO">
+		update goods
+		set gImage=
+		#{gImage}, gName= #{gName}, gUnit= #{gUnit}, gWeight= #{gWeight},
+		gPrice= #{gPrice}, gStock= #{gStock}
+		where gCode= #{gCode}
+	</update>
 </mapper>

@@ -1,5 +1,6 @@
 package com.dao;
 
+import java.util.List;
 import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -28,5 +29,13 @@ public class MemberDAO {
 		template.update("MemberMapper.memberUpdate", m);		
 	}
 	
-
+	public void memberDelete(String userid) throws Exception {
+		int n = template.delete("MemberMapper.memberDelete", userid);
+		System.out.println(n);
+	}
+	
+	public List<MemberDTO> memberEdit() throws Exception {
+		List<MemberDTO> list= template.selectList("MemberMapper.memberList");
+		return list;
+	}
 }

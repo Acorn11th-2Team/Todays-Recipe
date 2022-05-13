@@ -20,8 +20,7 @@ public class GoodsDAO implements GoodsDAO_Interface {
 	
 	@Override
 	public void orderDone(OrderDTO oDTO) throws Exception{
-		int n = template.insert("CartMapper.orderDone", oDTO);
-		
+		int n = template.insert("CartMapper.orderDone", oDTO);	
 	}
 	
 	@Override
@@ -70,8 +69,6 @@ public class GoodsDAO implements GoodsDAO_Interface {
 	@Override
 	public void cartDelete(int num) throws Exception{
 		int n= template.delete("CartMapper.cartDel", num);
-
-		
 	}
 	
 	@Override
@@ -83,7 +80,6 @@ public class GoodsDAO implements GoodsDAO_Interface {
 	@Override
 	public void delAllCart(ArrayList<String> list)  throws Exception{
 		int n = template.delete("CartMapper.cartAllDel", list);
-		
 	}
 
 	@Override
@@ -102,13 +98,20 @@ public class GoodsDAO implements GoodsDAO_Interface {
 		
 	}
 
-	
+	@Override
+	public void goodsAdd(GoodsDTO dto) {
+		int n = template.insert("GoodsMapper.goodsAdd", dto);
+		System.out.println(n);
+	}
 
-	
+	@Override
+	public void goodsRemove(String gCode) {
+		int n = template.delete("GoodsMapper.goodsRemove", gCode);
+	}
 
-
-
-
-
-	
+	@Override
+	public void goodsUpdate(GoodsDTO dto) {
+		int n = template.update("GoodsMapper.goodsUpdate", dto);
+		System.out.println(n);
+	}
 }

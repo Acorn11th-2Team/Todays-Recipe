@@ -1,5 +1,6 @@
 package com.service;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,6 @@ public class MemberService {
 		return dto;
 	}
 
-	
-
 	public MemberDTO myPage(String userid)throws Exception {
 		MemberDTO dto= dao.myPage(userid);
 		return dto;
@@ -31,5 +30,14 @@ public class MemberService {
 
 	public void memberUpdate(MemberDTO m)throws Exception {
 		dao.memberUpdate(m);		
+	}
+
+	public void memberDelete(String userid) throws Exception {
+		dao.memberDelete(userid);
+	}
+
+	public List<MemberDTO> memberEdit() throws Exception {
+		List<MemberDTO> list = dao.memberEdit();
+		return list;
 	}
 }

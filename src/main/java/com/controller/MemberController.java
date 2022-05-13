@@ -73,4 +73,32 @@ public class MemberController {
 	  public String serviceCenter() throws Exception {
 		return "serviceCenter";  
 	  }
+	  
+	  	@RequestMapping(value = "/adminMedit")
+	public String adminList(HttpSession session) throws Exception {
+		return "redirect:/memberEdit";
+	}
+	
+	@RequestMapping(value = "/memberEdit")//memberEdit.jsp
+	public ModelAndView memberEdit()throws Exception {
+		List<MemberDTO> list= service.memberEdit();
+		ModelAndView mav= new ModelAndView();
+		mav.addObject("memberEdit", list);
+		//request.setAttribute("goodsList", list)와 동일
+		mav.setViewName("adminMedit"); //main.jsp
+		return mav;	
+	}
+	@RequestMapping(value = "/mUpdate")
+	@ResponseBody
+	public void mUpdate(MemberDTO m) throws Exception {
+		System.out.println(m);
+		service.memberUpdate(m);
+	}
+
+	@RequestMapping(value = "/memberDelete")
+	@ResponseBody
+	public void memberDelete(@RequestParam("userid") String userid) throws Exception {
+		System.out.println(userid);
+		service.memberDelete(userid);
+	}
 }
