@@ -9,7 +9,9 @@ create table Notice
 (  num NUMBER(6) PRIMARY KEY,
     writeDay DATE  DEFAULT SYSDATE,
     title varchar2(500),
-    contents varchar2(3900)
+    contents varchar2(3900),
+    writer varchar2(500),
+    viewcount NUMBER(6)
 );   
 -- 공지사항 게시판 번호 시퀀스 생성
 create sequence notice_seq;
