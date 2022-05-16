@@ -24,7 +24,12 @@
 </head>
 <body>
 <div style="width:13%; float:left; margin-top: 55px;">
-	<jsp:include page="../table/servicecenterMenu.jsp"></jsp:include>
+	<c:if test="${login.userid eq 'admin'}">
+      	<jsp:include page="../table/servicecenterMenu_manager.jsp"></jsp:include>
+   	</c:if>
+   	<c:if test="${login.userid ne 'admin'}">
+      	<jsp:include page="../table/servicecenterMenu.jsp"></jsp:include>
+   	</c:if>
 </div>
 <div style="width:85%; float:right; margin-top: 55px">
 	<form action="answerUpdate">
