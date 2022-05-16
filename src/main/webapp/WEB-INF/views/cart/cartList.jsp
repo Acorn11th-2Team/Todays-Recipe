@@ -11,6 +11,12 @@
 	</script>
 </c:if>
 <% session.removeAttribute("mesg"); %>
+<c:if test="${empty cartList}">
+	<script>
+		alert('장바구니가 비었습니다');
+		location.href="goodsList?gCategory=Vegetable";
+	</script>
+</c:if>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 

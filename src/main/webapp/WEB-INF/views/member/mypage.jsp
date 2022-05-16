@@ -6,18 +6,122 @@
 <script>
   $(document).ready(function(){
 	 
-	  $("form").on("submit",function(event){
+	  /* $("form").on("submit",function(event){
 		 var email1=$("#email1").val(); 
 		 var email2=$("#email2").val(); 
 		 if(email1.length==0|| email2.length==0){
 			 event.preventDefault();
 			 alert("email  확인");
 		 }
-	  });
+	  }); */
+	  
+	  $('#mypage').submit(function() {
+		    console.log($('#result').text());			// 아이디 중복 검사
+			if ($('#result').text() == "아이디 중복") {
+	            alert('아이디 중복');
+	            $('#userid').focus();
+	            return false;
+	        }
+			
+			// 비밀번호 확인 불일치
+			if ($('#passwd').val() != $('#passwd2').val()) {
+	            alert('비밀번호 불일치');
+	            $('#passwd').focus();
+	            return false;
+	        }
+		  
+			// 빈칸 누락 예외처리
+	        if ($('#userid').val() == '') {
+	            alert('아이디를 입력하세요');
+	            $('#userid').focus();
+	            return false;
+	        }
+	        if ($('#passwd').val() == '') {
+	            alert('비밀번호를 입력하세요.');
+	            $('#passwd').focus();
+	            return false;
+	        }
+	        if ($('#passwd2').val() == '') {
+	            alert('비밀번호 확인을 입력하세요.');
+	            $('#passwd2').focus();
+	            return false;
+	        }
+	        if ($('#passwd2').val() == '') {
+	            alert('비밀번호 확인을 입력하세요.');
+	            $('#passwd2').focus();
+	            return false;
+	        }
+	        if ($('#username').val() == '') {
+	            alert('이름을 입력하세요.');
+	            $('#username').focus();
+	            return false;
+	        }
+	        
+	        if ($('#sample4_postcode').val() == '') {
+	            alert('우편번호 입력하세요.');
+	            $('#sample4_postcode').focus();
+	            return false;
+	        }
+	        if ($('#sample4_roadAddress').val() == '') {
+	            alert('도로명 주소를 입력하세요.');
+	            $('#sample4_roadAddress').focus();
+	            return false;
+	        }
+	        if ($('#sample4_jibunAddress').val() == '') {
+	            alert('지번 주소를 입력하세요.');
+	            $('#sample4_jibunAddress').focus();
+	            return false;
+	        }
+	        if ($('#phone1').val() == '') {
+	            alert('전화번호를 입력하세요.');
+	            $('#phone1').focus();
+	            return false;
+	        }
+	        if ($('#phone1').val().length != 3 ) {
+	            alert('전화번호를 확인하세요.');
+	            $('#phone1').focus();
+	            return false;
+	        }
+	        
+	        if ($('#phone2').val() == '') {
+	            alert('전화번호를 입력하세요.');
+	            $('#phone2').focus();
+	            return false;
+	        }
+	        
+	        if ($('#phone2').val().length > 4 ) {
+	            alert('전화번호를 확인하세요.');
+	            $('#phone2').focus();
+	            return false;
+	        }
+
+	        if ($('#phone3').val() == '') {
+	            alert('전화번호를 입력하세요.');
+	            $('#phone3').focus();
+	            return false;
+	        }
+	        
+	        if ($('#phone3').val().length > 4 ) {
+	            alert('전화번호를 확인하세요.');
+	            $('#phone3').focus();
+	            return false;
+	        }
+
+	        if ($('#email1').val() == '') {
+	            alert('이메일을 입력하세요.');
+	            $('#email1').focus();
+	            return false;
+	        }
+	        if ($('#email2').val() == '') {
+	            alert('이메일을 입력하세요.');
+	            $('#email2').focus();
+	            return false;
+	        }
+	    });
 	  
   });
 </script>
-<form action="loginCheck/memberUpdate" method="get">
+<form action="loginCheck/memberUpdate" method="get" id="mypage">
 
 <span id="result"></span>
 	<div class="wrap">
@@ -31,7 +135,7 @@
 
             <div class="username">
                 <h4>이름</h4>
-                <input type="text" name="username" value="${login.username}">
+                <input type="text" name="username" value="${login.username}" id="username">
             </div>
             <div class="post" style="display:inline;">
                 <h4>우편번호</h4>
@@ -46,7 +150,7 @@
             </div>
             <div class="phone">
                 <h4>전화번호</h4>
-				<select name="phone1">
+				<select name="phone1" id="phone1">
 					<option value="010" 
 					<c:if test="${login.phone1=='010' }">selected</c:if>
 				  	>010</option>
@@ -54,8 +158,8 @@
 				 	<c:if test="${login.phone1=='011' }">selected</c:if>
 				  	>011</option>
 				</select>&nbsp;-&nbsp;
-				<input type="text" value="${login.phone2 }" name="phone2" >
-					&nbsp;-&nbsp;<input type="text" value="${login.phone3 }" name="phone3" >
+				<input type="text" value="${login.phone2 }" name="phone2" id="phone2">
+					&nbsp;-&nbsp;<input type="text" value="${login.phone3 }" name="phone3" id="phone3">
             </div>
             <div class="email">
                 <h4>이메일</h4>
