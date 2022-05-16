@@ -82,15 +82,30 @@
 	            $('#phone1').focus();
 	            return false;
 	        }
+	        if ($('#phone1').val().length != 3 ) {
+	            alert('전화번호를 확인하세요.');
+	            $('#phone1').focus();
+	            return false;
+	        }
 	        
 	        if ($('#phone2').val() == '') {
 	            alert('전화번호를 입력하세요.');
 	            $('#phone2').focus();
 	            return false;
 	        }
+	        if ($('#phone2').val().length > 4 ) {
+	            alert('전화번호를 확인하세요.');
+	            $('#phone2').focus();
+	            return false;
+	        }
 
 	        if ($('#phone3').val() == '') {
 	            alert('전화번호를 입력하세요.');
+	            $('#phone3').focus();
+	            return false;
+	        }
+	        if ($('#phone3').val().length > 4 ) {
+	            alert('전화번호를 확인하세요.');
 	            $('#phone3').focus();
 	            return false;
 	        }
