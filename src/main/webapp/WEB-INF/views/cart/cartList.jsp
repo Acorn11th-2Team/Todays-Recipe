@@ -57,6 +57,7 @@ $(function() {
 		} */
 		$(this).toggleClass('is-checked');
 		var cnt = 0;
+		var num=$(this).attr("data-num");
 		$(".check").each(function(idx, data) {
 			if(this.checked == true){
 				cnt ++; // 
@@ -67,6 +68,10 @@ $(function() {
 		if(cnt == 0){	// 아무것도 선택되지 않았을때
 			alert('주문하실 항목을 선택해 주세요');
 		 	return false;
+		}
+		if($("#cartAmount" + num).val() == 0){
+			alert('수량을 조정해 주세요');
+			return false;
 		}
 		$("form").attr("action", "loginCheck/orderAllCart");
 		$("form").submit();	
@@ -205,7 +210,7 @@ $(function() {
 		var num=$(this).attr("data-num");
 		console.log(num);
 		var result = $("#cartAmount" + num).val();
-		if(result > 0){
+		if(result != 1){
 			result = parseInt(result) - 1;
 		}
 		
