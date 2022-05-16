@@ -39,6 +39,31 @@ $(function() {
 	//전체주문하기
 	$("#orderAllBtn").on("click",function(){
 		console.log("주문하기 버튼 클릭 됨")
+		/* var cnt = 0;
+		$(".check").each(function(idx, data) {
+			if(this.checked == true){
+				cnt ++;
+			}
+		});
+		if(cnt == 0){	// 아무것도 체크되지 않은 경우
+			alert("주문하실 항목을 선택해 주세요.");
+			return false;
+		}esle{
+			
+		} */
+		$(this).toggleClass('is-checked');
+		var cnt = 0;
+		$(".check").each(function(idx, data) {
+			if(this.checked == true){
+				cnt ++; // 
+			}
+			
+		});
+		
+		if(cnt == 0){	// 아무것도 선택되지 않았을때
+			alert('주문하실 항목을 선택해 주세요');
+		 	return false;
+		}
 		$("form").attr("action", "loginCheck/orderAllCart");
 		$("form").submit();	
 	});
