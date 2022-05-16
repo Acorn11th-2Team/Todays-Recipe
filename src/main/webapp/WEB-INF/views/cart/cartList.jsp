@@ -31,10 +31,14 @@ $(function() {
 	totalXXX();
 	
 	//주문하기
-	$(".orderBtn").on("click",function(){
+/* 	$(".orderBtn").on("click",function(){
 		var num= $(this).attr("data-num");
-		location.href="loginCheck/orderConfirm?num="+num;		
-	});
+		if(cnt == 0){
+			alert("아이템을 선택해주세요");
+		} else {
+		location.href="loginCheck/orderConfirm?num="+num;
+		}
+	}); */
 	
 	//전체주문하기
 	$("#orderAllBtn").on("click",function(){
@@ -61,7 +65,7 @@ $(function() {
 		});
 		
 		if(cnt == 0){	// 아무것도 선택되지 않았을때
-			alert('삭제하실 항목을 선택해 주세요');
+			alert('주문하실 항목을 선택해 주세요');
 		 	return false;
 		}
 		$("form").attr("action", "loginCheck/orderAllCart");
@@ -80,7 +84,7 @@ $(function() {
 		});
 		
 		if(cnt == 0){	// 아무것도 선택되지 않았을때
-			alert('주문하실 항목을 선택해 주세요');
+			alert('삭제하실 항목을 선택해 주세요');
 		 	return false;
 		}
 		$("form").attr("action", "loginCheck/delAllCart");

@@ -2,7 +2,16 @@
     pageEncoding="UTF-8"%>
      
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript">   
+<script type="text/javascript">
+
+
+	//숫자가 아니면 입력창에 입력이 안되게끔 처리 (NumberOnly)
+	$(document).ready(function(){
+	   $("input:text[numberOnly]").on("keyup", function() {
+	      $(this).val($(this).val().replace(/[^0-9]/g,""));
+	   }); 
+	}); //end. ready
+
    $(document).ready(function(){
 	  $("#userid").on("keyup",function(){
 		  $.ajax({
@@ -170,7 +179,8 @@
 				  <option value="010">010</option>
 				  <option value="011">011</option>
 				</select>&nbsp;-&nbsp;
-				<input type="text" name="phone2" id="phone2" >&nbsp;-&nbsp;<input type="text" name="phone3" id="phone3">
+				<input type="text" name="phone2" id="phone2" numberOnly >&nbsp;
+				-&nbsp;<input type="text" name="phone3" id="phone3" numberOnly>
             </div>
             <div class="email">
                 <h4>이메일</h4>

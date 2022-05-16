@@ -5,6 +5,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
 <script>
   $(document).ready(function(){
+	  
+	   //숫자가 아니면 입력창에 입력이 안되게끔 처리 (NumberOnly)
+	   $("input:text[numberOnly]").on("keyup", function() {
+		      $(this).val($(this).val().replace(/[^0-9]/g,""));
+		   }); 
 	 
 	  /* $("form").on("submit",function(event){
 		 var email1=$("#email1").val(); 
@@ -163,8 +168,8 @@
 				 	<c:if test="${login.phone1=='011' }">selected</c:if>
 				  	>011</option>
 				</select>&nbsp;-&nbsp;
-				<input type="text" value="${login.phone2 }" name="phone2" id="phone2">
-					&nbsp;-&nbsp;<input type="text" value="${login.phone3 }" name="phone3" id="phone3">
+				<input type="text" value="${login.phone2 }" name="phone2" id="phone2" numberOnly>
+					&nbsp;-&nbsp;<input type="text" value="${login.phone3 }" name="phone3" id="phone3" numberOnly>
             </div>
             <div class="email">
                 <h4>이메일</h4>
@@ -178,7 +183,7 @@
             
             <div class="submit">
                 <input type="submit" value="수정">&nbsp;&nbsp;
-                <input type="reset" value="취소">
+                <input type="reset" value="취소" onClick="location.href='/shopMiniMallProject_chul/';">
             </div>
             <br>
             <br>
