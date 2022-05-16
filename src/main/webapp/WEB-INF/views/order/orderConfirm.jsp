@@ -21,12 +21,21 @@
 			 document.getElementById("maddress2").value;
 		 document.getElementById("phone").value=
 			 document.getElementById("mphone").value;
+		 document.getElementById("phone1").value=
+			 document.getElementById("mphone1").value;
+		 document.getElementById("phone2").value=
+			 document.getElementById("mphone2").value;
+		 document.getElementById("phone3").value=
+			 document.getElementById("mphone3").value;
 		}else{
 			document.getElementById("orderName").value="";
 			 document.getElementById("sample4_postcode").value="";
 			 document.getElementById("sample4_roadAddress").value="";
 			 document.getElementById("sample4_jibunAddress").value="";
 			 document.getElementById("phone").value="";
+			 document.getElementById("phone1").value="";
+			 document.getElementById("phone2").value="";
+			 document.getElementById("phone3").value="";
 		}
 	}
 	$(document).ready(function(){
@@ -188,7 +197,7 @@
 					</td>
 					<td height="35" class="td_default">
 						<input class="input_default" type="text" id="mname" size="20" style="border:none;"
-							maxlength="20" value="${mDTO.username}"></input>
+							maxlength="20" value="${mDTO.username}" readonly></input>
 					</td>
 				</tr>
 				<tr>
@@ -220,9 +229,11 @@
 						휴대전화
 					</td>
 					<td height="35" class="td_default">
-						<input class="input_default" type="text" id="mphone" size="15" style="border:none;"
+						<input class="input_default" type="hidden" id="mphone" size="15" style="border:none;"
 							maxlength="15" value="${mDTO.phone1}${mDTO.phone2}${mDTO.phone3}"></input>
-						
+						<input type="text" style="border:none; text-align: center;" value="${mDTO.phone1}" id="mphone1" size="1" readonly/>-
+						<input type="text" style="border:none; text-align: center;" value="${mDTO.phone2}" id="mphone2" size="1" readonly/>-
+						<input type="text" style="border:none; text-align: center;" value="${mDTO.phone3}" id="mphone3" size="1" readonly/>
 					</td>
 				</tr>
 			</table>							
@@ -284,8 +295,22 @@
 						<!-- 다음주소 시작-->
 						<sapn class="post">
 							<input type="text" name="post" id="sample4_postcode" placeholder="우편번호">
-							<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
-							<input type="text" name="addr1" id="sample4_roadAddress" placeholder="도로명주소">
+							<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기">
+						</sapn>
+						<span id="guide" style="color:#999"></span>
+						<br>
+						<!-- 다음주소 끝 -->
+					</td>
+				</tr>
+				<tr>
+					<td height="35" class="td_default">
+						
+						주소
+					</td>
+					<td height="35" class="td_default">
+						<!-- 다음주소 시작-->
+						<sapn class="address">
+							<input type="text" name="addr1" id="sample4_roadAddress" placeholder="도로명주소"><br>
 							<input type="text" name="addr2" id="sample4_jibunAddress" placeholder="지번주소">
 						</sapn>
 						<span id="guide" style="color:#999"></span>
@@ -301,7 +326,11 @@
 					</td>
 					<td height="35" class="td_default">
 						<span class="phone">
-							<input class="input_default" type="text" id="phone"
+							
+							<input type="text" style="text-align: center;" value="" id="phone1"/>-
+							<input type="text" style="text-align: center;" value="" id="phone2"/>-
+							<input type="text" style="text-align: center;" value="" id="phone3"/>
+							<input class="input_default" type="hidden" id="phone"
 								name="phone" size="15" maxlength="15" value=""></input>
 						</span>
 					</td>

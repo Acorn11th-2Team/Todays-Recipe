@@ -32,11 +32,11 @@ h2 {
 
 
 .username {
-  width: 200px;
+  width: 100px;
 }
 
 .username input {
-  width: 200px;
+  width: 100px;
   height: 30px;
   border-radius: 30px;
   padding: 0px 20px;
@@ -61,11 +61,11 @@ h2 {
 
 .address {
   margin-top: 10px;
-  width: 500px;
+  width: 400px;
 }
 
 .address input {
-  width: 500px;
+  width: 400px;
   height: 30px;
   border-radius: 30px;
   margin-top: 10px;
@@ -76,7 +76,7 @@ h2 {
 
 .phone {
   margin-top: 10px;
-  width: 400px;
+  width: 300px;
 }
 
 .phone select {
