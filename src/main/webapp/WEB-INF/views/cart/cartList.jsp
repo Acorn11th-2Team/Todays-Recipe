@@ -61,7 +61,7 @@ $(function() {
 		});
 		
 		if(cnt == 0){	// 아무것도 선택되지 않았을때
-			alert('주문하실 항목을 선택해 주세요');
+			alert('삭제하실 항목을 선택해 주세요');
 		 	return false;
 		}
 		$("form").attr("action", "loginCheck/orderAllCart");
@@ -70,6 +70,19 @@ $(function() {
 	
 	//전체삭제
 	$("#delAllCart").on("click", function() {
+		$(this).toggleClass('is-checked');
+		var cnt = 0;
+		$(".check").each(function(idx, data) {
+			if(this.checked == true){
+				cnt ++; // 
+			}
+			
+		});
+		
+		if(cnt == 0){	// 아무것도 선택되지 않았을때
+			alert('주문하실 항목을 선택해 주세요');
+		 	return false;
+		}
 		$("form").attr("action", "loginCheck/delAllCart");
 		$("form").submit();
 	})
@@ -188,7 +201,10 @@ $(function() {
 		var num=$(this).attr("data-num");
 		console.log(num);
 		var result = $("#cartAmount" + num).val();
-		result = parseInt(result) - 1;
+		if(result > 0){
+			result = parseInt(result) - 1;
+		}
+		
 		$("#cartAmount" + num).val(result);
 		
 		var gAmount= $("#cartAmount"+num).val();
