@@ -19,7 +19,7 @@
 	</tr>
 	<tr>
 		<td>
-			<a href="user_qaList" style="text-decoration: none;">&nbsp;&nbsp;1:1문의</a>
+			<a href="loginCheck/user_qaList" style="text-decoration: none;">&nbsp;&nbsp;1:1문의</a>
 		</td>
 	</tr>
 		<tr>

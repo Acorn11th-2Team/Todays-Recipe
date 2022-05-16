@@ -119,6 +119,11 @@
 	        }
 	    });
 	  
+	// 이메일 선택 입력
+	  $("#emailSelect").on("click", function () {
+		$("#email2").val($("#emailSelect").val());
+	})
+	  
   });
 </script>
 <form action="loginCheck/memberUpdate" method="get" id="mypage">
