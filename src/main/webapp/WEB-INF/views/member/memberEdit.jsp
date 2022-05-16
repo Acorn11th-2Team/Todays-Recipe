@@ -79,6 +79,11 @@ $(function() {
 	}); //end click
 })
 </script>
+
+<div style="width:10%; float:left;">
+	<jsp:include page="../table/adminMenu.jsp"></jsp:include>
+</div>
+<div style="width:88%; float:right">
 <form name="memberListForm" method="GET" action="#">
 	<table style='padding: 5px; border: 1px; border-collapse: collapse'>
 		<tr>
@@ -134,3 +139,4 @@ $(function() {
 		</c:forEach>
 	</table>
 </form>
+</div>

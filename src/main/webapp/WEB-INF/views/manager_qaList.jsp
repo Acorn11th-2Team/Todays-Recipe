@@ -19,7 +19,7 @@
 </head>
 <body>
 	<div style="float: right;">
-		<jsp:include page="admin/top.jsp" flush="true"></jsp:include><BR>
+		<jsp:include page="common/top.jsp" flush="true"></jsp:include><BR>
 	</div>
 	<br>
 	<br>
@@ -28,7 +28,7 @@
 		style="display: block; margin: 0 auto;">
 	</a>
 	<div align="center">
-		<jsp:include page="admin/menu.jsp" flush="true"></jsp:include>
+		<jsp:include page="common/menu.jsp" flush="true"></jsp:include>
 	</div>
 	<hr style="border: solid 0.5px gray;">
 	<jsp:include page="QA/manager_qaList.jsp" flush="true"></jsp:include>

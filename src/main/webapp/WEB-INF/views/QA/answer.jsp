@@ -23,6 +23,10 @@
 <!-- 답변 입력, 답변 내용을 업데이트, 목록으로 전환, ${manager_qdto}-->
 </head>
 <body>
+<div style="width:13%; float:left; margin-top: 55px;">
+	<jsp:include page="../table/servicecenterMenu.jsp"></jsp:include>
+</div>
+<div style="width:85%; float:right; margin-top: 55px">
 	<form action="answerUpdate">
 	<input type="hidden" name="num" id="num" value="${manager_qdto.num}">
 		<table align="center">
@@ -84,5 +88,6 @@
 			<div style="text-align:center;"><a href="manager_qaList">이전페이지로</a></div>
 		</c:if>
 	</form>
+</div>
 </body>
 </html>

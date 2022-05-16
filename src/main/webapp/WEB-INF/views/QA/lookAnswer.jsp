@@ -8,6 +8,8 @@
 <!-- ${answerDto}, 질문 및 답변 모두 출력, 질문 수정 및 삭제 불가하며 조회만 가능 -->
 </head>
 <body>
+
+
 	<form name="myForm"> <!-- 조회 기능만 있음, action 불필요 -->
 		<table align="center">
 		<colgroup>

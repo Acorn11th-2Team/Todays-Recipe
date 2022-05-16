@@ -34,6 +34,10 @@
 </head>
 <!-- ${questionDto}, 질문 출력, 질문 수정, 질문 삭제 -->
 <body>
+<div style="width:13%; float:left; margin-top: 55px;">
+	<jsp:include page="../table/servicecenterMenu.jsp"></jsp:include>
+</div>
+<div style="width:85%; float:right; margin-top: 55px">
 	<form name="myForm" action="#">
 		<!-- 수정, 삭제 버튼을 클릭했을 때 이동 -->
 		<input type="hidden" name=num id="num" value="${questionDto.num}">
@@ -82,5 +86,6 @@
 	<div style="text-align: center;">
 		<a href="user_qaList">이전페이지로</a>
 	</div>
+</div>
 </body>
 </html>

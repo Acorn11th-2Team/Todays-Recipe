@@ -32,8 +32,10 @@
 	}
 
 </style>
-
-	
+<div style="width:13%; float:left; margin-top: 55px;">
+	<jsp:include page="../table/servicecenterMenu.jsp"></jsp:include>
+</div>
+<div style="width:85%; float:right;  margin-top: 55px">
 	<div class="container-fluid">
         <div class=""><!--게시판 넓이 -->
             <div class="row">
@@ -78,5 +80,5 @@
    			</div>
 		</div>
 	</div> 
-
+</div>
 </html>

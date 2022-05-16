@@ -38,16 +38,28 @@ a:active { /*클릭하는 순간*/
 	<a href="loginCheck/logout" style="text-decoration: none;">
 		<font face="Andale Mono">로그아웃</font>
 	</a>
-	&nbsp;|&nbsp;
-	<a href="loignCheck/myPage" style="text-decoration: none;">
-		<font face="Andale Mono">회원정보</font>
-	</a>
-	&nbsp;|&nbsp;
-	<a href="loginCheck/cartList" style="text-decoration: none;">
-		<font face="Andale Mono">장바구니</font>
-	</a>
-	&nbsp;|&nbsp;
-		<a href="loginCheck/serviceCenter" style="text-decoration: none;">
-		<font face="Andale Mono">고객센터</font>
-	</a>&nbsp;
+	<c:if test="${login.userid != 'admin' }" >
+		&nbsp;|&nbsp;
+		<a href="loignCheck/myPage" style="text-decoration: none;">
+			<font face="Andale Mono">회원정보</font>
+		</a>
+		&nbsp;|&nbsp;
+		<a href="loginCheck/cartList" style="text-decoration: none;">
+			<font face="Andale Mono">장바구니</font>
+		</a>
+		&nbsp;|&nbsp;
+			<a href="loginCheck/serviceCenter" style="text-decoration: none;">
+			<font face="Andale Mono">고객센터</font>
+		</a>
+	</c:if>
+	<c:if test="${login.userid == 'admin' }" >
+		&nbsp;|&nbsp;
+			<a href="loginCheck/serviceCenter" style="text-decoration: none;">
+			<font face="Andale Mono">고객센터</font>
+		</a>
+		&nbsp;|&nbsp;
+			<a href="adminMedit" style="text-decoration: none;">
+			<font face="Andale Mono">관리자 메뉴</font>
+		</a>&nbsp;
+	</c:if>
 </c:if>

@@ -135,6 +135,11 @@
 	})
 </script>
 
+<div style="width:10%; float:left;">
+	<jsp:include page="../table/adminMenu.jsp"></jsp:include>
+</div>
+<div style="width:88%; float:right">
+<jsp:include page="../admin/editMenu.jsp" flush="true" /><BR>
 <form name="goodEditForm" method="GET" action="#">
 	<table style='padding: 5px; border: 1px; border-collapse: collapse'>
 		<%
@@ -250,3 +255,4 @@
 		</c:forEach>
 	</table>
 </form>
+</div>

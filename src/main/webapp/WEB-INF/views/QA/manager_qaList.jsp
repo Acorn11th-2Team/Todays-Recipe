@@ -43,6 +43,10 @@
 <title>1:1 문의 목록 화면</title>
 </head>
 <body>
+<div style="width:13%; float:left; margin-top: 55px;">
+	<jsp:include page="../table/servicecenterMenu.jsp"></jsp:include>
+</div>
+<div style="width:85%; float:right; margin-top: 55px">
 	<form action="managerQA">
 	<div id="outter">
 	<div style="float: right;">
@@ -119,5 +123,6 @@
 		
 		</div>
 	</form>
+</div>
 </body>
 </html>

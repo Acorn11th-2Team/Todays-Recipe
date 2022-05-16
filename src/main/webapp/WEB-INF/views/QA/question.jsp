@@ -35,6 +35,10 @@
 
 </head>
 <body>
+<div style="width:13%; float:left; margin-top: 55px;">
+	<jsp:include page="../table/servicecenterMenu.jsp"></jsp:include>
+</div>
+<div style="width:85%; float:right; margin-top: 55px">
 	<form action="loginCheck/question" method="post">
 	
 		<table cellspacing="0" cellpadding="0" align="center">
@@ -71,6 +75,6 @@
 		<br>
 		<input type="submit" id="enroll" value="등록" style="margin:auto; display:block;">
 	</form>
-
+</div>
 </body>
 </html>

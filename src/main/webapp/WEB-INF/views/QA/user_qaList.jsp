@@ -36,6 +36,11 @@
 
 </head>
 <body>
+
+<div style="width:13%; float:left; margin-top: 55px;">
+	<jsp:include page="../table/servicecenterMenu.jsp"></jsp:include>
+</div>
+<div style="width:85%; float:right; margin-top: 55px">
 	<form name="myForm" method="get">
 		<table align="center">
 		<colgroup>
@@ -74,5 +79,6 @@
 		</table>
 		<input type="button" id="writeQ" value="문의쓰기" style="margin:auto; display:block;">
 	</form>
+</div>
 </body>
 </html>

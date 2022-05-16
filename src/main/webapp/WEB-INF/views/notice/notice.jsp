@@ -110,8 +110,10 @@
 
 
 <body>
-
-
+<div style="width:13%; float:left; margin-top: 55px;">
+	<jsp:include page="../table/servicecenterMenu.jsp"></jsp:include>
+</div>
+<div style="width:85%; float:right">
 <div id="outter">
 	<div style="float: right;">
 		<select id="countPerPage" name="sel" onchange="selChange()">
@@ -126,10 +128,6 @@
 </div>
 
 
-
-
-
-<body>
 
 <div class="page-wrapper">
     <div class="container-fluid">
@@ -205,6 +203,6 @@
         </div>
     </div>
  </div>
-
+</div>
 </body>
 </html>
