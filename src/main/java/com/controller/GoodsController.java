@@ -195,14 +195,21 @@ public class GoodsController {
 		System.out.println(gCode);
 		service.goodsRemove(gCode);
 	}
-
+	
+	@RequestMapping(value = "/goodsRemoveAll")
+	public String goodsRemoveAll(@RequestParam("gCcheck") ArrayList<String> list, @RequestParam("gCategoryEdit") String gCategoryEdit) throws Exception {
+		System.out.println(list);
+		service.goodsRemoveAll(list);
+		return "redirect:/goodsEdit?gCategory="+gCategoryEdit;
+	}
+	
 	@RequestMapping(value = "/goodsUpdate")
 	@ResponseBody
 	public void goodsUpdate(GoodsDTO dto) throws Exception {
 		System.out.println(dto);
 		service.goodsUpdate(dto);
 	}
-
+		
 	@RequestMapping(value = "/goodsEdit") // goodsEdit.jsp
 	public ModelAndView goodsEdit(@RequestParam("gCategory") String gCategory) throws Exception {
 		if (gCategory == null) {

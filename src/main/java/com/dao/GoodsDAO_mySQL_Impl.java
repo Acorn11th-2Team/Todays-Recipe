@@ -12,18 +12,17 @@ import com.dto.GoodsDTO;
 import com.dto.OrderDTO;
 
 //@Repository
-public class GoodsDAO_mySQL_Impl implements GoodsDAO_Interface{
-	//SqlTemplate  <= xml 주입 
+public class GoodsDAO_mySQL_Impl implements GoodsDAO_Interface {
+	// SqlTemplate <= xml 주입
 	@Override
 	public void orderDone(OrderDTO oDTO) throws Exception {
 		// TODO Auto-generated method stub
-		//mysql 연동   Mapper id 
+		// mysql 연동 Mapper id
 	}
-	
+
 	@Override
 	public void orderAllDone(List<OrderDTO> list_OrderDTO) throws Exception {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -53,36 +52,31 @@ public class GoodsDAO_mySQL_Impl implements GoodsDAO_Interface{
 	@Override
 	public void cartAdd(CartDTO cart) throws Exception {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void cartUpdate(Map<String, String> map) throws Exception {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void cartDelete(int num) throws Exception {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
-	public void delAllCart(ArrayList<String> list) throws Exception{
+	public void delAllCart(ArrayList<String> list) throws Exception {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public int getgStock(OrderDTO oDTO) throws Exception {
 		return 0;
 	}
-	
+
 	@Override
 	public void setgStock(HashMap map) throws Exception {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -92,32 +86,32 @@ public class GoodsDAO_mySQL_Impl implements GoodsDAO_Interface{
 	}
 
 	@Override
-	public void cartAllDelete(List<Integer> list_num) throws Exception{
+	public void cartAllDelete(List<Integer> list_num) throws Exception {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void setAllgStock(List<HashMap> list_map) throws Exception {
 		// TODO Auto-generated method stub
-		
 	}
 
-
 	@Override
-	public void goodsRemove(String gCode) {
+	public void goodsRemove(String gCode) throws Exception {
 		// TODO Auto-generated method stub
 	}
 
 	@Override
-	public void goodsUpdate(GoodsDTO dto) {
+	public void goodsRemoveAll(ArrayList<String> list) throws Exception {
 		// TODO Auto-generated method stub
 	}
 
 	@Override
-	public void goodsAdd(GoodsDTO dto) {
+	public void goodsUpdate(GoodsDTO dto) throws Exception {
 		// TODO Auto-generated method stub
 	}
-	
 
+	@Override
+	public void goodsAdd(GoodsDTO dto) throws Exception {
+		// TODO Auto-generated method stub
+	}
 }

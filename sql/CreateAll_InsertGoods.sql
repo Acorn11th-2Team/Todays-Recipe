@@ -35,7 +35,7 @@ add gStock NUMBER(20);
 insert into goods 
   values ('M1',	'Meat', '계란', '7200', 'meat1', '20구', '1200g', 1000);
 insert into goods 
-  values ('M2',	'Meat', '훈제오리', '2682', 'meat2', '1팩', '150g', 1000);
+  values ('M2',	'Meat', '훈제오리', '2680', 'meat2', '1팩', '150g', 1000);
 insert into goods 
   values ('M3',	'Meat', '삼겹살', '12660', 'meat3', '1팩', '600g', 1000);
 insert into goods 
@@ -172,25 +172,25 @@ INSERT INTO goods VALUES
 INSERT INTO goods VALUES 
 ('F3','Fruit','샤인마토','7980','fruit3','1팩','500g', 1000);
 INSERT INTO goods VALUES 
-('F4','Fruit','방울토마토','4179','fruit4','1팩','500g', 1000);
+('F4','Fruit','방울토마토','4170','fruit4','1팩','500g', 1000);
 INSERT INTO goods VALUES 
 ('F5','Fruit','아보카도','3240','fruit5','1개','200g', 1000);
 INSERT INTO goods VALUES 
 ('F6','Fruit','오렌지','7600','fruit6','1봉','1kg', 1000);
 INSERT INTO goods VALUES 
-('F7','Fruit','블루베리','8091','fruit7','1팩','100g', 1000);
+('F7','Fruit','블루베리','8090','fruit7','1팩','100g', 1000);
 INSERT INTO goods VALUES 
 ('F8','Fruit','청송사과','7990','fruit8','1봉','1kg', 1000);
 INSERT INTO goods VALUES 
-('F9','Fruit','애플청포도','9996','fruit9','1팩','500g', 1000);
+('F9','Fruit','애플청포도','9990','fruit9','1팩','500g', 1000);
 INSERT INTO goods VALUES 
-('F10','Fruit','완숙토마토','8557','fruit10','1팩','2kg', 1000);
+('F10','Fruit','완숙토마토','8550','fruit10','1팩','2kg', 1000);
 INSERT INTO goods VALUES 
 ('F11','Fruit','사파이어포도','8910','fruit11','1팩','500g', 1000);
 INSERT INTO goods VALUES 
 ('F12','Fruit','신고배','7900','fruit12','1봉','1kg', 1000);
 INSERT INTO goods VALUES 
-('F13','Fruit','냉동블루베리','8055','fruit13','1팩','1kg', 1000);
+('F13','Fruit','냉동블루베리','8050','fruit13','1팩','1kg', 1000);
 INSERT INTO goods VALUES 
 ('F14','Fruit','골드키위','9900','fruit14','1봉','800g', 1000);
 INSERT INTO goods VALUES 
@@ -210,13 +210,13 @@ INSERT INTO goods VALUES
 INSERT INTO goods VALUES 
 ('F22','Fruit','무지개망고','10900','fruit22','1팩','650g', 1000);
 INSERT INTO goods VALUES 
-('F23','Fruit','냉동애플망고','7225','fruit23','1봉','1kg', 1000);
+('F23','Fruit','냉동애플망고','7220','fruit23','1봉','1kg', 1000);
 INSERT INTO goods VALUES 
 ('F24','Fruit','세지멜론','16900','fruit24','1통','1.2kg', 1000);
 INSERT INTO goods VALUES 
 ('F25','Fruit','컷팅과일','2490','fruit25','1팩','150g', 1000);
 INSERT INTO goods VALUES 
-('F26','Fruit','팬시레몬','2565','fruit26','1팩','300g', 1000);
+('F26','Fruit','팬시레몬','2560','fruit26','1팩','300g', 1000);
 INSERT INTO goods VALUES 
 ('F27','Fruit','냉동딸기','7110','fruit27','1팩','1kg', 1000);
 INSERT INTO goods VALUES 
@@ -236,7 +236,7 @@ VALUES ( 'S5', 'Seafood', '장어', '22000', 'seafood5', '1팩', '240g', 1000 );
 INSERT INTO GOODS
 VALUES ( 'S6', 'Seafood', '아귀', '16900', 'seafood6', '1팩', '1000g', 1000 );
 INSERT INTO GOODS
-VALUES ( 'S7', 'Seafood', '대구', '11997', 'seafood7', '1팩', '500g', 1000 );
+VALUES ( 'S7', 'Seafood', '대구', '11990', 'seafood7', '1팩', '500g', 1000 );
 INSERT INTO GOODS
 VALUES ( 'S8', 'Seafood', '도다리', '16900', 'seafood8', '1마리', '400g', 1000 );
 INSERT INTO GOODS
@@ -264,7 +264,7 @@ VALUES ( 'S19', 'Seafood', '전복', '25000', 'seafood19', '1팩', '200g', 1000 
 INSERT INTO GOODS
 VALUES ( 'S20', 'Seafood', '멍게', '9160', 'seafood20', '1팩', '260g', 1000 );
 INSERT INTO GOODS
-VALUES ( 'S21', 'Seafood', '해삼', '11439', 'seafood21', '1팩', '300g', 1000 );
+VALUES ( 'S21', 'Seafood', '해삼', '11430', 'seafood21', '1팩', '300g', 1000 );
 INSERT INTO GOODS
 VALUES ( 'S22', 'Seafood', '명태알', '6500', 'seafood22', '1팩', '250g', 1000 );
 INSERT INTO GOODS

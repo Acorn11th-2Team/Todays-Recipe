@@ -1,18 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<a href="goodsEdit?gCategory=Vegetable" style="text-decoration: none;">
-	<img src="images/Vegetable.png" style=" height: 30px; border: 10 solid; ">
-</a>&nbsp;&nbsp;
-<a href="goodsEdit?gCategory=Fruit" style="text-decoration: none;">
-	<img src="images/Fruit.png" style=" height: 30px;">
-</a>&nbsp;&nbsp;
-<a href="goodsEdit?gCategory=Seafood" style="text-decoration: none;">
-	<img src="images/Seafood.png" style=" height: 30px;">
-</a>&nbsp;&nbsp;
-<a href="goodsEdit?gCategory=Meat" style="text-decoration: none;">
-	<img src="images/Meat.png" style=" height: 30px;">
-</a>&nbsp;&nbsp;
-<a href="goodsEdit?gCategory=Noodle" style="text-decoration: none;">
-	<img src="images/Noodle.png" style=" height: 30px;">
-</a>
+<a href="goodsEdit?gCategory=Vegetable" style="text-decoration: none;">채소</a>&nbsp;&nbsp;
+<a href="goodsEdit?gCategory=Fruit" style="text-decoration: none;">과일·견과·쌀</a>&nbsp;&nbsp;
+<a href="goodsEdit?gCategory=Seafood" style="text-decoration: none;">수산·해산·건어물</a>&nbsp;&nbsp;
+<a href="goodsEdit?gCategory=Meat" style="text-decoration: none;">정육·계란</a>&nbsp;&nbsp;
+<a href="goodsEdit?gCategory=Noodle" style="text-decoration: none;">면·양념·오일</a>
 <BR>

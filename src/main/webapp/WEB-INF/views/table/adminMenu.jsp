@@ -7,8 +7,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
-			<a href="adminMedit" style="text-decoration: none;">&nbsp;&nbsp;회원 관리</a>
+		<td align='center'>
+			<a href="adminMedit" style="text-decoration: none;">회원 관리</a>
 
 		</td>
 	</tr>
@@ -18,8 +18,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
-			<a href="adminGedit" style="text-decoration: none;">&nbsp;&nbsp;상품 관리</a>
+		<td align='center'>
+			<a href="adminGedit" style="text-decoration: none;">상품 관리</a>
 		</td>
 	</tr>
 		<tr>

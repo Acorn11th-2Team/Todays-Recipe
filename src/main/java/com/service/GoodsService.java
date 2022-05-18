@@ -85,16 +85,19 @@ public class GoodsService {
 		}
 	}
 
-	public void goodsRemove(String gCode) {
+	public void goodsRemove(String gCode) throws Exception {
 		dao.goodsRemove(gCode);
 	}
 
-	public void goodsUpdate(GoodsDTO dto) {
+	public void goodsUpdate(GoodsDTO dto) throws Exception {
 		dao.goodsUpdate(dto);
 	}
 
-	public void goodsAdd(GoodsDTO dto) {
+	public void goodsAdd(GoodsDTO dto) throws Exception {
 		dao.goodsAdd(dto);
 	}
 
+	public void goodsRemoveAll(ArrayList<String> list) throws Exception {
+		dao.goodsRemoveAll(list);
+	}
 }

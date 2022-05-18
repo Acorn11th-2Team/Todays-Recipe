@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 		<script>
-			location.href="/shopMiniMallProject_chul/adminMedit"
+			location.href="/TodaysRecipe/adminMedit"
 		</script>
 	</head>
 	<body>

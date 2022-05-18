@@ -41,9 +41,11 @@ public interface GoodsDAO_Interface {
 
 	void setAllgStock(List<HashMap> list_map) throws Exception;
 
-	void goodsRemove(String gCode);
+	void goodsRemove(String gCode) throws Exception;
 
-	void goodsUpdate(GoodsDTO dto);
+	void goodsRemoveAll(ArrayList<String> list) throws Exception;	
 
-	void goodsAdd(GoodsDTO dto);		
+	void goodsUpdate(GoodsDTO dto) throws Exception;
+
+	void goodsAdd(GoodsDTO dto) throws Exception;									
 }

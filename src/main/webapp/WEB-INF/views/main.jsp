@@ -10,7 +10,7 @@
 		<c:if test="${!empty success }"> <!-- 회원가입 성공 후 -->
 			<script>
 				alert("${success}")
-				location.href="/shopMiniMallProject_chul/"
+				location.href="/TodaysRecipe/"
 			</script>
 			
 		</c:if>

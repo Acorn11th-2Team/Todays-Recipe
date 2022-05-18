@@ -194,7 +194,7 @@
             
             <div class="submit">
                 <input type="submit" value="가입">
-                <input type="reset" value="취소" onClick="location.href='/shopMiniMallProject_chul/';">
+                <input type="reset" value="취소" onClick="location.href='/TodaysRecipe/';">
             </div>
             <div>
             	&nbsp;
