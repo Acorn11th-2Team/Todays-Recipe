@@ -46,9 +46,9 @@
 	            return false;
 	        }
 			// 이름 길이 예외처리
-			if ($('#orderName').val().length < 2 || $('#orderName').val().length > 5) {
-	            alert('이름이 유효하지 않습니다');
-	            $('#phone').focus();
+			if ($('#username').val().length < 2 || $('#username').val().length > 5) {
+	            alert('이름은 두글자에서 다섯글자까지만 설정 가능합니다.');
+	            $('#username').focus();
 	            return false;
 	        }
 			if ($('#sample4_postcode').val() == '') {
@@ -66,27 +66,30 @@
 	            $('#orderName').focus();
 	            return false;
 	        }
-			if ($('#phone').val() == '') {
+			/* if ($('#phone').val() == '') {
 	            alert('배송관련 연락을 받으실 휴대전화 번호를 입력하세요');
 	            $('#phone').focus();
 	            return false;
-	        }
+	        } */
 			if ($('#phone1').val().length != 3 ) {
 	            alert('전화번호를 확인하세요.');
 	            $('#phone1').focus();
 	            return false;
 	        }
-			if ($('#phone2').val().length > 4 ) {
+			if ($('#phone2').val().length != 4 ) {
 	            alert('전화번호를 확인하세요.');
 	            $('#phone2').focus();
 	            return false;
 	        }
-			if ($('#phone3').val().length > 4 ) {
+			if ($('#phone3').val().length != 4 ) {
 	            alert('전화번호를 확인하세요.');
 	            $('#phone3').focus();
 	            return false;
 	        }
 			
+			/* 전화번호 11자리 합쳐서 value 저장 */
+			var phone = $('#phone1').val()+$('#phone2').val()+$('#phone3').val();
+			$('#phone').val(phone);
 		});
 	});
 	

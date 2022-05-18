@@ -122,6 +122,13 @@
 	            $('#email2').focus();
 	            return false;
 	        }
+	        
+	     	// 이름 길이 예외처리
+			if ($('#username').val().length < 2 || $('#username').val().length > 5) {
+	            alert('이름은 두글자에서 다섯글자까지만 설정 가능합니다.');
+	            $('#username').focus();
+	            return false;
+	        }
 	    });
 	  
 	// 이메일 선택 입력
