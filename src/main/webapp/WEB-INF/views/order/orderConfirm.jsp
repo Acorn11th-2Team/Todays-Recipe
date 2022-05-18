@@ -71,10 +71,19 @@
 	            $('#phone').focus();
 	            return false;
 	        }
-			// 휴대폰 번호 길이 예외처리
-			if ($('#phone').val().length != 11) {
-	            alert('휴대전화 번호가 유효하지 않습니다');
-	            $('#phone').focus();
+			if ($('#phone1').val().length != 3 ) {
+	            alert('전화번호를 확인하세요.');
+	            $('#phone1').focus();
+	            return false;
+	        }
+			if ($('#phone2').val().length > 4 ) {
+	            alert('전화번호를 확인하세요.');
+	            $('#phone2').focus();
+	            return false;
+	        }
+			if ($('#phone3').val().length > 4 ) {
+	            alert('전화번호를 확인하세요.');
+	            $('#phone3').focus();
 	            return false;
 	        }
 			
