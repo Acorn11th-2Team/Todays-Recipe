@@ -173,7 +173,7 @@
             </div>
             <div class="post" style="display:inline;">
                 <h4>우편번호</h4>
-                <input type="text" name="post" id="sample4_postcode" placeholder="PostCode">
+                <input type="text" name="post" id="sample4_postcode" placeholder="PostCode" numberOnly>
                 <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기">
             </div>
             <div class="address">

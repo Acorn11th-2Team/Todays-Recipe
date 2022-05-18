@@ -104,7 +104,7 @@ $(function() {
 				<td><input type="text" name=userid id="userid${dto.userid}"
 					value="${dto.userid}" style="width: 90px; height: 15px;" disabled></td>
 
-				<td><input type="number" name=passwd id="passwd${dto.userid}"
+				<td><input type="text" name=passwd id="passwd${dto.userid}"
 					value="${dto.passwd}" style="width: 90px; height: 15px;"></td>
 
 				<td><input type="text" name=username id="username${dto.userid}"

@@ -182,6 +182,10 @@ $(function() {
 		console.log(num);
 		var result = $("#cartAmount" + num).val();
 		result = parseInt(result) + 1;
+		if(result > 999){
+			alert("최대주문수량은 999개 입니다.")
+			return false;
+		}
 		$("#cartAmount" + num).val(result);
 		
 		var gAmount= $("#cartAmount"+num).val();
@@ -321,9 +325,9 @@ $(function() {
 					data-num="${x.num}" data-price="${x.gPrice}"
 					width="30" height="30">&nbsp;
 				</td>
-				<td width="60">
+				<td width="70">
 					<div class="input_gAmount">
-						 <input class="input_default" type="text" name="cartAmount"
+						 <input class="changeAmount" type="text" name="cartAmount"
 						id="cartAmount${x.num}" style="text-align: right" maxlength="3"
 						size="2" value="${x.gAmount}" data-num="${x.num}"> 
 					</div>
