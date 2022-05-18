@@ -4,7 +4,7 @@
      gCode varchar2(20) not null,
      gName varchar2(50) not null,
      gPrice NUMBER(6) not null,
-     gAmount NUMBER(2) not null,
+     gAmount NUMBER(4) not null,
      gImage varchar2(20) not null,
      orderName VARCHAR2(10) NOT NULL,
      post VARCHAR2(5) NOT NULL,

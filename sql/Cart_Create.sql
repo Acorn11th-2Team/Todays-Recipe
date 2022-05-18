@@ -8,7 +8,7 @@ create table cart
     gCode varchar2(20) not null,
     gName varchar2(50) not null,
     gPrice NUMBER(6) not null,
-    gAmount NUMBER(2) not null,
+    gAmount NUMBER(4) not null,
     gImage varchar2(20) not null
 );   
    

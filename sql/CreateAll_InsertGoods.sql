@@ -389,3 +389,7 @@ REFERENCES member(userid) ON DELETE CASCADE;
 alter table cart
 add CONSTRAINT cart_gCode_fk FOREIGN KEY(gCode)
 REFERENCES goods(gCode) ON DELETE CASCADE;  
+
+-- cart, orderinfo gamount 길이 변경
+alter table cart modify gamount number(4);
+alter table orderinfo modify gamount number(4);
