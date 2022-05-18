@@ -30,6 +30,11 @@ function totalXXX() {
 $(function() {
 	totalXXX();
 	
+	// 수량 입력시 숫자만 가능하도록
+	$("input:text[numberOnly]").on("keyup", function() {
+	      $(this).val($(this).val().replace(/[^0-9]/g,""));
+	});
+	
 	//주문하기
 /* 	$(".orderBtn").on("click",function(){
 		var num= $(this).attr("data-num");
@@ -69,10 +74,13 @@ $(function() {
 			alert('주문하실 항목을 선택해 주세요');
 		 	return false;
 		}
-		if($("#cartAmount" + num).val() == 0){
+		
+		// 수량에 0보다 큰 수만 입력 가능하도록
+		if($(".changeAmount").val() == 0){
 			alert('수량을 조정해 주세요');
 			return false;
 		}
+		
 		$("form").attr("action", "loginCheck/orderAllCart");
 		$("form").submit();	
 	});
@@ -242,7 +250,38 @@ $(function() {
 		});//end ajax
 		
 	})
-});//end ready
+	
+	$(".changeAmount").on("keyup", function () {
+		var num=$(this).attr("data-num");
+		console.log(num);
+		
+		var result = $("#cartAmount" + num).val();
+		
+		$("#cartAmount" + num).val(result);
+		
+		var gAmount= $("#cartAmount"+num).val();
+		var gPrice = $(this).attr("data-price");
+		console.log(num, gPrice);
+		$.ajax({
+			url: "loginCheck/cartUpdate",
+			type: "get",
+			dataType: "text",
+			data: {
+				num: num,
+				gAmount: gAmount
+			},
+			success: function (data, status, xhr) {
+				var total= 
+						parseInt(gAmount)*parseInt(gPrice);
+				$("#sum"+num).text(total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원");				
+			},
+			error: function (xhr, status,error) {
+				console.log(error);
+			}//end error			
+		});//end ajax
+	})
+	
+})//end ready
  
 </script>
 
@@ -329,7 +368,7 @@ $(function() {
 					<div class="input_gAmount">
 						 <input class="changeAmount" type="text" name="cartAmount"
 						id="cartAmount${x.num}" style="text-align: right" maxlength="3"
-						size="2" value="${x.gAmount}" data-num="${x.num}"> 
+						size="2" value="${x.gAmount}" data-num="${x.num}" data-price="${x.gPrice}" numberOnly> 
 					</div>
 				</td>
 				<td>

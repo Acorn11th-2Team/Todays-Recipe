@@ -40,15 +40,15 @@
 	}
 	$(document).ready(function(){
 		$('#orderConfirmForm').submit(function() {
-			if ($('#orderName').val() == '') {
+			/* if ($('#orderName').val() == '') {
 	            alert('배송받는분의 이름을 입력하세요');
 	            $('#orderName').focus();
 	            return false;
-	        }
+	        } */
 			// 이름 길이 예외처리
-			if ($('#username').val().length < 2 || $('#username').val().length > 5) {
+			if ($('#orderName').val().length < 2 || $('#orderName').val().length > 5) {
 	            alert('이름은 두글자에서 다섯글자까지만 설정 가능합니다.');
-	            $('#username').focus();
+	            $('#orderName').focus();
 	            return false;
 	        }
 			if ($('#sample4_postcode').val() == '') {
@@ -87,9 +87,8 @@
 	            return false;
 	        }
 			
-			/* 전화번호 11자리 합쳐서 value 저장 */
-			var phone = $('#phone1').val()+$('#phone2').val()+$('#phone3').val();
-			$('#phone').val(phone);
+			var phone = $("#phone1").val() + $("#phone2").val() + $("#phone3").val();
+			$("#phone").val(phone);
 		});
 	});
 	
