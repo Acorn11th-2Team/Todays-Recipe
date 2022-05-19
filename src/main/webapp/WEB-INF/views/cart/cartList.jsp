@@ -7,7 +7,7 @@
 
 <c:if test="${!empty mesg }">
 	<script>
-		alert('${mesg}\n남은재고는 ${gStock}개 입니다');
+		alert('${mesg}');
 	</script>
 </c:if>
 <% session.removeAttribute("mesg"); %>

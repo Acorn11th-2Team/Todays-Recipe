@@ -9,9 +9,24 @@
 <script>
 
 	$(function() {
+		// 수량 입력시 숫자만 가능하도록
+		$("input:text[numberOnly]").on("keyup", function() {
+		      $(this).val($(this).val().replace(/[^0-9]/g,""));
+		});
+		
 		$("#cart").on("click", function() {
 			if($("#gAmount").val() == 0){
 				alert("수량을 선택하세요");
+				return false;
+			}
+			// 재고가 0일 시 처리
+			if ($("#gStock").attr("data-gStock") == 0) {
+				alert("상품이 품절되어 구매가 불가합니다");
+				return false;
+			}
+			// 수량 > 재고일 시 처리
+			if ($("#gStock").attr("data-gStock") < $("#gAmount").val()) {
+				alert("재고가 부족합니다. 수량을 확인해 주세요");
 				return false;
 			}
 			$("form").attr("action", "loginCheck/cartAdd")
@@ -30,6 +45,7 @@
 			}
 			$("#gAmount").val(result);
 		})
+
 	})
 
 </script>
@@ -116,7 +132,7 @@
 					
 					<tr>
 						<td class="td_title">재고</td>
-						<td class="td_default" colspan="2" style='padding-left: 30px'>
+						<td class="td_default" colspan="2" style='padding-left: 30px' id="gStock" data-gStock="${goodsRetrieve.gStock}">
 							<fmt:formatNumber value="${goodsRetrieve.gStock }" pattern="#,###"/>개
 						</td>
 					</tr>
@@ -133,7 +149,7 @@
 							<span class="gAmount">
 								<input type="text"
 								name="gAmount" value="1" id="gAmount"
-								style="text-align: right; height: 18px"> 
+								style="text-align: right; height: 18px" numberOnly> 
 							</span>
 							<img src="images/minus.png"
 							width="30" height="30" id="down">
