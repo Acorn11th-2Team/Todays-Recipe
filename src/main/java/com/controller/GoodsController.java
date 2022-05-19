@@ -90,7 +90,7 @@ public class GoodsController {
 			list_map.add(map);
 			list_num.add(oDTO.getNum());
 
-			if (AfterStock < 0) { // 재고가 없는 경우
+			if (AfterStock < 1) { // 재고가 없는 경우
 				session.setAttribute("mesg", oDTO.getgCode() + "상품의 재고가 없습니다");
 				session.setAttribute("gStock", Stock);
 				return "redirect:../loginCheck/cartList";

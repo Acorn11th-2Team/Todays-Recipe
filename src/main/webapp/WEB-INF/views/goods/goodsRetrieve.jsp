@@ -25,7 +25,15 @@
 				return false;
 			}
 			// 수량 > 재고일 시 처리
-			if ($("#gStock").attr("data-gStock") < $("#gAmount").val()) {
+			console.log($("#gStock").attr("data-gStock"));
+			console.log($("#gAmount").val());
+			console.log(typeof($("#gStock").attr("data-gStock")));
+			console.log(typeof($("#gAmount").val()));
+			var gStock = $("#gStock").attr("data-gStock")*1;
+			var gAmount = $("#gAmount").val()*1;
+			console.log("gStock: " + gStock);
+			console.log("gAmount: " + gAmount);
+			if (gStock < gAmount) {
 				alert("재고가 부족합니다. 수량을 확인해 주세요");
 				return false;
 			}
