@@ -37,6 +37,9 @@
  19. 회원정보관리 페이지(memberEdit) 에서 관리자가 회원비밀번호를 수정가능하게끔 MemberMapper 의 memberUpdate 부분 passwd 추가/수정
  20. 회원가입(memberForm) 에서 postcode 란에 문자가 입력되지않게끔 numberOnly 를 input에 표기
  
- 
+ 향후 to do list
+ - 전화번호 란에 숫자 4개만 입력되도록
+ - 회원정보 수정 란에서 우편번호에 숫자만 입력되도록
+ - 장바구니에서 ajax 방식아닌 일반 수량변경방식...
  
  
