@@ -60,7 +60,7 @@
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1">내용</label>
-             <textarea class="form-control" id="exampleFormControlTextarea1" name="contents" placeholder="내용을 작성해주세요." rows="10" value="${datalist.contents}" <c:if test="${ login.userid ne 'admin'}">readonly</c:if>> ${datalist.contents} </textarea>
+             <textarea class="form-control" id="exampleFormControlTextarea1" name="contents" placeholder="내용을 작성해주세요." rows="10" value="${datalist.contents}" <c:if test="${ login.userid ne 'admin'}">readonly</c:if>>${datalist.contents}</textarea>
 
           
           </div>
