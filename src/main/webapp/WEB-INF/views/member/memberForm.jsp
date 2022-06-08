@@ -3,10 +3,19 @@
      
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript">
-
-
 	//숫자가 아니면 입력창에 입력이 안되게끔 처리 (NumberOnly)
 	$(document).ready(function(){
+		$('.login_pw i').on('click',function(){
+	        $('input').toggleClass('active');
+	        if($('input').hasClass('active')){
+	            $(this).attr('class',"fa fa-eye-slash fa-lg")
+	            .prev('input').attr('type',"text");
+	        }else{
+	            $(this).attr('class',"fa fa-eye fa-lg")
+	            .prev('input').attr('type','password');
+	        }
+	    });
+		
 	   $("input:text[numberOnly]").on("keyup", function() {
 	      $(this).val($(this).val().replace(/[^0-9]/g,""));
 	   }); 
@@ -43,6 +52,13 @@
 	            $('#passwd').focus();
 	            return false;
 	        }
+			
+			// 비밀번호 길이 예외처리
+			if ($('#passwd').val().length < 4 || $('#passwd').val().length > 10) {
+				alert('비밀번호 길이를 확인하세요')
+				$('#passwd').focus();
+				return false;
+			}
 		  
 			// 빈칸 누락 예외처리
 	        if ($('#userid').val() == '') {
@@ -56,12 +72,7 @@
 	            return false;
 	        }
 	        if ($('#passwd2').val() == '') {
-	            alert('비밀번호 확인을 입력하세요.');
-	            $('#passwd2').focus();
-	            return false;
-	        }
-	        if ($('#passwd2').val() == '') {
-	            alert('비밀번호 확인을 입력하세요.');
+	            alert('비밀번호 확인란을 입력하세요.');
 	            $('#passwd2').focus();
 	            return false;
 	        }
@@ -82,7 +93,7 @@
 	            return false;
 	        }
 	        if ($('#sample4_jibunAddress').val() == '') {
-	            alert('지번 주소를 입력하세요.');
+	            alert('상세 주소를 입력하세요.');
 	            $('#sample4_jibunAddress').focus();
 	            return false;
 	        }
@@ -146,9 +157,22 @@
 			
 	  
    });//end ready
-   
-   
 </script> 
+<style>
+	div.login_pw{
+    position: relative;/* 
+    padding: 20px ; */
+}
+	div.login_pw i{
+    position: absolute;
+    left: 40%;
+    top: 40px;
+    color: orange;
+}
+</style>
+<head>
+	<link rel="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
 <form action="memberAdd" method="get" id="signup">
 	<div class="wrap">
         <div class="login">
@@ -158,18 +182,22 @@
                 <input type="text" name="userid" id="userid" placeholder="ID">
                 <span id="result"></span>
             </div>
-            <div class="login_pw">
-                <h4>비밀번호</h4>
-                <input type="text" name="passwd" id="passwd" placeholder="Password">
-            </div>
-            <div class="login_pw2">
-                <h4>비밀번호 확인</h4>
-                <input type="text" name="passwd2" id="passwd2" placeholder="Retype Password">
-                <span id="result2"></span>
-            </div>
+	        <div class="login_pw">
+	            <h4>비밀번호</h4>
+	            <input type="password" name="passwd" id="passwd" placeholder="Password">
+	            <i class="fa fa-eye fa-lg"></i>
+	            <h6 style="color:lightgray">비밀번호는 4자리~10자리 사이로 설정 가능합니다.</h6>
+	        </div>
+	        <div class="login_pw">
+	            <h4>비밀번호 확인</h4>
+	            <input type="password" name="passwd2" id="passwd2" placeholder="Retype Password">
+	            <i class="fa fa-eye fa-lg"></i>
+	            <span id="result2"></span>
+	        </div>
             <div class="username">
                 <h4>이름</h4>
                 <input type="text" name="username" id="username" placeholder="Name">
+                <h6 style="color:lightgray">이름은 두글자~다섯글자 사이로 설정 가능합니다.</h6>
             </div>
             <div class="post" style="display:inline;">
                 <h4>우편번호</h4>
@@ -179,7 +207,7 @@
             <div class="address">
                 <h4>주소</h4>
                 <input type="text" name="addr1" id="sample4_roadAddress" placeholder="도로명 주소">
-                <input type="text" name="addr2" id="sample4_jibunAddress" placeholder="지번 주소">
+                <input type="text" name="addr2" id="sample4_jibunAddress" placeholder="상세 주소">
                 <span id="guide" style="color:#999"></span>
             </div>
             <div class="phone">
@@ -250,7 +278,7 @@
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById('sample4_postcode').value = data.zonecode; //5자리 새우편번호 사용
                 document.getElementById('sample4_roadAddress').value = fullRoadAddr;
-                document.getElementById('sample4_jibunAddress').value = data.jibunAddress;
+                /* document.getElementById('sample4_jibunAddress').value = data.jibunAddress; */
 
                 // 사용자가 '선택 안함'을 클릭한 경우, 예상 주소라는 표시를 해준다.
                 if(data.autoRoadAddress) {
@@ -258,11 +286,11 @@
                     var expRoadAddr = data.autoRoadAddress + extraRoadAddr;
                     document.getElementById('guide').innerHTML = '(예상 도로명 주소 : ' + expRoadAddr + ')';
 
-                } else if(data.autoJibunAddress) {
+                } /* else if(data.autoJibunAddress) {
                     var expJibunAddr = data.autoJibunAddress;
                     document.getElementById('guide').innerHTML = '(예상 지번 주소 : ' + expJibunAddr + ')';
 
-                } else {
+                } */ else {
                     document.getElementById('guide').innerHTML = '';
                 }
             }

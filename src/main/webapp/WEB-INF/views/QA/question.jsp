@@ -71,7 +71,7 @@
 								name="title" placeholder="제목을 입력해 주세요" value="">
 						</div>
 						<div class="form-group">
-							<label for="exampleFormControlInput1">문의유형</label> 
+							<label for="exampleFormControlInput1">문의 유형</label> 
 							<br>
 							<select name="category" id="category">
 									<option selected>문의 유형을 선택해 주세요</option>
@@ -83,8 +83,8 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<label for="exampleFormControlInput1">질문</label>
-							<textarea class="form-control" id="contents" name="contents" rows="10" placeholder="질문을 입력해 주세요"></textarea>
+							<label for="exampleFormControlInput1">문의 내용</label>
+							<textarea class="form-control" id="contents" name="contents" rows="10" placeholder="문의 내용을 입력해 주세요"></textarea>
 						</div>
 						<!-- <table cellspacing="0" cellpadding="0" align="center">
 						<thead style="background-color: #bbdefb;">

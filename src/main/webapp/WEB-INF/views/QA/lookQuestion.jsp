@@ -66,7 +66,7 @@
 								value="${questionDto.title}">
 						</div>
 						<div class="form-group">
-							<label for="exampleFormControlInput1">문의유형</label><br> <select
+							<label for="exampleFormControlInput1">문의 유형</label><br> <select
 								name="category" id="category">
 								<option
 									<c:if test="${questionDto.category=='주문/결제문의'}">selected</c:if>>
@@ -83,7 +83,7 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<label for="exampleFormControlInput1">질문</label>
+							<label for="exampleFormControlInput1">문의 내용</label>
 							<textarea class="form-control" id="contents" name="contents" rows="10">${questionDto.contents}</textarea>
 						</div>
 						

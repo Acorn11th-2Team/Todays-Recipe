@@ -21,7 +21,8 @@
 	  }); */
 	  
 	  $('#mypage').submit(function() {
-		    console.log($('#result').text());			// 아이디 중복 검사
+		    console.log($('#result').text());			
+		    /* // 아이디 중복 검사
 			if ($('#result').text() == "아이디 중복") {
 	            alert('아이디 중복');
 	            $('#userid').focus();
@@ -33,10 +34,10 @@
 	            alert('비밀번호 불일치');
 	            $('#passwd').focus();
 	            return false;
-	        }
+	        } */
 		  
 			// 빈칸 누락 예외처리
-	        if ($('#userid').val() == '') {
+	        /* if ($('#userid').val() == '') {
 	            alert('아이디를 입력하세요');
 	            $('#userid').focus();
 	            return false;
@@ -55,7 +56,7 @@
 	            alert('비밀번호 확인을 입력하세요.');
 	            $('#passwd2').focus();
 	            return false;
-	        }
+	        } */
 	        if ($('#username').val() == '') {
 	            alert('이름을 입력하세요.');
 	            $('#username').focus();
@@ -73,7 +74,7 @@
 	            return false;
 	        }
 	        if ($('#sample4_jibunAddress').val() == '') {
-	            alert('지번 주소를 입력하세요.');
+	            alert('상세 주소를 입력하세요.');
 	            $('#sample4_jibunAddress').focus();
 	            return false;
 	        }
@@ -162,7 +163,7 @@
             <div class="address">
                 <h4>주소</h4>
                 <input type="text" value="${login.addr1 }" name="addr1" id="sample4_roadAddress" placeholder="도로명 주소">
-                <input type="text" value="${login.addr2 }" name="addr2" id="sample4_jibunAddress" placeholder="지번 주소">
+                <input type="text" value="${login.addr2 }" name="addr2" id="sample4_jibunAddress" placeholder="상세 주소">
                 <span id="guide" style="color:#999"></span>
             </div>
             <div class="phone">
@@ -234,7 +235,7 @@
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById('sample4_postcode').value = data.zonecode; //5자리 새우편번호 사용
                 document.getElementById('sample4_roadAddress').value = fullRoadAddr;
-                document.getElementById('sample4_jibunAddress').value = data.jibunAddress;
+                /* document.getElementById('sample4_jibunAddress').value = data.jibunAddress; */ //상세주소(직접입력)로 변경
 
                 // 사용자가 '선택 안함'을 클릭한 경우, 예상 주소라는 표시를 해준다.
                 if(data.autoRoadAddress) {
@@ -242,11 +243,11 @@
                     var expRoadAddr = data.autoRoadAddress + extraRoadAddr;
                     document.getElementById('guide').innerHTML = '(예상 도로명 주소 : ' + expRoadAddr + ')';
 
-                } else if(data.autoJibunAddress) {
+                } /* else if(data.autoJibunAddress) {
                     var expJibunAddr = data.autoJibunAddress;
                     document.getElementById('guide').innerHTML = '(예상 지번 주소 : ' + expJibunAddr + ')';
 
-                } else {
+                } */ else {
                     document.getElementById('guide').innerHTML = '';
                 }
             }

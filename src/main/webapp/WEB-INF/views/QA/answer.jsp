@@ -64,12 +64,12 @@
 								name="userid" value="${manager_qdto.userid}" readonly>
 						</div>
 						<div class="form-group">
-							<label for="exampleFormControlInput1">문의유형</label> <input
+							<label for="exampleFormControlInput1">문의 유형</label> <input
 								type="text" class="form-control" id="category"
 								name="category" value="${manager_qdto.category}" readonly>
 						</div>
 						<div class="form-group">
-							<label for="exampleFormControlInput1">질문</label>
+							<label for="exampleFormControlInput1">문의 내용</label>
 							<textarea class="form-control" id="contents" name="contents" rows="10" readonly>${manager_qdto.contents}</textarea>
 						</div>
 						<div class="form-group">

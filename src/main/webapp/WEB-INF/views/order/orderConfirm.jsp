@@ -61,9 +61,9 @@
 	            $('#sample4_roadAddress').focus();
 	            return false;
 	        }
-			if ($('sample4_jibunAddress').val() == '') {
-	            alert('배송지의 지번주소를 입력하세요');
-	            $('#orderName').focus();
+			if ($('#sample4_jibunAddress').val().length == 0) {
+	            alert('배송지의 상세주소를 입력하세요');
+	            $('#sample4_jibunAddress').focus();
 	            return false;
 	        }
 			/* if ($('#phone').val() == '') {
@@ -322,7 +322,7 @@
 						<!-- 다음주소 시작-->
 						<sapn class="address">
 							<input type="text" name="addr1" id="sample4_roadAddress" placeholder="도로명주소"><br>
-							<input type="text" name="addr2" id="sample4_jibunAddress" placeholder="지번주소">
+							<input type="text" name="addr2" id="sample4_jibunAddress" placeholder="상세주소">
 						</sapn>
 						<span id="guide" style="color:#999"></span>
 						<br>
@@ -441,7 +441,7 @@
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById('sample4_postcode').value = data.zonecode; //5자리 새우편번호 사용
                 document.getElementById('sample4_roadAddress').value = fullRoadAddr;
-                document.getElementById('sample4_jibunAddress').value = data.jibunAddress;
+                /* document.getElementById('sample4_jibunAddress').value = data.jibunAddress; */
 
                 // 사용자가 '선택 안함'을 클릭한 경우, 예상 주소라는 표시를 해준다.
                 if(data.autoRoadAddress) {
@@ -449,11 +449,11 @@
                     var expRoadAddr = data.autoRoadAddress + extraRoadAddr;
                     document.getElementById('guide').innerHTML = '(예상 도로명 주소 : ' + expRoadAddr + ')';
 
-                } else if(data.autoJibunAddress) {
+                } /* else if(data.autoJibunAddress) {
                     var expJibunAddr = data.autoJibunAddress;
                     document.getElementById('guide').innerHTML = '(예상 지번 주소 : ' + expJibunAddr + ')';
 
-                } else {
+                } */ else {
                     document.getElementById('guide').innerHTML = '';
                 }
             }
