@@ -29,5 +29,6 @@
 		</div>
 		<hr style="border: solid 0.5px gray;">
 		<jsp:include page="goods/goodsList.jsp" flush="true"></jsp:include>
+		<jsp:include page="footer/footer2.jsp" flush="true"></jsp:include>
 	</body>
 </html>
