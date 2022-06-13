@@ -24,5 +24,6 @@
 </body>
 <div align="center">
 	<jsp:include page="member/memberEdit.jsp" flush="true" />
+	<jsp:include page="footer/footer2.jsp" flush="true"></jsp:include>
 </div>
 </html>

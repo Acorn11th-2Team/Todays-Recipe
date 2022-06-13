@@ -116,12 +116,12 @@ opacity
 }
 
 #ftWrap { clear:both; width:100%; padding-bottom:80px; border-top: 1px solid #999; background-color: #fff; margin:0 auto;}
-#footer { max-width:1920px; min-width:100px; position:relative; overflow:hidden; padding:0 4%; margin:0 auto; width:1000px;}
+#footer { max-width:1500px; min-width:100px; position:relative; overflow:hidden; padding:0; margin:0 auto; width:900px;}
 #footer .footerLogo { text-align:left; }
 #footer .footerLogo > a { display:block; width:107px; text-align:center; }
 
-#footer .topArea { margin-bottom:40px; }
-#footer .topArea > div {display:inline-block; *display:inline; vertical-align:top; padding-left:50px; text-align:left; }
+#footer /* .topArea { margin-bottom:40px; } */
+#footer .topArea > div {display:inline-block; *display:inline; vertical-align:top; padding-left:50px; text-align:right; }
 #footer .topArea > div dt {font-size:14px; font-weight:bold; margin-bottom:10px; }
 #footer .topArea > div dd {margin-bottom:7px; color:#999; font-size:12px; }
 #footer .topArea > div dd a {color:#999; font-size:12px; display:inline-block; }
@@ -130,11 +130,11 @@ opacity
 #footer .topArea > div.lang dd,
 #footer .topArea > div.sns dd {display:inline-block; *display:inline; vertical-align:top; margin-right:7px; }
 #footer .topArea > div.lang { width:271px; }
-#footer .topArea .cs .cs_btn { display: block; height:29px; line-height:29px; background: #000; color:#fff; padding:0 10px; margin-top:25px; }
+#footer .topArea .cs .cs_btn { display: block; height:29px; line-height:29px; background: #000; color:#fff; padding:0px;}
 #footer .topArea .cs .cs_btn span { font-size:9px; margin-left:4px; }
 
 #footer .footerBottom .topArea {margin-bottom:0; }
-#footer .footerBottom address span { color:#999; font-size:12px; *display: inline; *zoom: 1; position: relative; padding-right: 19px; vertical-align: top; line-height:2; }
+#footer .footerBottom address span { color:#999; font-size:12px; *display: inline; *zoom: 1; position: relative; padding-right: 19px; vertical-align: top; line-height:2;}
 #footer .footerBottom address span a { color:#999; }
 #footer .footerBottom address span:after {display: block; content: ''; position: absolute; top: 50%; right: 9px; width: 1px; height: 9px; background: #a5a5a5; -webkit-transform: translate(0,-50%); -ms-transform: translate(0,-50%); transform: translate(0,-50%); }
 #footer .footerBottom address span.last:after {width:0; }
@@ -144,7 +144,7 @@ opacity
 #footer .footerBottom .menu {margin:20px 0; }
 #footer .footerBottom .menu li {display: inline-block; *display: inline; *zoom: 1; }
 #footer .footerBottom .menu li a { color:#999; font-size:12px; display: inline-block; *display: inline; *zoom: 1; position: relative; vertical-align: top; line-height:2; }
-#footer .footerBottom .menu li a:after {display: block; content: ''; position: absolute; top: 50%; right: 9px; width: 1px; height: 9px; background: #a5a5a5; -webkit-transform: translate(0,-50%); -ms-transform: translate(0,-50%); transform: translate(0,-50%); }
+#footer .footerBottom .menu li a:after {display: block; content: ''; position: absolute; top: 50%; right: -5px; width: 1px; height: 9px; background: #a5a5a5; -webkit-transform: translate(0,-50%); -ms-transform: translate(0,-50%); transform: translate(0,-50%); }
 #footer .footerBottom .menu li.last a:after {width:0; }
 
 
@@ -160,7 +160,7 @@ opacity
 </head>
 <body>
 	<div id="ftWrap" style="padding-bottom: 0px; height:500; width=:700px; margin:0;">
-		<div id="footer" style="height:500px;">
+		<div id="footer" style="height:500px; width:900px;">
 
 			<div class="wrap_inner_left">
 				<div class="footerLogo">
@@ -168,7 +168,7 @@ opacity
 						src="images/Main_Logo.png" width="75", height="75"></a>
 				</div>
 				<div class="footerBottom">
-					<ul class="menu" style="padding-left: 0px;">
+					<ul class="menu" style="padding-left: 0px; text-align:left;">
 						<li><a href="goodsList?gCategory=Vegetable">브랜드 스토리</a></li>
 						<li><a href="goodsList?gCategory=Vegetable" target="_blank">회사소개</a></li>
 						<li><a href="goodsList?gCategory=Vegetable">이용약관</a></li>
@@ -177,7 +177,7 @@ opacity
 					</ul>
 					<address class="info">
 						<span>사업자명 : (주)오늘의밥</span> <span>대표자명 : 박세희,송지민,이윤석,전우진,홍진우</span> <span
-							class="last">팩스 : 00-0000-0000</span> <br> <span>주소 :
+							class="last">팩스 : 00-0000-0000</span> <br> <div style="text-align:left;"><span>주소 :
 							서울시 강남구 테헤란로 124 삼원타워 5F</span> <span class="last">대표전화
 							: 1234-1234</span> <br> <span>사업자등록번호 : 000-00-00000
 							<a href="goodsList?gCategory=Vegetable">[사업자정보확인]</a>
@@ -185,12 +185,12 @@ opacity
 							class="last">제안/제휴문의 : 온라인 <a
 							href="goodsList?gCategory=Vegetable">todaysRecipe@google.com</a>
 						</span> <br> <span class="last">개인정보보호책임자 : 송지민 <a
-							href="goodsList?gCategory=Vegetable">(thdwlals41@naver.com)</a></span>
+							href="goodsList?gCategory=Vegetable">(thdwlals41@naver.com)</a></span></div>
 					</address>
 				</div>
 			</div>
 
-			<div class="wrap_inner_right" style="float:left; width:400px">
+			<div class="wrap_inner_right" style="float:left; width:300px; vertical-align:center;">
 				<div class="topArea">
 					<div class="cs">
 						<dl>
@@ -199,13 +199,12 @@ opacity
 							<dd>점심 &nbsp; 13:30 - 14:30</dd>
 							<dd>휴일 &nbsp; 토/일/공휴일</dd>
 						</dl>
-						<a href="notice" class="cs_btn" style="margin:0; text-align:center;">고객만족센터
-							<span></span>
+						<a href="notice" class="cs_btn" style="margin:0; text-align:center; width:150px; margin-left:auto;">고객만족센터
 						</a>
 					</div>
 					
 				</div>
-				<div class="topArea"  style="vertical-align:left">
+				<div class="topArea">
 					<div class="sns">
 						<dl>
 							<dt>SNS</dt>
@@ -214,7 +213,7 @@ opacity
 									src="images/items/github.png"
 									alt="오늘뭐먹조github" width="35" height="35"></a>
 							</dd>
-							<dd>
+							<!-- <dd>
 								<a href="https://www.instagram.com/xexymix/" target="_blank"><img
 									src="http://xexymix.jpg3.kr/xexymix/2020/main/footer_insta.png"
 									alt="제시믹스 인스타그램"></a>
@@ -225,7 +224,7 @@ opacity
 									target="_blank"><img
 									src="http://xexymix.jpg3.kr/xexymix/2020/main/footer_youtube.png"
 									alt="유튜브"></a>
-							</dd>
+							</dd> -->
 						</dl>
 					</div>
 				</div>

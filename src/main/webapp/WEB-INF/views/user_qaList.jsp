@@ -31,5 +31,6 @@
 	</div>
 	<hr style="border: solid 0.5px gray;">
 	<jsp:include page="QA/user_qaList.jsp" flush="true" />
+	<jsp:include page="footer/footer2.jsp" flush="true"></jsp:include>
 </body>
 </html>
