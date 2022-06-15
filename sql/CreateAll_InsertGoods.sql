@@ -393,3 +393,24 @@ REFERENCES goods(gCode) ON DELETE CASCADE;
 -- cart, orderinfo gamount 길이 변경
 alter table cart modify gamount number(4);
 alter table orderinfo modify gamount number(4);
+
+-- 주문 상태 속성 추가
+ALTER TABLE ORDERINFO
+add status VARCHAR(500);
+
+-- 주문 상태 속성에 주문접수 기본값 추가 
+ALTER TABLE ORDERINFO MODIFY (STATUS DEFAULT '주문접수');
+
+-- gCategory 추가
+ALTER TABLE ORDERINFO
+add gCategory varchar2(20);
+
+ALTER TABLE CART
+add gCategory varchar2(20);
+
+-- 테이블 내용 전부 삭제 후 not null 제약조건 추가
+ALTER TABLE ORDERINFO
+modify gCategory not null;
+
+ALTER TABLE CART
+modify gCategory not null;
