@@ -339,6 +339,7 @@ $(function() {
 			</tr>
 	
 			<tr>
+				<%-- <input type="hidden" name="gCategory" id="gCategory" value="${x.gCategory}"> --%>
 				<td class="td_default" align="left"> 
 					<!-- checkbox는 체크된 값만 서블릿으로 넘어간다. 
 					따라서 value에 삭제할 num값을 설정한다. -->

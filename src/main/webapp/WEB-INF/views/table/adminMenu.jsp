@@ -22,6 +22,17 @@
 			<a href="adminGedit" style="text-decoration: none;">상품 관리</a>
 		</td>
 	</tr>
+	<tr>
+		<td>
+			<hr style="border: 0.5px solid #ddd;">
+		</td>
+	</tr>
+	<tr>
+		<td align='center'>
+			<a href="dashBoard" style="text-decoration: none;">매출 집계</a>
+
+		</td>
+	</tr>
 		<tr>
 		<td height="7">
 			
