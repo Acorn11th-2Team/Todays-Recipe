@@ -5,7 +5,8 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 
 	$(function() {
@@ -58,16 +59,17 @@
 
 </script>
 <c:if test="${!empty mesg }">
-<script>
+	<script>
 	alert("${mesg}상품을 장바구니에 담았습니다.");
 </script>
 </c:if>
 <% session.removeAttribute("mesg"); %>
 <FORM name="goodRetrieveForm" method="GET" action="#">
-	    <input type="hidden" name="gImage" value="${goodsRetrieve.gImage }"> 
-	    <input type="hidden" name="gCode" value="${goodsRetrieve.gCode }">
-	     <input	type="hidden" name="gName" value="${goodsRetrieve.gName }"> 
-	     <input	type="hidden" name="gPrice" value="${goodsRetrieve.gPrice }">
+	<input type="hidden" name="gImage" value="${goodsRetrieve.gImage }">
+	<input type="hidden" name="gCode" value="${goodsRetrieve.gCode }">
+	<input type="hidden" name="gName" value="${goodsRetrieve.gName }">
+	<input type="hidden" name="gPrice" value="${goodsRetrieve.gPrice }">
+	<input type="hidden" name="gCategory" value="${goodsRetrieve.gCategory }">
 
 	<table align="center" cellspacing="0" cellpadding="0">
 		<tr>
@@ -77,24 +79,29 @@
 			<td>
 				<table align="center" width="710" cellspacing="0" cellpadding="0"
 					border="0" style='margin-left: 30px'>
-<!-- 					<tr>
+					<!-- 					<tr>
 						<td height="1" colspan="8" bgcolor="CECECE"></td>
 					</tr> -->
 
 					<tr>
-						<td rowspan="16"><img src="images/items/${goodsRetrieve.gImage }.png"
-							border="0" align="center" width="300" height="450"/></td>
+						<td rowspan="16"><img
+							src="images/items/${goodsRetrieve.gImage }.png" border="0"
+							align="center" width="300" height="450" /></td>
 					</tr>
 					<tr>
 						<td class="td_default" colspan="3">
-						<h1>${goodsRetrieve.gName }</h1>
-					</td>
-					
+							<h1>${goodsRetrieve.gName }</h1>
+						</td>
+
 					</tr>
-					
+
 					<tr>
-						<td class="td_red" colspan="3" >
-							<h2><fmt:formatNumber value="${goodsRetrieve.gPrice}" pattern="#,###"/>원</h2>
+						<td class="td_red" colspan="3">
+							<h2>
+								<fmt:formatNumber value="${goodsRetrieve.gPrice}"
+									pattern="#,###" />
+								원
+							</h2>
 						</td>
 					</tr>
 					<tr>
@@ -103,27 +110,24 @@
 					<tr>
 						<td class="td_title">제품코드</td>
 						<td class="td_default" colspan="2" style='padding-left: 30px'>
-						${goodsRetrieve.gCode }
-						</td>
+							${goodsRetrieve.gCode }</td>
 					</tr>
 					<tr>
 						<td colspan="3"><hr style="border: solid 0.5px gray;"></td>
 					</tr>
-					
+
 					<tr>
 						<td class="td_title">판매단위</td>
 						<td class="td_default" colspan="2" style='padding-left: 30px'>
-							${goodsRetrieve.gUnit }
-						</td>
+							${goodsRetrieve.gUnit }</td>
 					</tr>
 
 					<c:if test="${goodsRetrieve.gWeight != null}">
-					<tr>
-						<td class="td_title">중량/용량</td>
-						<td class="td_default" colspan="2" style='padding-left: 30px'>
-							${goodsRetrieve.gWeight }
-						</td>
-					</tr>
+						<tr>
+							<td class="td_title">중량/용량</td>
+							<td class="td_default" colspan="2" style='padding-left: 30px'>
+								${goodsRetrieve.gWeight }</td>
+						</tr>
 					</c:if>
 					<tr>
 						<td colspan="3"><hr style="border: solid 0.5px gray;"></td>
@@ -137,32 +141,27 @@
 					<tr>
 						<td colspan="3"><hr style="border: solid 0.5px gray;"></td>
 					</tr>
-					
+
 					<tr>
 						<td class="td_title">재고</td>
-						<td class="td_default" colspan="2" style='padding-left: 30px' id="gStock" data-gStock="${goodsRetrieve.gStock}">
-							<fmt:formatNumber value="${goodsRetrieve.gStock }" pattern="#,###"/>개
-						</td>
+						<td class="td_default" colspan="2" style='padding-left: 30px'
+							id="gStock" data-gStock="${goodsRetrieve.gStock}"><fmt:formatNumber
+								value="${goodsRetrieve.gStock }" pattern="#,###" />개</td>
 					</tr>
-					
+
 					<tr>
 						<td colspan="3"><hr style="border: solid 0.5px gray;"></td>
 					</tr>
-					
+
 
 					<tr>
 						<td class="td_title">주문수량</td>
-						
-						<td style="padding-left: 30px">
-							<span class="gAmount">
-								<input type="text"
-								name="gAmount" value="1" id="gAmount"
-								style="text-align: right; height: 18px" numberOnly> 
-							</span>
-							<img src="images/minus.png"
-							width="30" height="30" id="down">
-							<img src="images/plus.png"
-							width="30" height="30" id="up">
+
+						<td style="padding-left: 30px"><span class="gAmount">
+								<input type="text" name="gAmount" value="1" id="gAmount"
+								style="text-align: right; height: 18px" numberOnly>
+						</span> <img src="images/minus.png" width="30" height="30" id="down">
+							<img src="images/plus.png" width="30" height="30" id="up">
 						</td>
 					</tr>
 					<tr>
@@ -170,15 +169,15 @@
 					</tr>
 					<tr>
 						<td colspan="3" align="center">
-							<button id="cart" style="padding: 0; border: none; background: none;"> 
+							<button id="cart"
+								style="padding: 0; border: none; background: none;">
 								<img src="images/basket_button.png" width="360" border="0">
 							</button>
 						</td>
 					</tr>
 					<tr>
-						<td>
-						</td>
-						
+						<td></td>
+
 					</tr>
 
 				</table>

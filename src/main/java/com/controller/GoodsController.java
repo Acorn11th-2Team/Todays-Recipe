@@ -62,6 +62,7 @@ public class GoodsController {
 			oDTO.setgAmount(cDTO.getgAmount());
 			oDTO.setgImage(cDTO.getgImage());
 			oDTO.setOrderName(orderName);
+			oDTO.setgCategory(cDTO.getgCategory());
 			oDTO.setPost(postcode);
 			oDTO.setAddr1(roadAddress);
 			oDTO.setAddr2(jibunAddress);

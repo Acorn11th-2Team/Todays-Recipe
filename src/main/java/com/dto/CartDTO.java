@@ -8,6 +8,7 @@ import org.apache.ibatis.type.Alias;
 	private int num;
 	private String userid;
 	private String gCode;
+	private String gCategory;
 	private String gName;
 	private int gPrice;
 	private int gAmount;
@@ -16,7 +17,7 @@ import org.apache.ibatis.type.Alias;
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public CartDTO(int num, String userid, String gCode, String gName, int gPrice, int gAmount, String gImage) {
+	public CartDTO(int num, String userid, String gCode, String gName, int gPrice, int gAmount, String gImage, String gCategory) {
 		super();
 		this.num = num;
 		this.userid = userid;
@@ -25,6 +26,7 @@ import org.apache.ibatis.type.Alias;
 		this.gPrice = gPrice;
 		this.gAmount = gAmount;
 		this.gImage = gImage;
+		this.gCategory = gCategory;
 	}
 	public int getNum() {
 		return num;
@@ -68,12 +70,16 @@ import org.apache.ibatis.type.Alias;
 	public void setgImage(String gImage) {
 		this.gImage = gImage;
 	}
+	public String getgCategory() {
+		return gCategory;
+	}
+	public void setgCategory(String gCategory) {
+		this.gCategory = gCategory;
+	}
 	@Override
 	public String toString() {
 		return "CartDTO [num=" + num + ", userid=" + userid + ", gCode=" + gCode + ", gName=" + gName + ", gPrice="
-				+ gPrice + ", gAmount=" + gAmount + ", gImage=" + gImage + "]";
+				+ gPrice + ", gAmount=" + gAmount + ", gImage=" + gImage + ", gCategory=" + gCategory + "]";
 	}
-	
-		
 }
 

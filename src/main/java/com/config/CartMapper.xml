@@ -15,12 +15,12 @@ end;
 	  <foreach item="item" index="index" collection="list">
 		into orderinfo	
 		    (num,userid,gCode,gName,gPrice,gAmount,
- 			 gImage,orderName,post,addr1,addr2,phone,payMethod)
+ 			 gImage,orderName,post,addr1,addr2,phone,payMethod,gCategory)
        values( #{item.num}, #{item.userid},#{item.gCode},
        #{item.gName},#{item.gPrice},#{item.gAmount},
               #{item.gImage},#{item.orderName},
               #{item.post},#{item.addr1},#{item.addr2},
-              #{item.phone},#{item.payMethod})
+              #{item.phone},#{item.payMethod},#{item.gCategory})
 	</foreach>
 	  select *
 	  from dual
@@ -28,7 +28,7 @@ end;
 
 <select id="orderAllConfirm" parameterType="arraylist" 
 	resultType="CartDTO">
-	 select num,userid,gCode,gPrice,gAmount,gName,gImage
+	 select num,userid,gCode,gPrice,gAmount,gName,gImage,gCategory
 	 from cart
 	 where num
 	 IN
@@ -41,9 +41,9 @@ end;
 <insert id="orderDone" parameterType="OrderDTO">
  insert into orderinfo 
  (num,userid,gCode,gName,gPrice,gAmount,
- 			 gImage,orderName,post,addr1,addr2,phone,payMethod)
- values( orderInfo_seq.nextval, #{userid},#{gCode},#{gName},#{gPrice},
-               #{gAmount}, #{gImage},#{orderName},#{post},#{addr1},#{addr2},#{phone},#{payMethod})
+ 			 gImage,orderName,post,addr1,addr2,phone,payMethod,gCategory)
+ values(orderInfo_seq.nextval, #{userid},#{gCode},#{gName},#{gPrice},
+               #{gAmount}, #{gImage},#{orderName},#{post},#{addr1},#{addr2},#{phone},#{payMethod},#{gCategory})
 </insert>
 
   <delete id="cartAllDel" parameterType="arraylist">
@@ -55,7 +55,6 @@ end;
 			#{item}
 		</foreach>
 	</delete>
-	
 	
 	<delete id="cartDel" parameterType="int">
 		delete from cart
@@ -71,28 +70,28 @@ end;
 	
 	<insert id="cartAdd" parameterType="CartDTO">
 		insert into cart (num,userid,gCode,gPrice,
-		        gAmount,gName,gImage)
+		        gAmount,gName,gImage,gCategory)
 		values( cart_seq.nextval, #{userid},#{gCode},#{gPrice},
-		        #{gAmount},#{gName},#{gImage} )
+		        #{gAmount},#{gName},#{gImage},#{gCategory} )
 	</insert>
 	
 	<select id="cartList" parameterType="string" 
 	resultType="CartDTO">
-	 select num,userid,gCode,gPrice,gAmount,gName,gImage
+	 select num,userid,gCode,gPrice,gAmount,gName,gImage,gCategory
 	 from cart
 	 where userid=#{userid}
 	</select>
 	
 	<select id="cartByNum" parameterType="int" 
 	resultType="CartDTO">
-	 select num,userid,gCode,gPrice,gAmount,gName,gImage
+	 select num,userid,gCode,gPrice,gAmount,gName,gImage,gCategory
 	 from cart
 	 where num=#{num}
 	</select>
 	
 	<select id="cartByCheck" parameterType="List" 
 	resultType="CartDTO">
-	 select num,userid,gCode,gPrice,gAmount,gName,gImage
+	 select num,userid,gCode,gPrice,gAmount,gName,gImage,gCategory
 	 from cart
 	 where num IN
 	 <foreach collection="list" item="item" open="("

@@ -8,6 +8,7 @@ public class OrderDTO {
 	private String userid;
 	private String gCode;
 	private String gName;
+	private String gCategory;
 	private int gPrice;
 	private int gAmount;
 	private String gImage;
@@ -24,7 +25,7 @@ public class OrderDTO {
 	}
 	public OrderDTO(int num, String userid, String gCode, String gName, int gPrice, int gAmount, String gImage,
 			String orderName, String post, String addr1, String addr2, String phone, String payMethod,
-			String orderday) {
+			String orderday, String gCategory) {
 		super();
 		this.num = num;
 		this.userid = userid;
@@ -40,6 +41,7 @@ public class OrderDTO {
 		this.phone = phone;
 		this.payMethod = payMethod;
 		this.orderday = orderday;
+		this.gCategory = gCategory;
 	}
 	public int getNum() {
 		return num;
@@ -125,14 +127,17 @@ public class OrderDTO {
 	public void setOrderday(String orderday) {
 		this.orderday = orderday;
 	}
+	public String getgCategory() {
+		return gCategory;
+	}
+	public void setgCategory(String gCategory) {
+		this.gCategory = gCategory;
+	}
 	@Override
 	public String toString() {
 		return "OrderDTO [num=" + num + ", userid=" + userid + ", gCode=" + gCode + ", gName=" + gName + ", gPrice="
 				+ gPrice + ", gAmount=" + gAmount + ", gImage=" + gImage + ", orderName=" + orderName + ", post=" + post
 				+ ", addr1=" + addr1 + ", addr2=" + addr2 + ", phone=" + phone + ", payMethod=" + payMethod
-				+ ", orderday=" + orderday + "]";
+				+ ", orderday=" + orderday + ", gCategory=" + gCategory +"]";
 	}
-	
-	
-	
 }
