@@ -21,4 +21,10 @@ public class DashBoardDAO {
 		return list;
 	}
 
+	public List<OrderdaySalesDTO> getDaySalesMap(Map<String, String> mapDay) {
+		// TODO Auto-generated method stub
+		List<OrderdaySalesDTO> list = template.selectList("orderdaySalesMap", mapDay);
+		return list;
+	}
+
 }

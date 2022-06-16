@@ -10,6 +10,7 @@
 	src="https://www.gstatic.com/charts/loader.js"></script>
 <!--jQuery CDN -->
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script type="text/javascript">
     
@@ -28,7 +29,6 @@
     //데이터 테이블을 만들고 채우는 콜백입니다.
     //원형 차트를 인스턴스화하고 데이터를 전달하며 그립니다.
     
-
       function drawChart() {
 
         var data = new google.visualization.DataTable();
@@ -46,12 +46,53 @@
 
         chart.draw(data, options);
       }
+    
+    $(function () {
+    	// 날짜 데이터 비동기 전송
+    	$("#setDay").on("click", function () {
+    		console.log("setDay 클릭 ");
+    		
+    		var startDay= $("#startDay").val();
+    		var endDay= $("#endDay").val();
+    		
+    		if (startDay > endDay || startDay == "" || endDay == "") {
+				alert("날짜를 확인해 주세요.");
+				event.preventDefault();
+			}
+    		
+    		$.ajax({
+    			url: "selectDay",
+    			type:"get",
+    			dataType: "text",
+    			data: {
+    				startDay : startDay,
+    				endDay : endDay
+    			},
+    			success: function(data, status, xhr) {
+    				console.log("success");
+    				$("#startDay").val();
+    				$("#endDay").val();
+    			},
+    			error: function(xhr, status, error) {
+    				console.log(error);
+    			}			
+    		});//end ajax
+    	});//end event
+	})
 </script>
 </head>
 <body>
 	<div style="width: 10%; float: left;">
 		<jsp:include page="../table/adminMenu.jsp"></jsp:include>
 	</div>
+	<form action="selectDay">
+	<div style="margin:0 auto; width: 600px;">
+		<input type="date" id="startDay" name="startDay"/>
+		<span>to</span>
+		<input type="date" id="endDay" name="endDay""/>
+		<button id="setDay">날짜 설정</button>
+	</div><br>
+	</form>
 	<div id="barchart" style="width: 900px; height: 500px; margin: 0 auto;"></div>
 </body>
 </html>

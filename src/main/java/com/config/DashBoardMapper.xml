@@ -10,5 +10,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		from orderinfo
 		group by substr(orderday, 0, 10)
 	</select>
-
+	
+	<select id="orderdaySalesMap" parameterType="hashmap" resultType="orderdaySalesDTO">
+		select substr(orderday, 0, 10) orderday, SUM(gprice * gamount) sales
+		from orderinfo
+		where orderday <![CDATA[>=]]> #{startDay} 
+		and orderday <![CDATA[<=]]> #{endDay}
+		group by substr(orderday, 0, 10)
+	</select>
+	
 </mapper>

@@ -21,4 +21,10 @@ public class DashBoardService {
 		return list;
 	}
 
+	public List<OrderdaySalesDTO> getDaySalesMap(Map<String, String> mapDay) throws Exception {
+		// TODO Auto-generated method stub
+		List<OrderdaySalesDTO> list = dao.getDaySalesMap(mapDay);
+		return list;
+	}
+
 }
