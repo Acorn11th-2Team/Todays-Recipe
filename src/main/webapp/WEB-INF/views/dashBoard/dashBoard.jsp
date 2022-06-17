@@ -70,8 +70,8 @@
     			},
     			success: function(data, status, xhr) {
     				console.log("success");
-    				$("#startDay").val();
-    				$("#endDay").val();
+    				$("#startDay").val(startDay);
+    				$("#endDay").val(endDay);
     			},
     			error: function(xhr, status, error) {
     				console.log(error);
