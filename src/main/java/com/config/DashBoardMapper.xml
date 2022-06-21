@@ -8,7 +8,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="orderdaySales" resultType="orderdaySalesDTO">
 		select substr(orderday, 0, 10) orderday, SUM(gprice * gamount) sales
 		from orderinfo
+		where status <![CDATA[=]]> '거래완료'
 		group by substr(orderday, 0, 10)
+		order by 1
 	</select>
 	
 	<select id="orderdaySalesMap" parameterType="hashmap" resultType="orderdaySalesDTO">
@@ -16,7 +18,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		from orderinfo
 		where orderday <![CDATA[>=]]> #{startDay} 
 		and orderday <![CDATA[<=]]> #{endDay}
+		and status <![CDATA[=]]> '거래완료'
 		group by substr(orderday, 0, 10)
+		order by 1
 	</select>
 	
 </mapper>
