@@ -18,7 +18,9 @@
 		<jsp:include page="common/menu.jsp" flush="true"></jsp:include>
 		</div>
 		<hr style="border: solid 0.5px gray;">
-		<%-- <jsp:include page="dashBoard/dashBoard.jsp" flush="true"></jsp:include> --%>
+		<div style="text-align:center;"><a href="dashBoard">일별 매출 확인</a>&nbsp;&nbsp;<a href="">카테고리별 매출 확인</a></div>
+		<br>
+		
 		<jsp:include page="dashBoard/dashBoard.jsp" flush="true"></jsp:include>
 		<jsp:include page="footer/footer2.jsp" flush="true"></jsp:include>
 	</body>

@@ -84,7 +84,7 @@
 		<jsp:include page="../table/adminMenu.jsp"></jsp:include>
 	</div>
 	<form action="selectDay">
-	<div style="margin:0 auto; width: 600px;">
+	<div style="margin:0 auto; width: 450px;">
 		<span>시작일</span>
 		<input type="date" id="startDay" name="startDay"/>
 		<span>종료일</span>
