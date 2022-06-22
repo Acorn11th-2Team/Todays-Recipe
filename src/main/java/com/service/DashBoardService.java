@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dao.DashBoardDAO;
+import com.dto.DashBoardDTO;
 import com.dto.OrderdaySalesDTO;
 
 @Service
@@ -27,4 +28,8 @@ public class DashBoardService {
 		return list;
 	}
 
+	public List<DashBoardDTO> totalByCategory() throws Exception {
+		List<DashBoardDTO> list = dao.totalByCategory();
+		return list;
+	}
 }

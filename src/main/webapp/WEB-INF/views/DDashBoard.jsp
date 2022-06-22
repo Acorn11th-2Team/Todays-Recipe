@@ -17,12 +17,12 @@
 		style="display: block; margin: 0 auto;">
 	</a>
 	<div align="center">
-		<jsp:include page="common/menu.jsp" flush="true"></jsp:include>
+		<jsp:include page="common/menu.jsp" flush="true"/>
 	</div>
 	<hr style="border: solid 0.5px gray;">
 </body>
 <div align="center">
-	<jsp:include page="goods/goodsEdit.jsp" flush="true" />
-	<jsp:include page="footer/footer2.jsp" flush="true"></jsp:include>
+	<jsp:include page="dashBoard/DdashBoard.jsp" flush="true"/>
+	<jsp:include page="footer/footer2.jsp" flush="true"/>
 </div>
 </html>

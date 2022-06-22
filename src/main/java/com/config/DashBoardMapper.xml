@@ -23,4 +23,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		order by 1
 	</select>
 	
+	<select id="totalByCategory" resultType="DashBoardDTO">
+		select gCategory, sum(gPrice*gAmount) TotalPrice
+		from orderinfo
+		group by gCategory
+	</select>
 </mapper>

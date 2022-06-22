@@ -1,16 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="kor" xml:lang="ko">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Insert title here</title>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!-- Load the AJAX API -->
 <script type="text/javascript"
 	src="https://www.gstatic.com/charts/loader.js"></script>
 <!--jQuery CDN -->
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script type="text/javascript">
     
@@ -78,20 +76,18 @@
     	});//end event
 	})
 </script>
-</head>
-<body>
-	<div style="width: 10%; float: left;">
-		<jsp:include page="../table/adminMenu.jsp"></jsp:include>
-	</div>
-	<form action="selectDay">
-	<div style="margin:0 auto; width: 450px;">
-		<span>시작일</span>
-		<input type="date" id="startDay" name="startDay"/>
-		<span>종료일</span>
-		<input type="date" id="endDay" name="endDay""/>
+<div style="width: 10%; float: left;">
+	<jsp:include page="../table/adminMenu.jsp"/>
+</div>
+<div style="width: 80%; float: left; text-align: center;">
+	<jsp:include page="../admin/dashBoardMenu.jsp" flush="true" /><br>
+</div>
+<form action="selectDay">
+	<div style="margin: 0 auto; width: 450px;">
+		<span>시작일</span> <input type="date" id="startDay" name="startDay" /> ~
+		<span>종료일</span> <input type="date" id="endDay" name="endDay" />
 		<button id="setDay">날짜 설정</button>
-	</div><br>
-	</form>
-	<div id="barchart" style="width: 900px; height: 500px; margin: 0 auto;"></div>
-</body>
-</html>
+	</div>
+	<br>
+</form>
+<div id="barchart" style="width: 900px; height: 500px; margin: 0 auto;"></div>

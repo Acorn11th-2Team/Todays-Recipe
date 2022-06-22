@@ -29,7 +29,7 @@
 	</tr>
 	<tr>
 		<td align='center'>
-			<a href="dashBoard" style="text-decoration: none;">매출 집계</a>
+			<a href="DDashBoard" style="text-decoration: none;">매출 집계</a>
 
 		</td>
 	</tr>
