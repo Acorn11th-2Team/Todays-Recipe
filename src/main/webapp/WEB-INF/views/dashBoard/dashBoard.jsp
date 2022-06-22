@@ -70,8 +70,6 @@
     			},
     			success: function(data, status, xhr) {
     				console.log("success");
-    				$("#startDay").val(startDay);
-    				$("#endDay").val(endDay);
     			},
     			error: function(xhr, status, error) {
     				console.log(error);
@@ -87,8 +85,9 @@
 	</div>
 	<form action="selectDay">
 	<div style="margin:0 auto; width: 600px;">
+		<span>시작일</span>
 		<input type="date" id="startDay" name="startDay"/>
-		<span>to</span>
+		<span>종료일</span>
 		<input type="date" id="endDay" name="endDay""/>
 		<button id="setDay">날짜 설정</button>
 	</div><br>

@@ -57,4 +57,5 @@ public class QaService {
 	public List<QaDTO> selectBoard(PagingVO vo) throws Exception {
 		return dao.selectBoard(vo);
 	}
+
 }
