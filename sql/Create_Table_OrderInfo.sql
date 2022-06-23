@@ -1,35 +1,41 @@
-   create table orderInfo
-  (  num NUMBER(6) PRIMARY KEY,
-     userid VARCHAR2(10),
-     gCode varchar2(20) not null,
-     gName varchar2(50) not null,
-     gPrice NUMBER(6) not null,
-     gAmount NUMBER(4) not null,
-     gImage varchar2(20) not null,
-     orderName VARCHAR2(10) NOT NULL,
-     post VARCHAR2(5) NOT NULL,
-     addr1 VARCHAR2(500) NOT NULL,
-     addr2 VARCHAR2(500) NOT NULL,
-     phone VARCHAR2(11) NOT NULL,
-     payMethod VARCHAR2(10) NOT NULL,
-     orderDay DATE  DEFAULT SYSDATE
-  );   
-  alter table orderInfo
-  add CONSTRAINT orderInfo_userid_fk FOREIGN KEY(userid)
-   REFERENCES member(userid) ON DELETE CASCADE;
-   
-   
-  alter table orderInfo
-  add CONSTRAINT orderInfo_gCode_fk FOREIGN KEY(gCode)
-   REFERENCES goods(gCode) ON DELETE CASCADE; 
-   
-   create sequence orderInfo_seq;
-   
--- 데이터형식 수정
-ALTER TABLE orderInfo
-MODIFY ( paymethod VARCHAR2(30) );
+-- 기존 orderInfo 테이블과 시퀀스 삭제
+drop table orderinfo purge;
+drop sequence orderInfo_seq;
 
--- 데이터 추가
+-- orderInfo 테이블 생성
+create table orderInfo
+  (num NUMBER(6) PRIMARY KEY,
+    userid VARCHAR2(10),
+    gCode varchar2(20) NOT NULL,
+	gCategory VARCHAR2(20) NOT NULL,
+    gName varchar2(50) NOT NULL,
+    gPrice NUMBER(6) NOT NULL,
+    gAmount NUMBER(4) NOT NULL,
+    gImage varchar2(20) NOT NULL,
+    orderName VARCHAR2(10) NOT NULL,
+    post VARCHAR2(5) NOT NULL,
+    addr1 VARCHAR2(500) NOT NULL,
+    addr2 VARCHAR2(500) NOT NULL,
+    phone VARCHAR2(11) NOT NULL,
+    payMethod VARCHAR2(30) NOT NULL,
+    orderDay DATE DEFAULT SYSDATE,
+	status VARCHAR(500) DEFAULT '주문접수'
+  );   
+  
+-- orderInfo에 userid FK 추가
+alter table orderInfo
+add CONSTRAINT orderInfo_userid_fk FOREIGN KEY(userid)
+REFERENCES member(userid) ON DELETE CASCADE;
+
+alter table orderInfo
+add CONSTRAINT orderInfo_gCode_fk FOREIGN KEY(gCode)
+REFERENCES goods(gCode) ON DELETE CASCADE; 
+
+-- orderInfo 번호 시퀀스 생성   
+create sequence orderInfo_seq;
+
+-- Insert
+-- OrderInfo 더미 데이터
 Insert into ORDERINFO values (9,'1','F5','아보카도',3240,7,'fruit5','KIM','11111','서울','광진','01011111111','신용카드',to_date('22/06/10','RR/MM/DD'),'거래완료','Fruit');
 Insert into ORDERINFO values (8,'1','V15','당근',2990,8,'veg15','KIM','11111','서울','광진','01011111111','계좌이체',to_date('22/06/11','RR/MM/DD'),'거래완료','Vegetable');
 Insert into ORDERINFO values (7,'1','V6','깐대파',2590,6,'veg6','KIM','11111','서울','광진','01011111111','계좌이체',to_date('22/06/12','RR/MM/DD'),'거래완료','Vegetable');
@@ -127,3 +133,4 @@ Insert into ORDERINFO values (57,'9','F9','애플청포도',9990,5,'fruit9','KWA
 Insert into ORDERINFO values (58,'9','V15','당근',2990,4,'veg15','KWAK','99999','충북','제천','01099999999','무통장 입급',to_date('22/06/14','RR/MM/DD'),'거래완료','Vegetable');
 Insert into ORDERINFO values (59,'9','F14','골드키위',9900,24,'fruit14','KWAK','99999','충북','제천','01099999999','계좌이체',to_date('22/06/12','RR/MM/DD'),'거래완료','Fruit');
 Insert into ORDERINFO values (60,'9','F11','사파이어포도',8910,55,'fruit11','KWAK','99999','충북','제천','01099999999','계좌이체',to_date('22/06/13','RR/MM/DD'),'거래완료','Fruit');
+commit;
