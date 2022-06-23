@@ -1,12 +1,11 @@
 package com.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,13 +21,18 @@ public class NoticeController {
 
 	@Autowired
 	NoticeService service;
+	
+	@ExceptionHandler({Exception.class})
+	public String errorPage() {
+	  	return "error/error";//error/error.jsp
+	  }
 
 	// 비로그인 & 로그인
 	@RequestMapping(value = "notice", method = RequestMethod.GET)
 	public String notice(Model model, HttpSession session,
 			NoticePagingDTO ndto
 			, @RequestParam(value="nowPage", required=false)String nowPage
-			, @RequestParam(value="countPerPage", required=false)String countPerPage) {
+			, @RequestParam(value="countPerPage", required=false)String countPerPage) throws Exception {
 		int total = service.CountBoard();
 		System.out.println("nowPage = " + nowPage);
 		if(nowPage == null && countPerPage == null) {
@@ -81,7 +85,7 @@ public class NoticeController {
 	
 	//공지사항 추가
 	@RequestMapping(value = "/noticeAdd", method = RequestMethod.GET)
-	public String noticeAdd(NoticeDTO dto, Model model, HttpSession session) {
+	public String noticeAdd(NoticeDTO dto, Model model, HttpSession session) throws Exception {
 		MemberDTO mdto = (MemberDTO) session.getAttribute("login");
 		//dto.setWriter(mdto.getUserid());
 		
@@ -95,14 +99,14 @@ public class NoticeController {
 	//공지사항 삭제
 	@RequestMapping(value="/noticeDelete", method = RequestMethod.GET)
 	@ResponseBody
-	public void noticeDelete(@RequestParam("num") int num) {
+	public void noticeDelete(@RequestParam("num") int num) throws Exception {
 		System.out.println("num = " + num);
 		service.noticeDelete(num);
 	}
 	
 	//공지사항 상세보기
 	@RequestMapping(value="/detail", method = RequestMethod.GET)
-	public String noticedetail(@RequestParam(value="num" ,defaultValue="0")  int num, Model model, HttpSession session) {
+	public String noticedetail(@RequestParam(value="num" ,defaultValue="0")  int num, Model model, HttpSession session) throws Exception {
 		System.out.println("num 값이 제대로 넘어오는지 = " + num);
 		service.ViewCount(num); //해당글을 보면 조회가 올라가는 기능
 		NoticeDTO datalist = service.detail(num);
@@ -113,7 +117,7 @@ public class NoticeController {
 	
 	//공지사항 수정
 	@RequestMapping(value="/noticeUpdate", method = RequestMethod.GET)
-	public String noticeUpdate(NoticeDTO dto, HttpSession session) {
+	public String noticeUpdate(NoticeDTO dto, HttpSession session) throws Exception {
 		System.out.println("업데이트 전 정보 : "+dto);
 		service.noticeUpdate(dto);
 		System.out.println("업데이트 후 정보 : "+dto);

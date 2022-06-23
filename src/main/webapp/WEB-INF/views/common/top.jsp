@@ -48,6 +48,10 @@ a:active { /*클릭하는 순간*/
 			<font face="Andale Mono">장바구니</font>
 		</a>
 		&nbsp;|&nbsp;
+		<a href="orderCheck" style="text-decoration: none;">
+			<font face="Andale Mono">주문목록</font>
+		</a>
+		&nbsp;|&nbsp;
 			<a href="loginCheck/serviceCenter" style="text-decoration: none;">
 			<font face="Andale Mono">고객센터</font>
 		</a>

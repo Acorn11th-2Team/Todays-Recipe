@@ -33,7 +33,8 @@
 				<!-- QA -->
 				<value>classpath:com/config/QaMapper.xml</value>
 				<value>classpath:com/config/NoticeMapper.xml</value> <!-- Notice -->
-				<value>classpath:com/config/DashBoardMapper.xml</value>					
+				<value>classpath:com/config/DashBoardMapper.xml</value>
+				<value>classpath:com/config/OrderCheckMapper.xml</value><!-- OrderCheck -->				
 			</list>		
 		</property>
 		<property name="typeAliases">
@@ -47,7 +48,8 @@
 				<value>com.dto.NoticeDTO</value> <!-- Notice -->
 				<value>com.dto.NoticePagingDTO</value>	<!-- Notice -->
 				<value>com.dto.DashBoardDTO</value>
-				<value>com.dto.OrderdaySalesDTO</value>						
+				<value>com.dto.OrderdaySalesDTO</value>	
+				<value>com.dto.OrderCheckDTO</value> <!-- OrderCheck -->				
 			</list>		
 		</property>
 	</bean>	
