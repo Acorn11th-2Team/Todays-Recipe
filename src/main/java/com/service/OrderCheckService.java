@@ -29,6 +29,15 @@ public class OrderCheckService {
 		dao.receiptStatus(map);
 		
 	}
+
+	public List<OrderCheckDTO> listOrderGoods() {
+		return dao.listOrderGoods();
+	}
+
+	public void receiptStatusAdmin(Map<String, String> map) {
+		dao.receiptStatusAdmin(map);
+		
+	}
 	
 	
 	//페이징처리 향후 구현

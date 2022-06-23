@@ -20,10 +20,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<update id="receiptStatusUpate" parameterType="hashmap">
 	update ORDERINFO
-	set status = '완료'
+	set status = '거래완료'
 	where num = #{num}
 	</update>
 	
+	
+	<!-- 유저 주문확인 페이지에 주문한 품목 총 리스트 가져오기 -->
+	<select id="selectOrderGoodsList" resultType="OrderCheckDTO">
+	 select * from ORDERINFO 
+	 order by orderday desc
+	</select>
+	
+	<update id="receiptStatusUpateAdmin" parameterType="hashmap">
+	update ORDERINFO
+	set status = '배송완료'
+	where num = #{num}
+	</update>
 	
 <!-- 	<select id="selectMyOrderGoodsList" resultType="OrderCheckDTO">
 	 select num, B.rn rownumber, gimage, gname, gprice, gamount, orderday, status

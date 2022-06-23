@@ -32,6 +32,16 @@ public class OrderCheckDAO {
 		
 	}
 
+	public List<OrderCheckDTO> listOrderGoods() {
+		return template.selectList("OrderCheckMapper.selectOrderGoodsList");
+	}
+
+	public void receiptStatusAdmin(Map<String, String> map) {
+		int n = template.update("OrderCheckMapper.receiptStatusUpateAdmin", map);
+		System.out.println("정상적으로 주문상태 변경되는지 확인 - DAO  : " + n);
+		
+	}
+
 	//페이징처리 추후 구현
 //	public List<OrderCheckDTO> listMyOrderGoods(NoticePagingDTO ndto) {
 //		return template.selectList("OrderCheckMapper.selectMyOrderGoodsList", ndto);

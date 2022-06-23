@@ -29,6 +29,16 @@
 	</tr>
 	<tr>
 		<td align='center'>
+			<a href="orderCheckAdmin" style="text-decoration: none;">배송 관리</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<hr style="border: 0.5px solid #ddd;">
+		</td>
+	</tr>
+	<tr>
+		<td align='center'>
 			<a href="DDashBoard" style="text-decoration: none;">매출 집계</a>
 
 		</td>
@@ -38,4 +48,5 @@
 			
 		</td>
 	</tr>
+	
 </table>

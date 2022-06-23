@@ -28,7 +28,8 @@
 <mvc:view-controller path="/dashBoard" view-name="dashBoard"/><!-- dashBoard.jsp -->
 <!-- OrderCheck -->
 <mvc:view-controller path="/orderCheck" view-name="orderCheck"/><!-- orderCheck.jsp -->
-
+<!-- orderCheckAdmin -->
+<mvc:view-controller path="/orderCheckAdmin" view-name="orderCheckAdmin"/><!-- orderCheckAdmin.jsp -->
 
 <mvc:resources location="/WEB-INF/views/images/" mapping="/images/**"/>
 <mvc:resources location="/WEB-INF/views/css/" mapping="/css/**"/>

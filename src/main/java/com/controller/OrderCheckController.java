@@ -97,6 +97,22 @@ public class OrderCheckController {
 //		return "orderCheck";
 //	}
 	
+	// 관리자용
+	@RequestMapping(value="/orderCheckAdmin", method=RequestMethod.GET)
+	public String orderCheckListAdmin (Model model, OrderCheckDTO odto) throws Exception {
 
+		List<OrderCheckDTO>OrderList = service.listOrderGoods();
+		System.out.println("주문목록 리스트 잘 담기는지 확인 : " + OrderList);
+		model.addAttribute("OrderList", OrderList);
+		return "orderCheckAdmin";
+	}
+	
+	//배송완료상태 변경
+	@RequestMapping(value="/receiptStatusAdmin", method = RequestMethod.GET)
+	@ResponseBody
+	public void receiptStatusAdmin(@RequestParam Map<String, String> map) throws Exception {
+		System.out.println("수정전 항목이 제대로 넘어오는지 확인 : " + map);
+		service.receiptStatusAdmin(map);
+	}
 
 }
