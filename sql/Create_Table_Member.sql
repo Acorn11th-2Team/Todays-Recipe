@@ -1,3 +1,7 @@
+-- 기존 Member 테이블 삭제
+drop table member purge;
+
+-- Member 테이블 생성
 create table member
 (
   userid varchar2(10) primary key,
@@ -13,6 +17,8 @@ create table member
   email2 varchar2(20) not null
 );
 
+-- Insert
+-- Member 더미 데이터 
 insert into member values
 ('admin', 'admin', '관리자', '00000', '서울', '강남', '010', '0000', '0000', 'admin', 'daum.net');
 insert into member values

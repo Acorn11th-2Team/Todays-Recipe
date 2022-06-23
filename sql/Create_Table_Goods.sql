@@ -1,37 +1,20 @@
--- 기존 테이블들 삭제
-drop table cart purge;
-drop table notice purge;
-drop table qa purge;
-drop table orderinfo purge;
+-- 기존 Goods 테이블 삭제
 drop table goods purge;
-drop table member purge;
 
+-- Goods 테이블 생성
+create table goods 
+	( gCode varchar2(20) PRIMARY KEY, -- 상품코드
+	gCategory varchar2(20) not null,   -- 상품 카테고리 (fruit, )
+	gName varchar2(50) not null,   -- 상품 이름 (본래 식재료 이름만 표기 원산지, 생산자 제외)
+	gPrice NUMBER(6) not null,     -- 상품 가격
+	gImage varchar2(20) not null,   -- 상품 이미지
+	gUnit varchar2(20),     -- 판매단위 (기재된 것이 없을 경우 NULL)
+	gWeight varchar2(20),   -- 중량 (기재된 것이 없을 경우 NULL)
+	gStock NUMBER(20)   -- 재고
+);
 
-
-
--- 기존 시퀀스들 삭제
-drop sequence cart_seq;
-drop sequence orderInfo_seq;
-drop sequence QA_seq;
-drop sequence notice_seq;
-
----상품
-   -- vegetable, fruit, seafood, meat, noodle
-   create table goods
-   ( gCode varchar2(20) PRIMARY KEY, -- 상품코드
-     gCategory varchar2(20) not null,   -- 상품 카테고리
-     gName varchar2(50) not null,   -- 상품 이름   (본래 식재료 이름만 표기 원산지, 생산자 제외)
-     gPrice NUMBER(6) not null,     -- 상품 가격
-     gImage varchar2(20) not null,   -- 상품 이미지
-     gUnit varchar2(20),     -- 판매단위 (기재된 것이 없을 경우 NULL)
-     gWeight varchar2(20)   -- 중량 (기재된 것이 없을 경우 NULL)
-     );
-
--- goods테이블에 gStock(재고) 항목 추가
-ALTER TABLE goods
-add gStock NUMBER(20);
-
--- 기본 재고 1000개씩으로 추가
+-- Insert
+-- Meat 더미 데이터
 insert into goods 
   values ('M1',	'Meat', '계란', '7200', 'meat1', '20구', '1200g', 1000);
 insert into goods 
@@ -92,8 +75,7 @@ insert into goods
   values ('M29', 'Meat', '함박 스테이크', '13000', 'meat29', '2팩', '600g', 1000);
 insert into goods 
   values ('M30', 'Meat', '소고기 안심', '15900', 'meat30', '1팩', '200g', 1000);
-  
--- 면, 양념, 오일 DB
+-- Noodle 더미 데이터
 insert into goods values ('N1', 'Noodle', '토마토 소스', 2500, 'noodle1', '1개', '500g', 1000);
 insert into goods values ('N2', 'Noodle', '바질페스토', 5980, 'noodle2', '1병', '230g', 1000);
 insert into goods values ('N3', 'Noodle', '스파게티', 2450, 'noodle3', '1봉', '500g', 1000);
@@ -127,10 +109,7 @@ insert into goods values ('N30', 'Noodle', '올리고당', 2800, 'noodle30', '1�
 insert into goods values ('N31', 'Noodle', '식용유', 7510, 'noodle31', '1병', '1.8L', 1000);
 insert into goods values ('N32', 'Noodle', '볶음 참깨', 3200, 'noodle32', '1병', '120g', 1000);
 insert into goods values ('N33', 'Noodle', '순후추', 3340, 'noodle33', '1캔', '50g', 1000);  
-
-
-
--- 채소
+-- Vegetable 더미 데이터
 insert into goods values ('V1',	'Vegetable', '애호박', '1480', 'veg1', '1개', NULL, 1000);
 insert into goods values ('V2',	'Vegetable', '팽이버섯', '1160', 'veg2', '1봉', '2입', 1000);
 insert into goods values ('V3',	'Vegetable', '참타리 버섯', '1050', 'veg3', '1개', '200g', 1000);
@@ -141,7 +120,6 @@ insert into goods values ('V7',	'Vegetable', '양파', '3600', 'veg7', '1망', '
 insert into goods values ('V8',	'Vegetable', '깐마늘', '2990', 'veg8', '1봉', '200g', 1000);
 insert into goods values ('V9',	'Vegetable', '감자', '6980', 'veg9', '1봉', '1kg', 1000);
 insert into goods values ('V10','Vegetable', '새송이버섯', '2000', 'veg10', '1봉', '400g', 1000);
-     
 insert into goods values ('V11','Vegetable', '다다기오이', '2800', 'veg11', '1봉', '3개입', 1000);
 insert into goods values ('V12','Vegetable', '국산 브로콜리', '2120', 'veg12', '1봉', '1송이', 1000);
 insert into goods values ('V13','Vegetable', '파프리카', '2480', 'veg13', '1봉', '2입', 1000);
@@ -152,7 +130,6 @@ insert into goods values ('V17','Vegetable', '알배기 배추', '3990', 'veg17'
 insert into goods values ('V18','Vegetable', '양배추', '3790', 'veg18', '1통', '900g 내외', 1000);
 insert into goods values ('V19','Vegetable', '부추', '2220', 'veg19', '1봉', '200g', 1000);
 insert into goods values ('V20','Vegetable', '청양고추', '2280', 'veg20', '1봉', '200g', 1000);
-     
 insert into goods values ('V21','Vegetable', '청상추', '1480', 'veg21', '1봉', '150g', 1000);
 insert into goods values ('V22','Vegetable', '미나리', '4990', 'veg22', '1봉', '200g', 1000);
 insert into goods values ('V23','Vegetable', '시금치', '2190', 'veg23', '1봉지', '200g', 1000);
@@ -163,8 +140,7 @@ insert into goods values ('V27','Vegetable', '양송이버섯', '3690', 'veg27',
 insert into goods values ('V28','Vegetable', '숙주나물', '1990', 'veg28', '1봉', '200g', 1000);
 insert into goods values ('V29','Vegetable', '로메인', '2990', 'veg29', '1봉', '200g', 1000);
 insert into goods values ('V30','Vegetable', '콩나물', '2600', 'veg30', '1팩', '340', 1000);
-
--- 과일
+-- Fruit 더미 데이터
 INSERT INTO goods VALUES 
 ('F1','Fruit','바나나','2980','fruit1','1봉','1kg', 1000);
 INSERT INTO goods VALUES 
@@ -221,8 +197,7 @@ INSERT INTO goods VALUES
 ('F27','Fruit','냉동딸기','7110','fruit27','1팩','1kg', 1000);
 INSERT INTO goods VALUES 
 ('F28','Fruit','적용과','3960','fruit28','1팩','450g', 1000);
-
--- 해산물
+-- Seafood 더미 데이터
 INSERT INTO GOODS
 VALUES ( 'S1', 'Seafood', '고등어', '3900', 'seafood1', '1팩', '250g', 1000 );
 INSERT INTO GOODS
@@ -283,134 +258,4 @@ INSERT INTO GOODS
 VALUES ( 'S29', 'Seafood', '미역', '8900', 'seafood29', '1팩', '130g', 1000 );
 INSERT INTO GOODS
 VALUES ( 'S30', 'Seafood', '다시마', '6900', 'seafood30', '1팩', '200g', 1000 );
-
--- cart 테이블 생성
-create table cart
-(  num NUMBER(6) PRIMARY KEY,
-    userid VARCHAR2(10),
-    gCode varchar2(20) not null,
-    gName varchar2(50) not null,
-    gPrice NUMBER(6) not null,
-    gAmount NUMBER(2) not null,
-    gImage varchar2(20) not null
-);   
-  
-   
-create sequence cart_seq;
-
--- Member table 생성
-create table member
-(
-  userid varchar2(10) primary key,
-  passwd varchar2(10) not null,
-  username varchar2(10) not null,
-  post varchar2(6) not null,
-  addr1 varchar2(500) not null,
-  addr2 varchar2(500) not null,
-  phone1 varchar2(3) not null,
-  phone2 varchar2(4) not null,
-  phone3 varchar2(4) not null,
-  email1 varchar2(20) not null,
-  email2 varchar2(20) not null
-);
-
--- orderInfo 테이블 생성
-create table orderInfo
-  (  num NUMBER(6) PRIMARY KEY,
-     userid VARCHAR2(10),
-     gCode varchar2(20) not null,
-     gName varchar2(50) not null,
-     gPrice NUMBER(6) not null,
-     gAmount NUMBER(2) not null,
-     gImage varchar2(20) not null,
-     orderName VARCHAR2(10) NOT NULL,
-     post VARCHAR2(5) NOT NULL,
-     addr1 VARCHAR2(500) NOT NULL,
-     addr2 VARCHAR2(500) NOT NULL,
-     phone VARCHAR2(11) NOT NULL,
-     payMethod VARCHAR2(10) NOT NULL,
-     orderDay DATE  DEFAULT SYSDATE
-  );   
-  alter table orderInfo
-  add CONSTRAINT orderInfo_userid_fk FOREIGN KEY(userid)
-   REFERENCES member(userid) ON DELETE CASCADE;
-   
-   
-  alter table orderInfo
-  add CONSTRAINT orderInfo_gCode_fk FOREIGN KEY(gCode)
-   REFERENCES goods(gCode) ON DELETE CASCADE; 
-   
-   create sequence orderInfo_seq;
-   
--- 데이터형식 수정
-ALTER TABLE orderInfo
-MODIFY ( paymethod VARCHAR2(30) );
-
-
--- Notice(공지사항) 테이블 생성
-create table Notice
-(  num NUMBER(6) PRIMARY KEY,
-    writeDay DATE  DEFAULT SYSDATE,
-    title varchar2(500),
-    contents varchar2(3900),
-    writer varchar2(500),
-    viewcount NUMBER(6)
-);   
--- 공지사항 게시판 번호 시퀀스 생성
-create sequence notice_seq;
-
--- QA(1:1문의) 테이블 생성
-create table QA
-(  num NUMBER(6) PRIMARY KEY,
-    category varchar2(20),
-    writeDay DATE  DEFAULT SYSDATE,
-    title varchar2(500),
-    contents varchar2(3900),
-    userid  varchar2(20)
-);   
-   
-alter table QA
-add CONSTRAINT QA_userid_fk FOREIGN KEY(userid)
-REFERENCES member(userid) ON DELETE CASCADE;
-
--- 1:1문의 게시판 번호 시퀀스 생성
-create sequence QA_seq;
-
--- QA(1:1문의) 테이블 답변 속성 추가
-ALTER TABLE QA
-add answer VARCHAR(3900);
-
-
--- cart에 userid FK 추가
-alter table cart
-add CONSTRAINT cart_userid_fk FOREIGN KEY(userid)
-REFERENCES member(userid) ON DELETE CASCADE;
-   
-alter table cart
-add CONSTRAINT cart_gCode_fk FOREIGN KEY(gCode)
-REFERENCES goods(gCode) ON DELETE CASCADE;  
-
--- cart, orderinfo gamount 길이 변경
-alter table cart modify gamount number(4);
-alter table orderinfo modify gamount number(4);
-
--- 주문 상태 속성 추가
-ALTER TABLE ORDERINFO
-add status VARCHAR(500);
-
--- 주문 상태 속성에 주문접수 기본값 추가 
-ALTER TABLE ORDERINFO MODIFY (STATUS DEFAULT '주문접수');
-
--- gCategory 추가
-ALTER TABLE ORDERINFO
-add gCategory varchar2(20);
-
-ALTER TABLE CART
-add gCategory varchar2(20);
-
--- 테이블 내용 전부 삭제 후 not null 제약조건 추가
-ALTER TABLE ORDERINFO
-modify gCategory not null;
-
-ALTER TABLE CART
-modify gCategory not null;
+commit;

@@ -1,44 +1,43 @@
+-- 기존 Notice / Qa 테이블과 시퀀스 삭제
+drop table Notice purge;
+drop sequence Notice_seq;
+drop table QA purge;
+drop sequence QA_seq;
 
+-- QA(1:1문의) 테이블 생성
+create table QA
+(  num NUMBER(6) PRIMARY KEY,
+    category varchar2(20),
+    writeDay DATE DEFAULT SYSDATE,
+    title varchar2(500),
+    contents varchar2(3900),
+	answer varchar2(3900),
+    userid  varchar2(20)
+);   
+   
+-- QA에 userid FK 추가
+alter table QA
+add CONSTRAINT QA_userid_fk FOREIGN KEY(userid)
+REFERENCES member(userid) ON DELETE CASCADE;
 
--- goods�뀒�씠釉붿뿉 gStock(�옱怨�) �빆紐� 異붽�
-ALTER TABLE goods
-add gStock VARCHAR(20);
+-- QA 번호 시퀀스 생성
+create sequence QA_seq;
 
--- Notice(怨듭��궗�빆) �뀒�씠釉� �깮�꽦
+-- Notice(공지사항) 테이블 생성
 create table Notice
 (  num NUMBER(6) PRIMARY KEY,
-    writeDay DATE  DEFAULT SYSDATE,
+    writeDay DATE DEFAULT SYSDATE,
     title varchar2(500),
     contents varchar2(3900),
     writer varchar2(500),
     viewcount NUMBER(6)
 );   
--- 怨듭��궗�빆 寃뚯떆�뙋 踰덊샇 �떆���뒪 �깮�꽦
+
+-- Notice 번호 시퀀스 생성
 create sequence notice_seq;
 
--- QA(1:1臾몄쓽) �뀒�씠釉� �깮�꽦
-create table QA
-(  num NUMBER(6) PRIMARY KEY,
-    category varchar2(20),
-    writeDay DATE  DEFAULT SYSDATE,
-    title varchar2(500),
-    contents varchar2(3900),
-    userid  varchar2(20)
-);   
-   
-alter table QA
-add CONSTRAINT QA_userid_fk FOREIGN KEY(userid)
-REFERENCES member(userid) ON DELETE CASCADE;
-
--- 1:1臾몄쓽 寃뚯떆�뙋 踰덊샇 �떆���뒪 �깮�꽦
-create sequence QA_seq;
-
--- QA(1:1臾몄쓽) �뀒�씠釉� �떟蹂� �냽�꽦 異붽�
-ALTER TABLE QA
-add answer VARCHAR(3900);
-
-
--- Notice공지사항 더미데이터
+-- Insert
+-- Notice 더미 데이터
 INSERT INTO NOTICE ( NUM, WRITEDAY, TITLE, CONTENTS, WRITER, VIEWCOUNT )
 VALUES ( NOTICE_SEQ.NEXTVAL, SYSDATE, '공지사항1', '공지사항1입니다', '관리자', 0 );
 INSERT INTO NOTICE ( NUM, WRITEDAY, TITLE, CONTENTS, WRITER, VIEWCOUNT )
