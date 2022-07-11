@@ -1,10 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
-Built-By: dbs03
-Build-Jdk: 1.8.0_251
-=======
 Built-By: WooJin
-Build-Jdk: 1.8.0_321
->>>>>>> 65104c5a17b50e525f8d08615d67d6f686bf319f
+Build-Jdk: 1.8.0_333
 Created-By: Maven Integration for Eclipse
 
