@@ -14,248 +14,1019 @@ create table goods
 );
 
 -- Insert
--- Meat 더미 데이터
-insert into goods 
-  values ('M1',	'Meat', '계란', '7200', 'meat1', '20구', '1200g', 1000);
-insert into goods 
-  values ('M2',	'Meat', '훈제오리', '2680', 'meat2', '1팩', '150g', 1000);
-insert into goods 
-  values ('M3',	'Meat', '삼겹살', '12660', 'meat3', '1팩', '600g', 1000);
-insert into goods 
-  values ('M4',	'Meat', '앞다리 살', '6900', 'meat4', '1팩', '600g', 1000);
-insert into goods 
-  values ('M5',	'Meat', '소고기 다짐육', '7500', 'meat5', '1팩', '200g', 1000);
-insert into goods 
-  values ('M6',	'Meat', '목살', '12660', 'meat6', '1팩', '600g', 1000);
-insert into goods 
-  values ('M7',	'Meat', '뒷다리 살', '4500', 'meat7', '1팩', '600g', 1000);
-insert into goods 
-  values ('M8',	'Meat', '치마살', '9730', 'meat8', '1팩', '300g', 1000);
-insert into goods 
-  values ('M9',	'Meat', '대패 삼겹살', '11900', 'meat9', '1팩', '1kg', 1000);
-insert into goods 
-  values ('M10', 'Meat', '닭볶음탕용 닭', '5800', 'meat10', '1팩', '1kg', 1000);
-insert into goods 
-  values ('M11', 'Meat', '소고기 국거리용', '8100', 'meat11', '1팩', '200g', 1000);
-insert into goods 
-  values ('M12', 'Meat', '닭 다리살', '12800', 'meat12', '1팩', '1kg', 1000);
-insert into goods 
-  values ('M13', 'Meat', '메추리 알', '4800', 'meat13', '1팩', '450g', 1000);
-insert into goods 
-  values ('M14', 'Meat', '차돌박이', '9500', 'meat14', '1팩', '150g', 1000);
-insert into goods 
-  values ('M15', 'Meat', '등심 돈까스', '12900', 'meat15', '1팩', '1kg', 1000);
-insert into goods 
-  values ('M16', 'Meat', '돼지고기 다짐육', '3600', 'meat16', '1팩', '300g', 1000);
-insert into goods 
-  values ('M17', 'Meat', '소고기 등심', '11500', 'meat17', '1팩', '250g', 1000);
-insert into goods 
-  values ('M18', 'Meat', '채끝살', '16000', 'meat18', '1팩', '250g', 1000);
-insert into goods 
-  values ('M19', 'Meat', '돼지고기 등심', '5400', 'meat19', '1팩', '300g', 1000);
-insert into goods 
-  values ('M20', 'Meat', '우삼겹', '6930', 'meat20', '1팩', '500g', 1000);
-insert into goods 
-  values ('M21', 'Meat', '생닭', '3500', 'meat21', '1팩', '500g', 1000);
-insert into goods 
-  values ('M22', 'Meat', '닭 안심살', '6900', 'meat22', '1팩', '500g', 1000);
-insert into goods 
-  values ('M23', 'Meat', '닭 가슴살', '12900', 'meat23', '1팩', '2kg', 1000);
-insert into goods 
-  values ('M24', 'Meat', '소고기 우둔살', '8910', 'meat24', '1팩', '200g', 1000);
-insert into goods 
-  values ('M25', 'Meat', '닭 윗날개', '8600', 'meat25', '1팩', '500g', 1000);
-insert into goods 
-  values ('M26', 'Meat', '항정살', '15700', 'meat26', '1팩', '300g', 1000);
-insert into goods 
-  values ('M27', 'Meat', '꽃등심', '29900', 'meat27', '1팩', '200g', 1000);
-insert into goods 
-  values ('M28', 'Meat', '양갈비', '15000', 'meat28', '1팩', '300g', 1000);
-insert into goods 
-  values ('M29', 'Meat', '함박 스테이크', '13000', 'meat29', '2팩', '600g', 1000);
-insert into goods 
-  values ('M30', 'Meat', '소고기 안심', '15900', 'meat30', '1팩', '200g', 1000);
--- Noodle 더미 데이터
-insert into goods values ('N1', 'Noodle', '토마토 소스', 2500, 'noodle1', '1개', '500g', 1000);
-insert into goods values ('N2', 'Noodle', '바질페스토', 5980, 'noodle2', '1병', '230g', 1000);
-insert into goods values ('N3', 'Noodle', '스파게티', 2450, 'noodle3', '1봉', '500g', 1000);
-insert into goods values ('N4', 'Noodle', '마요네즈', 4790, 'noodle4', '1병', '295ml', 1000);
-insert into goods values ('N5', 'Noodle', '토마토 케첩', 2580, 'noodle5', '1통', '280g', 1000);
-insert into goods values ('N6', 'Noodle', '오리엔탈 드레싱', 3250, 'noodle6', '1병', '270g', 1000);
-insert into goods values ('N7', 'Noodle', '샤브샤브 육수', 2650, 'noodle7', '1팩', '200g', 1000);
-insert into goods values ('N8', 'Noodle', '카레 분말', 3280, 'noodle8', '1봉', '100g', 1000);
-insert into goods values ('N9', 'Noodle', '들기름', 14980, 'noodle9', '1병', '320ml', 1000);
-insert into goods values ('N10', 'Noodle', '참기름', 7980, 'noodle10', '1캔', '350ml', 1000);
-insert into goods values ('N11', 'Noodle', '메밀면', 4300, 'noodle11', '1봉', '400g', 1000);
-insert into goods values ('N12', 'Noodle', '소면', 3150, 'noodle12', '1봉', '900g', 1000);
-insert into goods values ('N13', 'Noodle', '우동사리면', 1100, 'noodle13', '1봉', '210g', 1000);
-insert into goods values ('N14', 'Noodle', '생칼국수', 2480, 'noodle14', '1봉', '320g', 1000);
-insert into goods values ('N15', 'Noodle', '올리브 오일', 7980, 'noodle15', '1병', '500ml', 1000);
-insert into goods values ('N16', 'Noodle', '고춧가루', 9800, 'noodle16', '1봉', '250g', 1000);
-insert into goods values ('N17', 'Noodle', '소금', 4800, 'noodle17', '1봉', '500g', 1000);
-insert into goods values ('N18', 'Noodle', '설탕', 2070, 'noodle18', '1팩', '1kg', 1000);
-insert into goods values ('N19', 'Noodle', '멸치육수', 3500, 'noodle19', '1팩', '1000ml', 1000);
-insert into goods values ('N20', 'Noodle', '진간장', 5000, 'noodle20', '1통', '840ml', 1000);
-insert into goods values ('N21', 'Noodle', '돈까스 소스', 3280, 'noodle21', '1병', '455g', 1000);
-insert into goods values ('N22', 'Noodle', '굴소스', 3900, 'noodle22', '1병', '725g', 1000);
-insert into goods values ('N23', 'Noodle', '당면', 3980, 'noodle23', '1봉', '300g', 1000);
-insert into goods values ('N24', 'Noodle', '식초', 2700, 'noodle24', '1병', '500ml', 1000);
-insert into goods values ('N25', 'Noodle', '다진마늘', 4900, 'noodle25', '1개', '150g', 1000);
-insert into goods values ('N26', 'Noodle', '라면사리', 1580, 'noodle26', '1봉', '110gx5개입', 1000);
-insert into goods values ('N27', 'Noodle', '부침가루', 2980, 'noodle27', '1팩', '1kg', 1000);
-insert into goods values ('N28', 'Noodle', '고추장', 9000, 'noodle28', '1개', '1kg', 1000);
-insert into goods values ('N29', 'Noodle', '된장', 2050, 'noodle29', '1개', '500g', 1000);
-insert into goods values ('N30', 'Noodle', '올리고당', 2800, 'noodle30', '1병', '700g', 1000);
-insert into goods values ('N31', 'Noodle', '식용유', 7510, 'noodle31', '1병', '1.8L', 1000);
-insert into goods values ('N32', 'Noodle', '볶음 참깨', 3200, 'noodle32', '1병', '120g', 1000);
-insert into goods values ('N33', 'Noodle', '순후추', 3340, 'noodle33', '1캔', '50g', 1000);  
--- Vegetable 더미 데이터
-insert into goods values ('V1',	'Vegetable', '애호박', '1480', 'veg1', '1개', NULL, 1000);
-insert into goods values ('V2',	'Vegetable', '팽이버섯', '1160', 'veg2', '1봉', '2입', 1000);
-insert into goods values ('V3',	'Vegetable', '참타리 버섯', '1050', 'veg3', '1개', '200g', 1000);
-insert into goods values ('V4',	'Vegetable', '무', '1450', 'veg4', '1통', '800g 이상', 1000);
-insert into goods values ('V5',	'Vegetable', '깻잎', '1090', 'veg5', '1봉', '3속', 1000);
-insert into goods values ('V6',	'Vegetable', '깐대파', '2590', 'veg6', '1봉', '500g 내외', 1000);
-insert into goods values ('V7',	'Vegetable', '양파', '3600', 'veg7', '1망', '1.8kg', 1000);
-insert into goods values ('V8',	'Vegetable', '깐마늘', '2990', 'veg8', '1봉', '200g', 1000);
-insert into goods values ('V9',	'Vegetable', '감자', '6980', 'veg9', '1봉', '1kg', 1000);
-insert into goods values ('V10','Vegetable', '새송이버섯', '2000', 'veg10', '1봉', '400g', 1000);
-insert into goods values ('V11','Vegetable', '다다기오이', '2800', 'veg11', '1봉', '3개입', 1000);
-insert into goods values ('V12','Vegetable', '국산 브로콜리', '2120', 'veg12', '1봉', '1송이', 1000);
-insert into goods values ('V13','Vegetable', '파프리카', '2480', 'veg13', '1봉', '2입', 1000);
-insert into goods values ('V14','Vegetable', '양상추', '2590', 'veg14', '1통', '200g 이상', 1000);
-insert into goods values ('V15','Vegetable', '당근', '2990', 'veg15', '1봉지', '500g(2~4개입)', 1000);
-insert into goods values ('V16','Vegetable', '대파', '2690', 'veg16', '1봉', '1단/1kg 이상', 1000);
-insert into goods values ('V17','Vegetable', '알배기 배추', '3990', 'veg17', '1통', NULL, 1000);
-insert into goods values ('V18','Vegetable', '양배추', '3790', 'veg18', '1통', '900g 내외', 1000);
-insert into goods values ('V19','Vegetable', '부추', '2220', 'veg19', '1봉', '200g', 1000);
-insert into goods values ('V20','Vegetable', '청양고추', '2280', 'veg20', '1봉', '200g', 1000);
-insert into goods values ('V21','Vegetable', '청상추', '1480', 'veg21', '1봉', '150g', 1000);
-insert into goods values ('V22','Vegetable', '미나리', '4990', 'veg22', '1봉', '200g', 1000);
-insert into goods values ('V23','Vegetable', '시금치', '2190', 'veg23', '1봉지', '200g', 1000);
-insert into goods values ('V24','Vegetable', '샐러리', '2690', 'veg24', '1봉', '500g', 1000);
-insert into goods values ('V25','Vegetable', '가지', '2180', 'veg25', '1봉', '2입', 1000);
-insert into goods values ('V26','Vegetable', '밤고구마', '4780', 'veg26', '1봉', '800g', 1000);
-insert into goods values ('V27','Vegetable', '양송이버섯', '3690', 'veg27', '1팩', '6~9입', 1000);
-insert into goods values ('V28','Vegetable', '숙주나물', '1990', 'veg28', '1봉', '200g', 1000);
-insert into goods values ('V29','Vegetable', '로메인', '2990', 'veg29', '1봉', '200g', 1000);
-insert into goods values ('V30','Vegetable', '콩나물', '2600', 'veg30', '1팩', '340', 1000);
--- Fruit 더미 데이터
-INSERT INTO goods VALUES 
-('F1','Fruit','바나나','2980','fruit1','1봉','1kg', 1000);
-INSERT INTO goods VALUES 
-('F2', 'Fruit','참외','14900','fruit2','1봉','1.5kg', 1000);
-INSERT INTO goods VALUES 
-('F3','Fruit','샤인마토','7980','fruit3','1팩','500g', 1000);
-INSERT INTO goods VALUES 
-('F4','Fruit','방울토마토','4170','fruit4','1팩','500g', 1000);
-INSERT INTO goods VALUES 
-('F5','Fruit','아보카도','3240','fruit5','1개','200g', 1000);
-INSERT INTO goods VALUES 
-('F6','Fruit','오렌지','7600','fruit6','1봉','1kg', 1000);
-INSERT INTO goods VALUES 
-('F7','Fruit','블루베리','8090','fruit7','1팩','100g', 1000);
-INSERT INTO goods VALUES 
-('F8','Fruit','청송사과','7990','fruit8','1봉','1kg', 1000);
-INSERT INTO goods VALUES 
-('F9','Fruit','애플청포도','9990','fruit9','1팩','500g', 1000);
-INSERT INTO goods VALUES 
-('F10','Fruit','완숙토마토','8550','fruit10','1팩','2kg', 1000);
-INSERT INTO goods VALUES 
-('F11','Fruit','사파이어포도','8910','fruit11','1팩','500g', 1000);
-INSERT INTO goods VALUES 
-('F12','Fruit','신고배','7900','fruit12','1봉','1kg', 1000);
-INSERT INTO goods VALUES 
-('F13','Fruit','냉동블루베리','8050','fruit13','1팩','1kg', 1000);
-INSERT INTO goods VALUES 
-('F14','Fruit','골드키위','9900','fruit14','1봉','800g', 1000);
-INSERT INTO goods VALUES 
-('F15','Fruit','컷팅파인애플','9800','fruit15','1팩','1kg', 1000);
-INSERT INTO goods VALUES 
-('F16','Fruit','혼합포도','11430','fruit16','1팩','700g', 1000);
-INSERT INTO goods VALUES 
-('F17','Fruit','씨없는청포도','6840','fruit17','1팩','500g', 1000);
-INSERT INTO goods VALUES 
-('F18','Fruit','자몽','10900','fruit18','1봉','1.8kg', 1000);
-INSERT INTO goods VALUES 
-('F19','Fruit','성주참외','12900','fruit19','1봉','1.1kg', 1000);
-INSERT INTO goods VALUES 
-('F20','Fruit','파인애플청크','5480','fruit20','1팩','400g', 1000);
-INSERT INTO goods VALUES 
-('F21','Fruit','카랴향','14800','fruit21','1팩','1.4kg', 1000);
-INSERT INTO goods VALUES 
-('F22','Fruit','무지개망고','10900','fruit22','1팩','650g', 1000);
-INSERT INTO goods VALUES 
-('F23','Fruit','냉동애플망고','7220','fruit23','1봉','1kg', 1000);
-INSERT INTO goods VALUES 
-('F24','Fruit','세지멜론','16900','fruit24','1통','1.2kg', 1000);
-INSERT INTO goods VALUES 
-('F25','Fruit','컷팅과일','2490','fruit25','1팩','150g', 1000);
-INSERT INTO goods VALUES 
-('F26','Fruit','팬시레몬','2560','fruit26','1팩','300g', 1000);
-INSERT INTO goods VALUES 
-('F27','Fruit','냉동딸기','7110','fruit27','1팩','1kg', 1000);
-INSERT INTO goods VALUES 
-('F28','Fruit','적용과','3960','fruit28','1팩','450g', 1000);
--- Seafood 더미 데이터
-INSERT INTO GOODS
-VALUES ( 'S1', 'Seafood', '고등어', '3900', 'seafood1', '1팩', '250g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S2', 'Seafood', '갈치', '11100', 'seafood2', '1팩', '350g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S3', 'Seafood', '동태', '5900', 'seafood3', '1팩', '500g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S4', 'Seafood', '삼치', '6500', 'seafood4', '1팩', '450g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S5', 'Seafood', '장어', '22000', 'seafood5', '1팩', '240g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S6', 'Seafood', '아귀', '16900', 'seafood6', '1팩', '1000g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S7', 'Seafood', '대구', '11990', 'seafood7', '1팩', '500g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S8', 'Seafood', '도다리', '16900', 'seafood8', '1마리', '400g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S9', 'Seafood', '가자미', '6500', 'seafood9', '1팩', '350g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S10', 'Seafood', '병어', '9990', 'seafood10', '1팩', '200g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S11', 'Seafood', '연어', '22900', 'seafood11', '1팩', '400g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S12', 'Seafood', '오징어', '12900', 'seafood12', '1팩', '400g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S13', 'Seafood', '낙지', '19900', 'seafood13', '1팩', '240g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S14', 'Seafood', '쭈꾸미', '19710', 'seafood14', '1팩', '500g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S15', 'Seafood', '문어', '22500', 'seafood15', '1마리', '500g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S16', 'Seafood', '바지락', '7500', 'seafood16', '1팩', '200g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S17', 'Seafood', '굴', '4500', 'seafood17', '1팩', '200g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S18', 'Seafood', '꼬막', '8900', 'seafood18', '1팩', '1000g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S19', 'Seafood', '전복', '25000', 'seafood19', '1팩', '200g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S20', 'Seafood', '멍게', '9160', 'seafood20', '1팩', '260g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S21', 'Seafood', '해삼', '11430', 'seafood21', '1팩', '300g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S22', 'Seafood', '명태알', '6500', 'seafood22', '1팩', '250g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S23', 'Seafood', '꽃게', '59900', 'seafood23', '1팩', '950g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S24', 'Seafood', '새우', '9900', 'seafood24', '1팩', '300g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S25', 'Seafood', '새우살', '6640', 'seafood25', '1팩', '200g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S26', 'Seafood', '우렁', '5600', 'seafood26', '1팩', '180g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S27', 'Seafood', '황태', '5500', 'seafood27', '1팩', '280g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S28', 'Seafood', '멸치', '9900', 'seafood28', '1팩', '600g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S29', 'Seafood', '미역', '8900', 'seafood29', '1팩', '130g', 1000 );
-INSERT INTO GOODS
-VALUES ( 'S30', 'Seafood', '다시마', '6900', 'seafood30', '1팩', '200g', 1000 );
-commit;
+--베이커리
+insert into goods values ('B001', 'Bakery', '식빵', '4960', 'Bakery001', '2개', '330g', 1000);
+insert into goods values ('B002', 'Bakery', '튀김가루', '5300', 'Bakery002', '1개', '2kg', 1000);
+insert into goods values ('B003', 'Bakery', '바게트', '7940', 'Bakery003', '3개', '300g', 1000);
+insert into goods values ('B004', 'Bakery', '핫도그빵', '5800', 'Bakery004', '1세트', '50g', 1000);
+insert into goods values ('B005', 'Bakery', '강력분', '5150', 'Bakery005', '1개', '2.5kg', 1000);
+insert into goods values ('B006', 'Bakery', '인스턴트드라이이스트', '15500', 'Bakery006', '1박스', NULL, 1000);
+insert into goods values ('B007', 'Bakery', '초콜릿칩', '8700', 'Bakery007', '1개', '1kg', 1000);
+insert into goods values ('B008', 'Bakery', '초코크런치', '7900', 'Bakery008', '1개', '1kg', 1000);
+insert into goods values ('B009', 'Bakery', '메이플시럽', '11950', 'Bakery009', '1개', '450g', 1000);
+insert into goods values ('B010', 'Bakery', '박력쌀가루', '6830', 'Bakery010', '1개', '1kg', 1000);
+insert into goods values ('B011', 'Bakery', '잉글리시머핀', '2800', 'Bakery011', '1개', '240g', 1000);
+insert into goods values ('B012', 'Bakery', '찹쌀도나스믹스', '9410', 'Bakery012', '1개', '500g', 1000);
+insert into goods values ('B013', 'Bakery', '스콘믹스', '7690', 'Bakery013', '1개', '1kg', 1000);
+
+insert into goods values ('B101', 'Bakery', '꿀', '20640', 'Bakery101', '1개', '900ml', 1000);
+insert into goods values ('B102', 'Bakery', '슈가파우더', '6340', 'Bakery102', '1세트', NULL, 1000);
+insert into goods values ('B103', 'Bakery', '사과잼', '7010', 'Bakery103', '1개', '810g', 1000);
+insert into goods values ('B104', 'Bakery', '도넛', '5730', 'Bakery104', '1개', '400g', 1000);
+insert into goods values ('B105', 'Bakery', '녹차카스텔라', '9500', 'Bakery105', '1개', '200g', 1000);
+insert into goods values ('B106', 'Bakery', '꽃빵', '7560', 'Bakery106', '30개', '30g', 1000);
+insert into goods values ('B107', 'Bakery', '찐빵', '11800', 'Bakery107', '1개', '0g', 1000);
+insert into goods values ('B108', 'Bakery', '한라봉잼', '6000', 'Bakery108', '1개', '235g', 1000);
+insert into goods values ('B109', 'Bakery', '쿠키', '10780', 'Bakery109', '1세트', '650g', 1000);
+insert into goods values ('B110', 'Bakery', '베이글', '8640', 'Bakery110', '1개', '720g', 1000);
+insert into goods values ('B111', 'Bakery', '코코넛슬라이스', '8640', 'Bakery111', '1개', '720g', 1000);
+insert into goods values ('B112', 'Bakery', '치아바타', '12600', 'Bakery112', '10개', '108g', 1000);
+insert into goods values ('B113', 'Bakery', '카스테라', '8990', 'Bakery113', '1개', '560g', 1000);
+insert into goods values ('B114', 'Bakery', '코코넛가루', '10000', 'Bakery114', '1개', '600g', 1000);
+insert into goods values ('B115', 'Bakery', '아몬드가루', '8330', 'Bakery115', '1개', '500g', 1000);
+insert into goods values ('B116', 'Bakery', '초콜릿시럽', '6240', 'Bakery116', '1개', '680g', 1000);
+insert into goods values ('B117', 'Bakery', '코팅용밀크초콜릿', '9000', 'Bakery117', '1개', '1kg', 1000);
+
+insert into goods values ('B201', 'Bakery', '코코아파우더', '7980', 'Bakery201', '1개', '227g', 1000);
+insert into goods values ('B202', 'Bakery', '햄버거빵', '4400', 'Bakery202', '1봉', '90g/4개입', 1000);
+insert into goods values ('B203', 'Bakery', '스프링클', '3800', 'Bakery203', '1개', '55g', 1000);
+insert into goods values ('B204', 'Bakery', '판젤라틴', '3800', 'Bakery204', '1팩', '12장', 1000);
+insert into goods values ('B205', 'Bakery', '블루베리잼', '6900', 'Bakery205', '1병', '1kg', 1000);
+insert into goods values ('B206', 'Bakery', '초코시럽', '5980', 'Bakery206', '1팩', '425g', 1000);
+insert into goods values ('B207', 'Bakery', '크루아상', '4600', 'Bakery207', '1개', '85g', 1000);
+insert into goods values ('B208', 'Bakery', '파이지', '10000', 'Bakery208', '1묶음', '110g/10개입', 1000);
+insert into goods values ('B209', 'Bakery', '초코칩', '8500', 'Bakery209', '1봉', '1kg', 1000);
+insert into goods values ('B210', 'Bakery', '호밀빵', '4390', 'Bakery210', '1개', '430g', 1000);
+insert into goods values ('B211', 'Bakery', '도넛믹스', '4320', 'Bakery211', '1팩', '1kg', 1000);
+insert into goods values ('B212', 'Bakery', '우박설탕', '4720', 'Bakery212', '1봉', '500g', 1000);
+insert into goods values ('B213', 'Bakery', '브리오슈', '9000', 'Bakery213', '1개', '360g', 1000);
+insert into goods values ('B214', 'Bakery', '부시맨빵', '6220', 'Bakery214', '1봉', '100g/6입', 1000);
+insert into goods values ('B215', 'Bakery', '반미빵', '8200', 'Bakery215', '1봉', '450g', 1000);
+
+insert into goods values ('B601', 'Bakery', '박력분', '5420', 'Bakery601', '1봉', '2.5kg', 1000);
+insert into goods values ('B602', 'Bakery', '베이킹파우더', '8930', 'Bakery602', '1봉', '397g', 1000);
+insert into goods values ('B603', 'Bakery', '베이킹소다', '4000', 'Bakery603', '1봉', '1kg', 1000);
+insert into goods values ('B604', 'Bakery', '딸기잼', '7190', 'Bakery604', '1개', '500g', 1000);
+insert into goods values ('B605', 'Bakery', '핫케이크믹스', '2450', 'Bakery605', '1팩', '400g', 1000);
+insert into goods values ('B606', 'Bakery', '초코펜', '5500', 'Bakery606', '1박스', '80g', 1000);
+insert into goods values ('B607', 'Bakery', '화이트초콜릿', '9000', 'Bakery607', '1통', '1kg', 1000);
+insert into goods values ('B608', 'Bakery', '호떡믹스', '4390', 'Bakery608', '1통', '400g', 1000);
+insert into goods values ('B609', 'Bakery', '바닐라익스트랙', '13030', 'Bakery609', '1통', '60mL', 1000);
+insert into goods values ('B610', 'Bakery', '밀빵', '6900', 'Bakery610', '1봉', '300g', 1000);
+insert into goods values ('B611', 'Bakery', '포도잼', '6980', 'Bakery611', '1개', '620g', 1000);
+insert into goods values ('B612', 'Bakery', '팬케이크가루', '4900', 'Bakery612', '1개', '1kg', 1000);
+insert into goods values ('B613', 'Bakery', '커버춰초콜릿', '4300', 'Bakery613', '1통', '300g', 1000);
+insert into goods values ('B614', 'Bakery', '미니바게트', '4900', 'Bakery614', '1봉', '375g', 1000);
+insert into goods values ('B615', 'Bakery', '모닝빵', '3720', 'Bakery615', '1봉', '150g', 1000);
+insert into goods values ('B616', 'Bakery', '머핀', '6500', 'Bakery616', '1개', '90g', 1000);
+insert into goods values ('B617', 'Bakery', '야채호빵', '9900', 'Bakery617', '1봉', '820g', 1000);
+insert into goods values ('B618', 'Bakery', '브라우니믹스', '5500', 'Bakery618', '1팩', '400g', 1000);
+insert into goods values ('B619', 'Bakery', '백앙금', '4720', 'Bakery619', '1팩', '1kg', 1000);
+
+
+--커피/음료
+insert into goods values ('BE001', 'Beverage', '유자청', '8890', 'Beverage001', '1개', '1kg', 1000);
+insert into goods values ('BE002', 'Beverage', '막걸리', '28500', 'Beverage002', '5입', '750ml', 1000);
+insert into goods values ('BE003', 'Beverage', '콜라', '2400', 'Beverage003', '1병', '1.5L', 1000);
+insert into goods values ('BE004', 'Beverage', '녹차티백', '5500', 'Beverage004', '1박스', '22.5g', 1000);
+insert into goods values ('BE005', 'Beverage', '깔라만시원액', '4550', 'Beverage005', '1팩', '1000mL', 1000);
+insert into goods values ('BE006', 'Beverage', '에스프레소', '15500', 'Beverage006', '1병', '1000mL', 1000);
+insert into goods values ('BE007', 'Beverage', '애플와인', '19200', 'Beverage007', '1병', '375mL', 1000);
+
+insert into goods values ('BE101', 'Beverage', '루비자몽청', '16400', 'Beverage101', '1개', '1kg', 1000);
+insert into goods values ('BE102', 'Beverage', '커피믹스', '28500', 'Beverage102', '1세트(220개입)', NULL, 1000);
+insert into goods values ('BE103', 'Beverage', '망고퓨레', '11900', 'Beverage103', '1개', '1kg', 1000);
+insert into goods values ('BE104', 'Beverage', '홍찻잎', '18800', 'Beverage104', '1개', '350g', 1000);
+insert into goods values ('BE105', 'Beverage', '탄산수', '9900', 'Beverage105', '20개', '500ml', 1000);
+insert into goods values ('BE106', 'Beverage', '사이다', '9200', 'Beverage106', '24개', '160ml', 1000);
+insert into goods values ('BE107', 'Beverage', '맥주', '24490', 'Beverage107', '12개', '500ml', 1000);
+insert into goods values ('BE108', 'Beverage', '배즙', '27750', 'Beverage108', '20개', '100ml', 1000);
+insert into goods values ('BE109', 'Beverage', '매실액', '19900', 'Beverage109', '2개', '1kg', 1000);
+insert into goods values ('BE110', 'Beverage', '홍차티백', '6090', 'Beverage110', '1개', '50g', 1000);
+
+insert into goods values ('BE201', 'Beverage', '생수', '5980', 'Beverage201', '1박스', '2L/6입', 1000);
+insert into goods values ('BE202', 'Beverage', '생강즙', '10000', 'Beverage202', '1박스', '120ml/10개입', 1000);
+insert into goods values ('BE203', 'Beverage', '레드와인', '14705', 'Beverage203', '1병', '750ml', 1000);
+insert into goods values ('BE204', 'Beverage', '코코넛밀크', '10900', 'Beverage204', '묶음', '250ml/6입', 1000);
+insert into goods values ('BE205', 'Beverage', '오렌지주스', '3150', 'Beverage205', '1개', '1L', 1000);
+insert into goods values ('BE206', 'Beverage', '마늘즙', '14490', 'Beverage206', '1박스', '80ml/30개입', 1000);
+insert into goods values ('BE207', 'Beverage', '흑맥주', '8000', 'Beverage207', '1묶음', '340ml/4개입', 1000);
+insert into goods values ('BE208', 'Beverage', '카페시럽', '6300', 'Beverage208', '1병', '250ml', 1000);
+insert into goods values ('BE209', 'Beverage', '수정과', '4190', 'Beverage209', '1병', '1L', 1000);
+
+insert into goods values ('BE601', 'Beverage', '녹차가루', '9180', 'Beverage601', '1개', '40g', 1000);
+insert into goods values ('BE602', 'Beverage', '화이트와인', '9500', 'Beverage602', '1병', '750mL', 1000);
+insert into goods values ('BE603', 'Beverage', '양파즙', '11000', 'Beverage603', '1박스', '1000mL', 1000);
+insert into goods values ('BE604', 'Beverage', '미숫가루', '6990', 'Beverage604', '1봉', '500g', 1000);
+insert into goods values ('BE605', 'Beverage', '배음료', '1480', 'Beverage605', '1통', '1L', 1000);
+insert into goods values ('BE606', 'Beverage', '코코넛워터', '1700', 'Beverage606', '1팩', '330mL', 1000);
+insert into goods values ('BE607', 'Beverage', '카페라테', '1400', 'Beverage607', '1개', '220mL', 1000);
+insert into goods values ('BE608', 'Beverage', '자몽즙', '2500', 'Beverage608', '1병', '210mL', 1000);
+
+
+--통조림/즉석밥/면
+insert into goods values ('C001', 'Can', '통조림옥수수', '8400', 'Can001', '5개', '340g', 1000);
+insert into goods values ('C002', 'Can', '라이스페이퍼', '4660', 'Can002', '3개', '200g', 1000);
+insert into goods values ('C003', 'Can', '떡볶이밀키트', '15000', 'Can003', '2인분', NULL, 1000);
+insert into goods values ('C004', 'Can', '쌀국수', '8500', 'Can004', '5개', '94g', 1000);
+insert into goods values ('C005', 'Can', '블랙올리브', '17120', 'Can005', '3개', '370g', 1000);
+
+insert into goods values ('C101', 'Can', '카레가루', '6260', 'Can101', '1개', '1kg', 1000);
+insert into goods values ('C102', 'Can', '비지', '6780', 'Can102', '2개', '400g', 1000);
+insert into goods values ('C103', 'Can', '통조림단팥', '8130', 'Can103', '1개', '3kg', 1000);
+insert into goods values ('C104', 'Can', '수제비', '7510', 'Can105', '1개', '1kg', 1000);
+insert into goods values ('C105', 'Can', '피클', '6740', 'Can105', '1개', '3kg', 1000);
+insert into goods values ('C106', 'Can', '쫄면', '8360', 'Can106', '1개', '920g', 1000);
+insert into goods values ('C107', 'Can', '통조림번데기', '15340', 'Can107', '10개', '280g', 1000);
+insert into goods values ('C108', 'Can', '칼국수면', '7690', 'Can108', '1개', '3kg', 1000);
+insert into goods values ('C109', 'Can', '통조림죽순', '5800', 'Can109', '1개', '3kg', 1000);
+insert into goods values ('C110', 'Can', '통조림완두콩', '8500', 'Can110', '2개', '600g', 1000);
+insert into goods values ('C111', 'Can', '면두부', '5990', 'Can111', '3개', '100g', 1000);
+insert into goods values ('C112', 'Can', '마카로니', '4740', 'Can112', '2개', '500g', 1000);
+insert into goods values ('C113', 'Can', '카펠리니', '2270', 'Can113', '1개', '500g', 1000);
+insert into goods values ('C114', 'Can', '통조림꽁치', '8550', 'Can114', '2개', '400g', 1000);
+insert into goods values ('C115', 'Can', '소면', '4750', 'Can115', '1개', '1.5kg', 1000);
+insert into goods values ('C116', 'Can', '통조림골뱅이', '6750', 'Can116', '1개', '400g', 1000);
+insert into goods values ('C117', 'Can', '라면사리', '6100', 'Can117', '20개', NULL, 1000);
+insert into goods values ('C118', 'Can', '자차이', '6000', 'Can118', '1개', '1kg', 1000);
+insert into goods values ('C119', 'Can', '누룽지', '20100', 'Can119', '1개', '3kg', 1000);
+insert into goods values ('C120', 'Can', '메밀국수', '7680', 'Can120', '1개', '1.5kg', 1000);
+insert into goods values ('C121', 'Can', '곤약면', '9820', 'Can121', '8개', '150g', 1000);
+
+insert into goods values ('C201', 'Can', '빵가루', '5980', 'Can201', '1팩', '1kg', 1000);
+insert into goods values ('C202', 'Can', '토르티야', '2980', 'Can202', '1봉', '280g', 1000);
+insert into goods values ('C203', 'Can', '라면', '3100', 'Can203', '1봉', '120g/5개입', 1000);
+insert into goods values ('C204', 'Can', '할라피뇨피클', '2990', 'Can204', '1병', '370ml', 1000);
+insert into goods values ('C205', 'Can', '통조림파인애플', '4260', 'Can205', '1캔', '836g', 1000);
+insert into goods values ('C206', 'Can', '푸실리', '3900', 'Can206', '1개', '500g', 1000);
+insert into goods values ('C207', 'Can', '포두부', '4500', 'Can207', '1팩', '200g', 1000);
+insert into goods values ('C208', 'Can', '통조림황도', '2280', 'Can208', '1캔', '400g', 1000);
+insert into goods values ('C209', 'Can', '짜파게티', '4280', 'Can209', '1팩', '700g', 1000);
+insert into goods values ('C210', 'Can', '생면', '3000', 'Can210', '1봉', '450g', 1000);
+insert into goods values ('C211', 'Can', '쇼트파스타', '3380', 'Can211', '1봉', '500g', 1000);
+insert into goods values ('C212', 'Can', '칼국수', '3680', 'Can212', '1봉', '320g', 1000);
+insert into goods values ('C213', 'Can', '통조림닭가슴살', '6810', 'Can213', '1묶음', '135g/4개입', 1000);
+insert into goods values ('C214', 'Can', '청포묵', '5300', 'Can214', '1팩', '400g', 1000);
+insert into goods values ('C215', 'Can', '링귀니', '2390', 'Can215', '1팩', '500g', 1000);
+insert into goods values ('C216', 'Can', '실곤약', '4390', 'Can216', '1팩', '1kg', 1000);
+insert into goods values ('C217', 'Can', '올리브', '4390', 'Can217', '1병', '240g', 1000);
+insert into goods values ('C218', 'Can', '통조림고추참치', '11200', 'Can218', '1묶음', '8캔', 1000);
+insert into goods values ('C219', 'Can', '탈리아텔레', '3680', 'Can219', '1봉', '250g', 1000);
+insert into goods values ('C220', 'Can', '페투치네', '2850', 'Can220', '1봉', '500g', 1000);
+insert into goods values ('C221', 'Can', '베이크드빈', '2130', 'Can221', '1캔', '400g', 1000);
+insert into goods values ('C222', 'Can', '납작당면', '2130', 'Can222', '1팩', '300g', 1000);
+insert into goods values ('C223', 'Can', '타피오카펄', '8870', 'Can223', '1팩', '1kg', 1000);
+insert into goods values ('C224', 'Can', '통조림병아리콩', '2140', 'Can224', '1캔', '400g', 1000);
+insert into goods values ('C225', 'Can', '코코넛크림', '5000', 'Can225', '1캔', '425g', 1000);
+insert into goods values ('C226', 'Can', '춘권피', '3090', 'Can226', '1팩', '50장', 1000);
+insert into goods values ('C227', 'Can', '미역국수', '2200', 'Can227', '1팩', '300g', 1000);
+insert into goods values ('C228', 'Can', '곤약떡볶이떡', '2200', 'Can228', '1묶음', '180g/8입', 1000);
+insert into goods values ('C229', 'Can', '난', '4500', 'Can229', '1팩', '180g', 1000);
+insert into goods values ('C230', 'Can', '비빔라면', '3780', 'Can230', '1봉', '130g/5개입', 1000);
+
+
+--과일/견과류/쌀
+insert into goods values ('F001', 'Fruit', '딸기', '22900', 'Fruit001', '1박스', '1kg', 1000);
+insert into goods values ('F002', 'Fruit', '건크랜베리', '6900', 'Fruit002', '1개', '500g', 1000);
+insert into goods values ('F003', 'Fruit', '자두', '12800', 'Fruit003', '1팩', '1.5kg', 1000);
+insert into goods values ('F004', 'Fruit', '냉동체리', '16850', 'Fruit004', '32개입', '85g', 1000);
+insert into goods values ('F005', 'Fruit', '키위', '20900', 'Fruit005', '1개', '5kg', 1000);
+insert into goods values ('F006', 'Fruit', '곶감', '17910', 'Fruit006', '1개', '1kg', 1000);
+insert into goods values ('F007', 'Fruit', '체리', '19900', 'Fruit007', '1개', '700g', 1000);
+insert into goods values ('F008', 'Fruit', '대추', '6580', 'Fruit008', '1봉', '200g', 1000);
+insert into goods values ('F009', 'Fruit', '패션프루트', '7500', 'Fruit009', '1봉', '650g', 1000);
+insert into goods values ('F010', 'Fruit', '치자', '8840', 'Fruit010', '1봉', '300g', 1000);
+insert into goods values ('F011', 'Fruit', '황률', '9900', 'Fruit011', '1봉', '500g', 1000);
+insert into goods values ('F012', 'Fruit', '말린과일', '6720', 'Fruit012', '1봉', '30g', 1000);
+insert into goods values ('F013', 'Fruit', '감', '11700', 'Fruit013', '1박스', '3kg', 1000);
+insert into goods values ('F014', 'Fruit', '슬라이스레몬', '9370', 'Fruit014', '1봉', '1kg', 1000);
+
+insert into goods values ('F101', 'Fruit', '바나나', '14980', 'Fruit101', '1개', '2.2kg', 1000);
+insert into goods values ('F102', 'Fruit', '슬라이스아몬드', '15900', 'Fruit102', '2개', '250g', 1000);
+insert into goods values ('F103', 'Fruit', '복숭아', '16900', 'Fruit103', '1개(7~10입)', '1.8kg', 1000);
+insert into goods values ('F104', 'Fruit', '호두', '13800', 'Fruit104', '1팩', '1kg', 1000);
+insert into goods values ('F105', 'Fruit', '단감', '20900', 'Fruit105', '1개', '5kg', 1000);
+insert into goods values ('F106', 'Fruit', '건포도', '6490', 'Fruit106', '1개', '1kg', 1000);
+insert into goods values ('F107', 'Fruit', '천도복숭아', '9900', 'Fruit107', '1개', '3kg', 1000);
+insert into goods values ('F108', 'Fruit', '금귤', '27850', 'Fruit108', '1개', '1kg', 1000);
+insert into goods values ('F109', 'Fruit', '귤', '10900', 'Fruit109', '1개', '800g', 1000);
+insert into goods values ('F110', 'Fruit', '블루베리', '9400', 'Fruit110', '1개', '200g', 1000);
+insert into goods values ('F111', 'Fruit', '아보카도', '129900', 'Fruit111', '1봉', '1kg', 1000);
+insert into goods values ('F112', 'Fruit', '애플망고', '42900', 'Fruit112', '6개', '2.7kg', 1000);
+insert into goods values ('F113', 'Fruit', '한라봉', '25900', 'Fruit113', '17~20과', '3kg', 1000);
+insert into goods values ('F114', 'Fruit', '커팅파인애플', '14900', 'Fruit114', '1개', '1kg', 1000);
+insert into goods values ('F115', 'Fruit', '라임', '20900', 'Fruit115', '1개', '1kg', 1000);
+insert into goods values ('F116', 'Fruit', '냉동블루베리', '21900', 'Fruit116', '3팩', '1kg', 1000);
+insert into goods values ('F117', 'Fruit', '무화과', '18900', 'Fruit116', '1팩(6개입)', '800g', 1000);
+insert into goods values ('F118', 'Fruit', '건무화과', '13900', 'Fruit116', '1개', '1kg', 1000);
+
+insert into goods values ('F201', 'Fruit', '오렌지', '17910', 'Fruit201', '1박스', '2.5kg', 1000);
+insert into goods values ('F202', 'Fruit', '배', '7480', 'Fruit202', '1팩', '540g', 1000);
+insert into goods values ('F203', 'Fruit', '망고', '18900', 'Fruit203', '1팩', '2입', 1000);
+insert into goods values ('F204', 'Fruit', '해바라기씨', '2500', 'Fruit204', '1봉', '300g', 1000);
+insert into goods values ('F205', 'Fruit', '깐호두', '8950', 'Fruit205', '1봉', '500g', 1000);
+insert into goods values ('F206', 'Fruit', '루비자몽', '22800', 'Fruit206', '1상자', '10개', 1000);
+insert into goods values ('F207', 'Fruit', '레드키위', '23000', 'Fruit207', '1박스', '2kg', 1000);
+insert into goods values ('F208', 'Fruit', '감말랭이', '8900', 'Fruit208', '1팩', '200g', 1000);
+insert into goods values ('F209', 'Fruit', '살구', '8928', 'Fruit209', '1팩', '500g', 1000);
+
+insert into goods values ('F601', 'Fruit', '사과', '8990', 'Fruit601', '1봉', '1.2kg', 1000);
+insert into goods values ('F602', 'Fruit', '배', '4500', 'Fruit602', '1팩', '450g', 1000);
+insert into goods values ('F603', 'Fruit', '레몬', '1250', 'Fruit603', '1개', '130g', 1000);
+insert into goods values ('F604', 'Fruit', '밤', '7150', 'Fruit604', '1봉', '800g', 1000);
+insert into goods values ('F605', 'Fruit', '아몬드', '9120', 'Fruit605', '1봉', '500g', 1000);
+insert into goods values ('F606', 'Fruit', '은행', '7000', 'Fruit606', '1팩', '220g', 1000);
+insert into goods values ('F607', 'Fruit', '찹쌀', '22050', 'Fruit607', '1팩', '4kg', 1000);
+insert into goods values ('F608', 'Fruit', '찹외', '11610', 'Fruit608', '1봉', '1.2kg', 1000);
+insert into goods values ('F609', 'Fruit', '호박씨', '11950', 'Fruit609', '1팩', '1kg', 1000);
+insert into goods values ('F610', 'Fruit', '청포도', '14950', 'Fruit610', '1팩', '500g', 1000);
+insert into goods values ('F611', 'Fruit', '자몽', '2590', 'Fruit611', '1개', '320g', 1000);
+insert into goods values ('F612', 'Fruit', '검은콩', '13900', 'Fruit612', '1봉', '500g', 1000);
+insert into goods values ('F613', 'Fruit', '깐밤', '7100', 'Fruit613', '1봉', '250g', 1000);
+insert into goods values ('F614', 'Fruit', '수박', '19800', 'Fruit614', '1통', '6kg', 1000);
+insert into goods values ('F615', 'Fruit', '냉동망고', '10900', 'Fruit615', '1봉', '700g', 1000);
+insert into goods values ('F616', 'Fruit', '과일모둠', '2490', 'Fruit616', '1팩', '150g', 1000);
+insert into goods values ('F617', 'Fruit', '크랜베리', '7200', 'Fruit617', '1팩', '500g', 1000);
+insert into goods values ('F618', 'Fruit', '카카오닙스', '8000', 'Fruit618', '1팩', '500g', 1000);
+insert into goods values ('F619', 'Fruit', '감귤', '24605', 'Fruit619', '1팩', '700g', 1000);
+insert into goods values ('F620', 'Fruit', '그린올리브', '2380', 'Fruit620', '1통', '360g', 1000);
+insert into goods values ('F621', 'Fruit', '베리믹스', '14900', 'Fruit621', '1봉', '1kg', 1000);
+
+
+--쌀/잡곡
+insert into goods values ('G001', 'Grain', '찹쌀가루', '6850', 'Grain001', '1개', '1kg', 1000);
+insert into goods values ('G002', 'Grain', '잣', '41000', 'Grain002', '1개', '500g', 1000);
+insert into goods values ('G003', 'Grain', '차조', '8900', 'Grain003', '1개', '500g', 1000);
+insert into goods values ('G004', 'Grain', '견과류', '24830', 'Grain004', '1개', '850g', 1000);
+insert into goods values ('G005', 'Grain', '생콩가루', '6910', 'Grain005', '2개', '1kg', 1000);
+insert into goods values ('G006', 'Grain', '녹두', '9800', 'Grain006', '1개', '1kg', 1000);
+insert into goods values ('G007', 'Grain', '현미가루', '5490', 'Grain007', '1봉', '500g', 1000);
+insert into goods values ('G008', 'Grain', '백미', '17890', 'Grain008', '1봉', '4kg', 1000);
+insert into goods values ('G009', 'Grain', '수수', '7490', 'Grain009', '1봉', '500g', 1000);
+
+insert into goods values ('G101', 'Grain', '쌀', '45900', 'Grain101', '1개', '20kg', 1000);
+insert into goods values ('G102', 'Grain', '발아현미', '19900', 'Grain102', '1개', '4kg', 1000);
+insert into goods values ('G103', 'Grain', '메밀가루', '17900', 'Grain103', '1개', '800g', 1000);
+insert into goods values ('G104', 'Grain', '조', '4980', 'Grain104', '1개', '1kg', 1000);
+insert into goods values ('G105', 'Grain', '거피렌틸콩', '14000', 'Grain105', '1개', '5kg', 1000);
+insert into goods values ('G106', 'Grain', '오트밀', '11980', 'Grain106', '1개', '2kg', 1000);
+insert into goods values ('G107', 'Grain', '현미', '11800', 'Grain107', '1개', '4kg', 1000);
+insert into goods values ('G108', 'Grain', '병아리콩', '19900', 'Grain108', '1개', '10kg', 1000);
+insert into goods values ('G109', 'Grain', '캐슈넛', '16800', 'Grain109', '1팩', '1kg', 1000);
+insert into goods values ('G110', 'Grain', '피스타치오', '17800', 'Grain110', '1개', '1kg', 1000);
+insert into goods values ('G111', 'Grain', '콜리플라워라이스', '14710', 'Grain111', '2개', '1kg', 1000);
+
+insert into goods values ('G201', 'Grain', '밀가루', '1990', 'Grain201', '1팩', '800g', 1000);
+insert into goods values ('G202', 'Grain', '팥', '13900', 'Grain202', '1봉', '500g', 1000);
+insert into goods values ('G203', 'Grain', '옥수수', '5990', 'Grain203', '1망', '5입', 1000);
+insert into goods values ('G204', 'Grain', '쌀가루', '3990', 'Grain204', '1개', '350g', 1000);
+insert into goods values ('G205', 'Grain', '멥쌀', '10000', 'Grain205', '1봉', '2kg', 1000);
+insert into goods values ('G206', 'Grain', '멥쌀가루', '4300', 'Grain206', '1봉', '1kg', 1000);
+insert into goods values ('G207', 'Grain', '서리태', '12900', 'Grain207', '1봉', '500g', 1000);
+insert into goods values ('G208', 'Grain', '찰보리', '2900', 'Grain208', '1봉', '500g', 1000);
+insert into goods values ('G209', 'Grain', '검은깨가루', '15000', 'Grain209', '1봉', '200g', 1000);
+insert into goods values ('G210', 'Grain', '완두콩', '3980', 'Grain210', '1봉', '1kg', 1000);
+insert into goods values ('G211', 'Grain', '습식찹쌀가루', '7200', 'Grain211', '1봉', '1kg', 1000);
+insert into goods values ('G212', 'Grain', '보리', '2690', 'Grain212', '1봉', '500g', 1000);
+insert into goods values ('G213', 'Grain', '백태', '9990', 'Grain213', '1봉', '500g', 1000);
+
+insert into goods values ('G601', 'Grain', '흑미', '7800', 'Grain601', '1통', '800g', 1000);
+insert into goods values ('G602', 'Grain', '귀리', '3989', 'Grain602', '1봉', '500g', 1000);
+insert into goods values ('G603', 'Grain', '오트밀가루', '6500', 'Grain603', '1팩', '500g', 1000);
+insert into goods values ('G604', 'Grain', '수수가루', '9360', 'Grain604', '1봉', '150g', 1000);
+
+
+--김치/반찬
+insert into goods values ('K001', 'Kimchi', '묵은지', '14310', 'Kimchi001', '1팩', '3kg', 1000);
+insert into goods values ('K002', 'Kimchi', '맛살', '7000', 'Kimchi002', '3개', '210g', 1000);
+insert into goods values ('K003', 'Kimchi', '오이피클', '7160', 'Kimchi003', '1개', '3kg', 1000);
+insert into goods values ('K004', 'Kimchi', '안초비', '24250', 'Kimchi004', '1개', '720g', 1000);
+insert into goods values ('K005', 'Kimchi', '단무지', '7810', 'Kimchi005', '1팩', '3kg', 1000);
+insert into goods values ('K006', 'Kimchi', '명란젓', '12900', 'Kimchi006', '1개', '500g', 1000);
+insert into goods values ('K007', 'Kimchi', '조개젓', '18000', 'Kimchi007', '1개', '500g', 1000);
+insert into goods values ('K008', 'Kimchi', '볼어묵', '33400', 'Kimchi008', '1개', '1kg', 1000);
+insert into goods values ('K009', 'Kimchi', '깍두기', '19000', 'Kimchi009', '1봉', '3kg', 1000);
+insert into goods values ('K010', 'Kimchi', '무생채', '3500', 'Kimchi010', '1팩', '200g', 1000);
+insert into goods values ('K011', 'Kimchi', '매실장아찌', '6000', 'Kimchi011', '1개', '120g', 1000);
+insert into goods values ('K012', 'Kimchi', '밤조림', '23000', 'Kimchi012', '1병', '520g', 1000);
+
+insert into goods values ('K101', 'Kimchi', '백명란젓', '7900', 'Kimchi101', '1개', '150g', 1000);
+insert into goods values ('K102', 'Kimchi', '마늘종장아찌', '22000', 'Kimchi102', '1개', '1kg', 1000);
+insert into goods values ('K103', 'Kimchi', '명이나물장아찌', '7200', 'Kimchi103', '1개', '1kg', 1000);
+insert into goods values ('K104', 'Kimchi', '멸치볶음', '16740', 'Kimchi104', '1개', '1kg', 1000);
+insert into goods values ('K105', 'Kimchi', '고추장아찌', '11560', 'Kimchi105', '1팩', '500g', 1000);
+insert into goods values ('K106', 'Kimchi', '꼬치', '12640', 'Kimchi106', '1팩', '300g', 1000);
+insert into goods values ('K107', 'Kimchi', '백김치', '14310', 'Kimchi107', '1개', '3kg', 1000);
+insert into goods values ('K108', 'Kimchi', '가마보꼬', '10020', 'Kimchi108', '2개', '340g', 1000);
+insert into goods values ('K109', 'Kimchi', '잡채', '8690', 'Kimchi109', '1세트', '400g', 1000);
+insert into goods values ('K110', 'Kimchi', '어묵볶음', '4800', 'Kimchi110', '1개', '180g', 1000);
+insert into goods values ('K111', 'Kimchi', '말린도토리묵', '13900', 'Kimchi111', '1개', '500g', 1000);
+
+insert into goods values ('K201', 'Kimchi', '김치', '39900', 'Kimchi201', '1봉', '4.9kg', 1000);
+insert into goods values ('K202', 'Kimchi', '오징어젓', '6000', 'Kimchi202', '1팩', '2300g', 1000);
+insert into goods values ('K203', 'Kimchi', '콩비지', '2500', 'Kimchi203', '1팩', '300g', 1000);
+insert into goods values ('K204', 'Kimchi', '파김치', '7400', 'Kimchi204', '1팩', '350g', 1000);
+insert into goods values ('K205', 'Kimchi', '조미유부', '14500', 'Kimchi205', '1팩', '800g', 1000);
+insert into goods values ('K206', 'Kimchi', '무짠지', '5500', 'Kimchi206', '1팩', '2kg', 1000);
+insert into goods values ('K207', 'Kimchi', '쌈무', '4590', 'Kimchi207', '1팩', '1kg', 1000);
+insert into goods values ('K208', 'Kimchi', '오이지', '4990', 'Kimchi208', '1팩', '3입', 1000);
+
+insert into goods values ('K601', 'Kimchi', '우엉조림', '4600', 'Kimchi601', '1팩', '100g', 1000);
+insert into goods values ('K602', 'Kimchi', '도토리묵', '4700', 'Kimchi602', '1팩', '400g', 1000);
+insert into goods values ('K603', 'Kimchi', '동치미', '15800', 'Kimchi603', '1팩', '3kg', 1000);
+insert into goods values ('K604', 'Kimchi', '열무김치', '25000', 'Kimchi604', '1팩', '1kg', 1000);
+insert into goods values ('K605', 'Kimchi', '창란젓', '7560', 'Kimchi605', '1통', '180g', 1000);
+insert into goods values ('K606', 'Kimchi', '총각김치', '7900', 'Kimchi606', '1팩', '500g', 1000);
+insert into goods values ('K607', 'Kimchi', '무장아찌', '4200', 'Kimchi607', '1팩', '150g', 1000);
+insert into goods values ('K608', 'Kimchi', '명란젓파지', '12900', 'Kimchi608', '1팩', '400g', 1000);
+insert into goods values ('K609', 'Kimchi', '낙지젓', '7000', 'Kimchi609', '1팩', '200g', 1000);
+insert into goods values ('K610', 'Kimchi', '장조림', '4900', 'Kimchi610', '1팩', '200g', 1000);
+insert into goods values ('K611', 'Kimchi', '우뭇가사리묵', '9900', 'Kimchi611', '1팩', '1kg', 1000);
+insert into goods values ('K612', 'Kimchi', '천사채', '7470', 'Kimchi612', '1팩', '1kg', 1000);
+
+--정육/계란
+insert into goods values ('M001', 'Meat', '돼지고기앞다리살', '17490', 'Meat001', '1개', '1kg', 1000);
+insert into goods values ('M002', 'Meat', '대패삼겹살', '11900', 'Meat002', '1개', '1kg', 1000);
+insert into goods values ('M003', 'Meat', '슬라이스햄', '8170', 'Meat003', '1팩', '1kg', 1000);
+insert into goods values ('M004', 'Meat', '비엔나소시지', '8990', 'Meat004', '1개', '700g', 1000);
+insert into goods values ('M005', 'Meat', '토막닭', '10900', 'Meat005', '2팩', '1kg', 1000);
+insert into goods values ('M006', 'Meat', '소고기국거리용', '9290', 'Meat006', '1개', '300g', 1000);
+insert into goods values ('M007', 'Meat', '닭봉', '11610', 'Meat007', '2팩', '350g', 1000);
+insert into goods values ('M008', 'Meat', '돼지고기등심', '12990', 'Meat008', '1개', '800g', 1000);
+insert into goods values ('M009', 'Meat', '소갈비찜용', '33900', 'Meat009', '1개', '1kg', 1000);
+insert into goods values ('M010', 'Meat', '돼지고기볶음용', '6435', 'Meat010', '1팩', '600g', 1000);
+insert into goods values ('M011', 'Meat', '돼지등뼈', '7900', 'Meat011', '1팩', '1.6kg', 1000);
+insert into goods values ('M012', 'Meat', '오리고기', '7500', 'Meat012', '1팩', '350g', 1000);
+
+insert into goods values ('M101', 'Meat', '다진소고기', '17490', 'Meat101', '1개', '350g', 1000);
+insert into goods values ('M102', 'Meat', '우삼겹', '15730', 'Meat102', '1개', '800g', 1000);
+insert into goods values ('M103', 'Meat', '오리햄', '16900', 'Meat103', '2개', '320g', 1000);
+insert into goods values ('M104', 'Meat', '소곱창', '8410', 'Meat104', '1팩', '250g', 1000);
+insert into goods values ('M105', 'Meat', '소고기국거리', '16660', 'Meat105', '1개', '300g', 1000);
+insert into goods values ('M106', 'Meat', '삼겹살', '33200', 'Meat106', '1개', '1kg', 1000);
+insert into goods values ('M107', 'Meat', '소고기우둔살', '16990', 'Meat107', '1개', '300g', 1000);
+insert into goods values ('M108', 'Meat', '페페로니', '7450', 'Meat108', '1개', '1kg', 1000);
+insert into goods values ('M109', 'Meat', '닭날개', '11890', 'Meat109', '2팩0', '350g', 1000);
+insert into goods values ('M110', 'Meat', '오도독뼈', '13800', 'Meat110', '1개', '2kg', 1000);
+insert into goods values ('M111', 'Meat', '소고기샤브샤브용', '15990', 'Meat111', '1개', '700g', 1000);
+insert into goods values ('M112', 'Meat', '햄', '8530', 'Meat112', '1개', '1kg', 1000);
+insert into goods values ('M113', 'Meat', '스팸', '16400', 'Meat113', '6개', '200g', 1000);
+insert into goods values ('M114', 'Meat', '돼지고기안심', '9900', 'Meat114', '1개', '1kg', 1000);
+insert into goods values ('M115', 'Meat', '양고기', '25600', 'Meat115', '1개', '500g', 1000);
+insert into goods values ('M116', 'Meat', '소고기채끝살', '23990', 'Meat116', '1개', '300g', 1000);
+insert into goods values ('M117', 'Meat', '족발', '11900', 'Meat117', '1개', '1kg', 1000);
+insert into goods values ('M118', 'Meat', '들기름', '14980', 'Meat118', '1개', '0g', 1000);
+insert into goods values ('M119', 'Meat', '들기름', '14980', 'Meat119', '1개', '0g', 1000);
+insert into goods values ('M120', 'Meat', '오도독뼈', '13800', 'Meat120', '1개', '2kg', 1000);
+
+insert into goods values ('M201', 'Meat', '베이컨', '3400', 'Meat201', '1팩', '200g', 1000);
+insert into goods values ('M202', 'Meat', '닭가슴살', '7900', 'Meat202', '1팩', '300g', 1000);
+insert into goods values ('M203', 'Meat', '다진돼지고기', '5450', 'Meat203', '1팩', '300g', 1000);
+insert into goods values ('M204', 'Meat', '프랑크소시지', '5300', 'Meat204', '1팩', '500g', 1000);
+insert into goods values ('M205', 'Meat', '돼지고기목살', '13350', 'Meat205', '1팩', '400g', 1000);
+insert into goods values ('M206', 'Meat', '소고기양지머리', '10900', 'Meat206', '1팩', '200g', 1000);
+insert into goods values ('M207', 'Meat', '소고기차돌박이', '29900', 'Meat207', '1팩', '1kg', 1000);
+insert into goods values ('M208', 'Meat', '돼지등갈비', '18000', 'Meat208', '1팩', '500g', 1000);
+insert into goods values ('M209', 'Meat', '훈제오리', '2980', 'Meat209', '1팩', '150g', 1000);
+insert into goods values ('M210', 'Meat', '돼지갈비', '11500', 'Meat210', '1팩', '500g', 1000);
+insert into goods values ('M211', 'Meat', '오리', '19900', 'Meat211', '1팩', '1800g', 1000);
+insert into goods values ('M212', 'Meat', '분홍소시지', '3900', 'Meat212', '1팩', '350g', 1000);
+insert into goods values ('M213', 'Meat', '소고기홍두깨살', '13520', 'Meat213', '1팩', '300g', 1000);
+
+insert into goods values ('M601', 'Meat', '소고기안심', '19900', 'Meat601', '1팩', '250g', 1000);
+insert into goods values ('M602', 'Meat', '닭다리살', '7900', 'Meat602', '1팩', '500g', 1000);
+insert into goods values ('M603', 'Meat', '소고기불고기용', '8400', 'Meat603', '1팩', '200g', 1000);
+insert into goods values ('M604', 'Meat', '생닭', '6900', 'Meat604', '1팩', '850g', 1000);
+insert into goods values ('M605', 'Meat', '닭안심살', '5400', 'Meat605', '1팩', '300g', 1000);
+insert into goods values ('M606', 'Meat', '소고기구이용', '30100', 'Meat606', '1팩', '200g', 1000);
+insert into goods values ('M607', 'Meat', '돼지고기구이용', '5200', 'Meat607', '1팩', '300g', 1000);
+insert into goods values ('M608', 'Meat', '메추리알', '4800', 'Meat608', '1팩', '450g', 1000);
+insert into goods values ('M609', 'Meat', '햄버거패티', '13900', 'Meat609', '1팩', '600g', 1000);
+insert into goods values ('M610', 'Meat', '닭모래집', '6000', 'Meat610', '1팩', '1kg', 1000);
+insert into goods values ('M611', 'Meat', '소고기스테이크용', '35900', 'Meat611', '1팩', '200g', 1000);
+insert into goods values ('M612', 'Meat', '소고기등심', '11200', 'Meat612', '1팩', '200g', 1000);
+insert into goods values ('M613', 'Meat', '돼지고기불고기용', '6900', 'Meat613', '1팩', '300g', 1000);
+insert into goods values ('M614', 'Meat', '흑돼지앞다리살', '5900', 'Meat614', '1팩', '300g', 1000);
+insert into goods values ('M615', 'Meat', '돼지생족발', '5900', 'Meat615', '1개', '2kg', 1000);
+insert into goods values ('M616', 'Meat', '닭다리', '6020', 'Meat616', '1팩', '400g', 1000);
+insert into goods values ('M617', 'Meat', '영계', '9180', 'Meat617', '1팩', '800g', 1000);
+insert into goods values ('M618', 'Meat', '소고기부채살', '11305', 'Meat618', '1팩', '300g', 1000);
+insert into goods values ('M619', 'Meat', '샌드위치햄', '2380', 'Meat619', '1팩', '90g', 1000);
+
+
+--우유/유제품
+insert into goods values ('MI001', 'Milk', '파르메산치즈', '8910', 'Milk001', '1개', '150g', 1000);
+insert into goods values ('MI002', 'Milk', '플레인요구르트', '6400', 'Milk002', '1개', '1.8L', 1000);
+insert into goods values ('MI003', 'Milk', '체다치즈', '9450', 'Milk003', '2개', '227g', 1000);
+insert into goods values ('MI004', 'Milk', '아몬드우유', '23170', 'Milk004', '35개', '190ml', 1000);
+insert into goods values ('MI005', 'Milk', '사워크림', '7970', 'Milk005', '1개', '970g', 1000);
+insert into goods values ('MI006', 'Milk', '그라나파다노치즈', '22000', 'Milk006', '1개', '900g', 1000);
+insert into goods values ('MI007', 'Milk', '콜비잭치즈', '15700', 'Milk007', '1개', '900g', 1000);
+insert into goods values ('MI008', 'Milk', '마시는유산균요구르트', '1100', 'Milk008', '1개', '150mL', 1000);
+insert into goods values ('MI009', 'Milk', '우유잼', '8900', 'Milk009', '1개', '130g', 1000);
+
+insert into goods values ('MI101', 'Milk', '파르메산치즈가루', '7150', 'Milk101', '1개', '227g', 1000);
+insert into goods values ('MI102', 'Milk', '요구르트', '3850', 'Milk102', '30개', '65g', 1000);
+insert into goods values ('MI103', 'Milk', '브리치즈', '8180', 'Milk103', '2개', '125g', 1000);
+insert into goods values ('MI104', 'Milk', '슬라이스체다치즈', '17990', 'Milk104', '1개', '1.8kg', 1000);
+insert into goods values ('MI105', 'Milk', '그라나파다노치즈가루', '14980', 'Milk105', '1개', '0g', 1000);
+insert into goods values ('MI106', 'Milk', '엔젤헤어치즈', '24200', 'Milk106', '1개', '2kg', 1000);
+insert into goods values ('MI107', 'Milk', '고르곤졸라치즈', '15000', 'Milk107', '1개', '500g', 1000);
+insert into goods values ('MI108', 'Milk', '무염버터', '16400', 'Milk108', '2개', '454g', 1000);
+insert into goods values ('MI109', 'Milk', '슈레드에멘탈치즈', '16400', 'Milk109', '1개', '1kg', 1000);
+
+insert into goods values ('MI201', 'Milk', '버터', '8500', 'Milk201', '1팩', '454g', 1000);
+insert into goods values ('MI202', 'Milk', '슈레드모차렐라치즈', '4900', 'Milk202', '1팩', '240g', 1000);
+insert into goods values ('MI203', 'Milk', '모차렐라치즈', '5500', 'Milk203', '1팩', '125g', 1000);
+insert into goods values ('MI204', 'Milk', '연유', '5040', 'Milk204', '1통', '500ml', 1000);
+insert into goods values ('MI205', 'Milk', '플레인요거트', '3180', 'Milk205', '1통', '430ml', 1000);
+insert into goods values ('MI206', 'Milk', '페타치즈', '7800', 'Milk206', '1통', '150g', 1000);
+insert into goods values ('MI207', 'Milk', '마스카르포네치즈', '10900', 'Milk207', '1통', '250g', 1000);
+insert into goods values ('MI208', 'Milk', '페코리노로마노치즈', '10900', 'Milk208', '1개', '150g', 1000);
+insert into goods values ('MI209', 'Milk', '그릭요구르트', '3900', 'Milk209', '1통', '150g', 1000);
+insert into goods values ('MI210', 'Milk', '에멘탈치즈', '5900', 'Milk210', '1팩', '250g', 1000);
+insert into goods values ('MI211', 'Milk', '스트링치즈', '6900', 'Milk211', '1팩', '210g/10개입', 1000);
+insert into goods values ('MI212', 'Milk', '스모크치즈', '5500', 'Milk212', '1팩', '200g', 1000);
+
+insert into goods values ('MI601', 'Milk', '생크림', '5950', 'Milk601', '1팩', '500mL', 1000);
+insert into goods values ('MI602', 'Milk', '크림치즈', '5900', 'Milk602', '1통', '200g', 1000);
+insert into goods values ('MI603', 'Milk', '두유', '3800', 'Milk603', '1병', '350g', 1000);
+insert into goods values ('MI604', 'Milk', '리코타치즈', '11900', 'Milk604', '1통', '453g', 1000);
+insert into goods values ('MI605', 'Milk', '휘핑크림', '2900', 'Milk605', '1개', '200mL', 1000);
+insert into goods values ('MI606', 'Milk', '슬라이스모차렐라치즈', '6580', 'Milk606', '1팩', '240g', 1000);
+insert into goods values ('MI607', 'Milk', '슈레드체다치즈', '10500', 'Milk607', '1봉', '800g', 1000);
+
+
+--냉장/냉동/간편식/밀키트/두부
+insert into goods values ('R001', 'Retort', '사골육수', '15100', 'Retort001', '6개', '300g', 1000);
+insert into goods values ('R002', 'Retort', '왕만두', '20900', 'Retort002', '1세트', NULL, 1000);
+insert into goods values ('R003', 'Retort', '순대', '6500', 'Retort003', '1개', '1kg', 1000);
+insert into goods values ('R004', 'Retort', '만두피', '4250', 'Retort004', '1개', '750g', 1000);
+insert into goods values ('R005', 'Retort', '유부', '6440', 'Retort005', '1개', '500g', 1000);
+insert into goods values ('R006', 'Retort', '양장피', '14500', 'Retort006', '1개', '600g', 1000);
+insert into goods values ('R007', 'Retort', '곤약', '4330', 'Retort007', '1개', '1kg', 1000);
+insert into goods values ('R008', 'Retort', '떡갈비', '3510', 'Retort008', '1팩', '120g', 1000);
+insert into goods values ('R009', 'Retort', '편육', '7900', 'Retort009', '1팩', '315g', 1000);
+insert into goods values ('R010', 'Retort', '하이라이스가루', '6450', 'Retort010', '1팩', '1kg', 1000);
+insert into goods values ('R011', 'Retort', '꼬치어묵', '4900', 'Retort011', '1팩', '320g', 1000);
+insert into goods values ('R012', 'Retort', '짜장가루', '8210', 'Retort012', '1팩', '1kg', 1000);
+insert into goods values ('R013', 'Retort', '큐브참치', '2800', 'Retort013', '1팩', '160g', 1000);
+insert into goods values ('R014', 'Retort', '교자만두', '12800', 'Retort014', '1팩', '1kg', 1000);
+insert into goods values ('R015', 'Retort', '고형카레', '3040', 'Retort015', '1묶음', '100g', 1000);
+insert into goods values ('R016', 'Retort', '닭가슴살소시지', '1900', 'Retort016', '1팩', '120g', 1000);
+insert into goods values ('R017', 'Retort', '냉동새우튀김', '17500', 'Retort017', '1박스', '800g', 1000);
+insert into goods values ('R018', 'Retort', '오뚜기3분소고기짜장', '1260', 'Retort018', '1개', '200g', 1000);
+insert into goods values ('R019', 'Retort', '쌀국수컵라면', '1500', 'Retort019', '1개', '78g', 1000);
+insert into goods values ('R020', 'Retort', '부대찌개밀키트', '5561', 'Retort020', '1팩', '500g', 1000);
+insert into goods values ('R021', 'Retort', '블루베리묵', '4800', 'Retort021', '1팩', '420g', 1000);
+insert into goods values ('R022', 'Retort', '습식곤약쌀', '15800', 'Retort022', '1팩', '200g', 1000);
+insert into goods values ('R023', 'Retort', '삼각김밥', '7500', 'Retort023', '1통', '760g', 1000);
+
+insert into goods values ('R101', 'Retort', '레토르트미역국', '8290', 'Retort101', '2개', '480g', 1000);
+insert into goods values ('R102', 'Retort', '불닭떡볶이', '13460', 'Retort102', '6개', '185g', 1000);
+insert into goods values ('R103', 'Retort', '떡볶이떡', '3000', 'Retort103', '1개', '1kg', 1000);
+insert into goods values ('R104', 'Retort', '김치만두', '9990', 'Retort104', '1개', '1kg', 1000);
+insert into goods values ('R105', 'Retort', '납작만두', '16500', 'Retort105', '5팩', NULL, 1000);
+insert into goods values ('R106', 'Retort', '파라타', '7140', 'Retort106', '2개', '400g', 1000);
+insert into goods values ('R107', 'Retort', '군만두', '7990', 'Retort107', '2개', '450g', 1000);
+
+insert into goods values ('R201', 'Retort', '얼음', '4280', 'Retort201', '1봉', '3000g', 1000);
+insert into goods values ('R202', 'Retort', '물만두', '13200', 'Retort202', '1팩', '1kg', 1000);
+insert into goods values ('R203', 'Retort', '만두', '8835', 'Retort203', '1팩', '450g', 1000);
+insert into goods values ('R204', 'Retort', '냉면육수', '1200', 'Retort204', '1팩', '330ml', 1000);
+insert into goods values ('R205', 'Retort', '돈가스', '6000', 'Retort205', '1팩', '480g', 1000);
+insert into goods values ('R206', 'Retort', '크림수프가루', '6000', 'Retort206', '1상자', '60g', 1000);
+insert into goods values ('R207', 'Retort', '미니돈가스', '7350', 'Retort207', '1팩', '450g', 1000);
+insert into goods values ('R208', 'Retort', '소고기육수', '10900', 'Retort208', '1묶음', '5팩', 1000);
+insert into goods values ('R209', 'Retort', '군고구마', '4890', 'Retort209', '1팩', '200g', 1000);
+insert into goods values ('R210', 'Retort', '냉면', '5480', 'Retort210', '1팩', '454g', 1000);
+insert into goods values ('R211', 'Retort', '냉면', '5480', 'Retort211', '1팩', '450g', 1000);
+insert into goods values ('R212', 'Retort', '삼계탕', '10800', 'Retort212', '1팩', '900g', 1000);
+
+insert into goods values ('R601', 'Retort', '즉석밥', '28900', 'Retort601', '1팩', '24개입', 1000);
+insert into goods values ('R602', 'Retort', '통조림참치', '2850', 'Retort602', '1통', '100g', 1000);
+insert into goods values ('R603', 'Retort', '순두부', '2000', 'Retort603', '1팩', '350g', 1000);
+insert into goods values ('R604', 'Retort', '부침용두부', '1900', 'Retort604', '1팩', '200g', 1000);
+insert into goods values ('R605', 'Retort', '짬뽕라면', '1250', 'Retort605', '1개', '130g', 1000);
+insert into goods values ('R606', 'Retort', '통조림강낭콩', '1450', 'Retort606', '1캔', '400g', 1000);
+insert into goods values ('R607', 'Retort', '통조림홀토마토', '4900', 'Retort607', '1캔', '400g', 1000);
+insert into goods values ('R608', 'Retort', '황도', '2280', 'Retort608', '1캔', '400g', 1000);
+insert into goods values ('R609', 'Retort', '레토르트갈비찜', '17000', 'Retort609', '1팩', '400g', 1000);
+insert into goods values ('R610', 'Retort', '곰국', '6900', 'Retort610', '1봉', '700g', 1000);
+insert into goods values ('R611', 'Retort', '고형하이라이스', '3980', 'Retort611', '1팩', '160g', 1000);
+insert into goods values ('R612', 'Retort', '건조콩고기', '10400', 'Retort612', '1팩', '1kg', 1000);
+insert into goods values ('R613', 'Retort', '냉동해물완자', '7980', 'Retort613', '1팩', '510g', 1000);
+insert into goods values ('R614', 'Retort', '김밥', '3600', 'Retort614', '1팩', '323g', 1000);
+insert into goods values ('R615', 'Retort', '신라면', '3680', 'Retort615', '1봉', '600g', 1000);
+insert into goods values ('R616', 'Retort', '스테이크밀키트', '13900', 'Retort616', '1팩', '580g', 1000);
+
+--수산/건어물
+insert into goods values ('S001', 'Seafood', '새우', '17100', 'Seafood001', '37~45미', '1kg', 1000);
+insert into goods values ('S002', 'Seafood', '바지락', '9200', 'Seafood002', '1봉', '800g', 1000);
+insert into goods values ('S003', 'Seafood', '오만둥이', '15900', 'Seafood003', '1개', '1kg', 1000);
+insert into goods values ('S004', 'Seafood', '생연어', '41940', 'Seafood004', '1개', '1kg', 1000);
+insert into goods values ('S005', 'Seafood', '전복', '36000', 'Seafood005', '16-18마리', '1kg', 1000);
+insert into goods values ('S006', 'Seafood', '주꾸미', '11800', 'Seafood006', '1개', '1kg', 1000);
+insert into goods values ('S007', 'Seafood', '낙지', '12500', 'Seafood007', '6미', '850g', 1000);
+insert into goods values ('S008', 'Seafood', '전어', '8910', 'Seafood008', '1박스', '1kg', 1000);
+insert into goods values ('S009', 'Seafood', '마른오징어', '55400', 'Seafood009', '20미', '1kg', 1000);
+insert into goods values ('S010', 'Seafood', '황태', '7900', 'Seafood010', '2개', NULL, 1000);
+insert into goods values ('S011', 'Seafood', '보리새우', '7900', 'Seafood011', '1개', '100g', 1000);
+insert into goods values ('S012', 'Seafood', '문어', '26900', 'Seafood012', '1팩', '1kg', 1000);
+insert into goods values ('S013', 'Seafood', '토막낸고등어', '5900', 'Seafood013', '1마리', '350g', 1000);
+insert into goods values ('S014', 'Seafood', '랍스터', '42000', 'Seafood014', '1팩', '850g', 1000);
+insert into goods values ('S015', 'Seafood', '생태', '6800', 'Seafood015', '1팩', '1.5kg', 1000);
+insert into goods values ('S016', 'Seafood', '냉동모둠해물', '12510', 'Seafood016', '1팩', '1.4kg', 1000);
+insert into goods values ('S017', 'Seafood', '회', '12900', 'Seafood017', '1팩', '150g', 1000);
+insert into goods values ('S018', 'Seafood', '쥐포채', '5900', 'Seafood018', '1봉', '150g', 1000);
+insert into goods values ('S019', 'Seafood', '파래', '9900', 'Seafood019', '1봉', '1kg', 1000);
+insert into goods values ('S020', 'Seafood', '마른꼴뚜기', '13800', 'Seafood020', '1봉', '300g', 1000);
+insert into goods values ('S021', 'Seafood', '민물새우', '16000', 'Seafood021', '1팩', '500g', 1000);
+insert into goods values ('S022', 'Seafood', '미니쥐포', '8700', 'Seafood022', '1팩', '300g', 1000);
+insert into goods values ('S023', 'Seafood', '명태포', '14450', 'Seafood023', '1팩', '600g', 1000);
+insert into goods values ('S024', 'Seafood', '도루묵', '15900', 'Seafood024', '1팩', '500g', 1000);
+insert into goods values ('S025', 'Seafood', '가리비', '15900', 'Seafood025', '1팩', '500g', 1000);
+insert into goods values ('S026', 'Seafood', '조기', '10900', 'Seafood026', '1팩', '240g', 1000);
+insert into goods values ('S027', 'Seafood', '염장미역줄기', '5900', 'Seafood027', '1팩', '1kg', 1000);
+insert into goods values ('S028', 'Seafood', '자른미역', '2050', 'Seafood028', '1봉', '30g', 1000);
+insert into goods values ('S029', 'Seafood', '우렁살', '6400', 'Seafood029', '1봉', '300g', 1000);
+insert into goods values ('S030', 'Seafood', '붉은참치', '20000', 'Seafood030', '1팩', '200g', 1000);
+insert into goods values ('S031', 'Seafood', '북어머리', '5900', 'Seafood031', '1팩', '500g', 1000);
+insert into goods values ('S032', 'Seafood', '순살갈치', '12400', 'Seafood032', '1팩', '250g', 1000);
+insert into goods values ('S033', 'Seafood', '생멸치', '10900', 'Seafood033', '1팩', '1kg', 1000);
+
+insert into goods values ('S101', 'Seafood', '오징어', '18940', 'Seafood101', '1개', '1kg', 1000);
+insert into goods values ('S102', 'Seafood', '북어', '29500', 'Seafood102', '10마리', NULL, 1000);
+insert into goods values ('S103', 'Seafood', '뱅어포', '9650', 'Seafood103', '1개(10매)', NULL, 1000);
+insert into goods values ('S104', 'Seafood', '마른홍합살', '6800', 'Seafood104', '1개', NULL, 1000);
+insert into goods values ('S105', 'Seafood', '임연수', '14310', 'Seafood105', '1개', '1kg', 1000);
+insert into goods values ('S106', 'Seafood', '동태', '14900', 'Seafood106', '4마리', NULL, 1000);
+insert into goods values ('S107', 'Seafood', '바지락살', '8900', 'Seafood107', '1팩', '200g', 1000);
+insert into goods values ('S108', 'Seafood', '건조해초', '14000', 'Seafood108', '10개', '7g', 1000);
+insert into goods values ('S109', 'Seafood', '백합', '14980', 'Seafood109', '1인분', '1kg', 1000);
+insert into goods values ('S110', 'Seafood', '냉동새우', '7890', 'Seafood110', '1개', '300g', 1000);
+insert into goods values ('S111', 'Seafood', '중멸치', '7080', 'Seafood111', '1세트', '500g', 1000);
+insert into goods values ('S112', 'Seafood', '북어채', '7900', 'Seafood112', '1개', '100g', 1000);
+insert into goods values ('S113', 'Seafood', '홍합', '10500', 'Seafood113', '1개', '5kg', 1000);
+insert into goods values ('S114', 'Seafood', '황태머리', '15250', 'Seafood114', '1개', '1kg', 1000);
+insert into goods values ('S115', 'Seafood', '미역', '9900', 'Seafood115', '1개', '1kg', 1000);
+insert into goods values ('S116', 'Seafood', '쥐포', '11900', 'Seafood116', '1개', '500g', 1000);
+insert into goods values ('S117', 'Seafood', '멸치', '14500', 'Seafood117', '1개', '1.5kg', 1000);
+insert into goods values ('S118', 'Seafood', '잔멸치', '22500', 'Seafood118', '1개', '1.5kg', 1000);
+insert into goods values ('S119', 'Seafood', '갈치', '14900', 'Seafood119', '1개', '500g', 1000);
+
+insert into goods values ('S201', 'Seafood', '새우젓', '4000', 'Seafood201', '1통', '160g', 1000);
+insert into goods values ('S202', 'Seafood', '사각어묵', '2500', 'Seafood202', '1팩', '240/2봉g', 1000);
+insert into goods values ('S203', 'Seafood', '칵에일새우', '10500', 'Seafood203', '1봉', '300g', 1000);
+insert into goods values ('S204', 'Seafood', '가다랑어포', '2290', 'Seafood204', '1봉', '10g', 1000);
+insert into goods values ('S205', 'Seafood', '꽃게', '16900', 'Seafood205', '1팩', '800g', 1000);
+insert into goods values ('S206', 'Seafood', '굴', '28000', 'Seafood206', '1박스', '2000g', 1000);
+insert into goods values ('S207', 'Seafood', '모시조개', '4900', 'Seafood207', '1팩', '200g', 1000);
+insert into goods values ('S208', 'Seafood', '다시마육수', '5200', 'Seafood208', '1팩', '80g', 1000);
+insert into goods values ('S209', 'Seafood', '대구살', '7900', 'Seafood209', '1팩', '100g', 1000);
+insert into goods values ('S210', 'Seafood', '황태채', '11700', 'Seafood210', '1팩', '300g', 1000);
+insert into goods values ('S211', 'Seafood', '키조개관자', '11000', 'Seafood211', '1팩', '130g', 1000);
+insert into goods values ('S212', 'Seafood', '황태포', '6500', 'Seafood212', '1팩', '90g', 1000);
+insert into goods values ('S213', 'Seafood', '총알오징어', '12600', 'Seafood213', '1팩', '1kg', 1000);
+insert into goods values ('S214', 'Seafood', '조미김', '8160', 'Seafood214', '1팩', '16봉', 1000);
+insert into goods values ('S215', 'Seafood', '가자미', '12500', 'Seafood215', '1팩', '350g', 1000);
+insert into goods values ('S216', 'Seafood', '자반고등어', '7900', 'Seafood216', '1팩', '700g', 1000);
+insert into goods values ('S217', 'Seafood', '봉어묵', '4600', 'Seafood217', '1팩', '300g', 1000);
+insert into goods values ('S218', 'Seafood', '코다리', '5900', 'Seafood218', '1팩', '500g', 1000);
+insert into goods values ('S219', 'Seafood', '마른파래', '10500', 'Seafood219', '1묶음', '130g/2봉', 1000);
+insert into goods values ('S220', 'Seafood', '모둠어묵', '4900', 'Seafood220', '1팩', '300g', 1000);
+insert into goods values ('S221', 'Seafood', '명엽채', '7900', 'Seafood221', '1팩', '180g', 1000);
+insert into goods values ('S222', 'Seafood', '멍게', '5900', 'Seafood222', '1상자', '1kg', 1000);
+insert into goods values ('S223', 'Seafood', '고등어', '14390', 'Seafood223', '1팩', '1kg', 1000);
+insert into goods values ('S224', 'Seafood', '대합', '9900', 'Seafood224', '1봉', '400g', 1000);
+insert into goods values ('S225', 'Seafood', '다슬기', '7000', 'Seafood225', '1박스', '1kg', 1000);
+insert into goods values ('S226', 'Seafood', '꽁치', '4700', 'Seafood226', '1팩', '300g', 1000);
+insert into goods values ('S227', 'Seafood', '김자반', '1920', 'Seafood227', '1팩', '40g', 1000);
+
+insert into goods values ('S601', 'Seafood', '다시마', '6900', 'Seafood601', '1팩', '120g', 1000);
+insert into goods values ('S602', 'Seafood', '국물용멸치', '7500', 'Seafood602', '1팩', '300g', 1000);
+insert into goods values ('S603', 'Seafood', '김가루', '3000', 'Seafood603', '1봉', '70g', 1000);
+insert into goods values ('S604', 'Seafood', '건새우', '7900', 'Seafood604', '1봉', '100g', 1000);
+insert into goods values ('S605', 'Seafood', '새우살', '11900', 'Seafood605', '1팩', '200g', 1000);
+insert into goods values ('S606', 'Seafood', '마른미역', '8900', 'Seafood606', '1봉', '50g', 1000);
+insert into goods values ('S607', 'Seafood', '날치알', '7900', 'Seafood607', '1팩', '180g', 1000);
+insert into goods values ('S608', 'Seafood', '장어', '18400', 'Seafood608', '1팩', '250g', 1000);
+insert into goods values ('S609', 'Seafood', '삼치', '6500', 'Seafood609', '1팩', '450g', 1000);
+insert into goods values ('S610', 'Seafood', '미더덕', '4500', 'Seafood610', '1팩', '250g', 1000);
+insert into goods values ('S611', 'Seafood', '참치', '25900', 'Seafood611', '1팩', '150g', 1000);
+insert into goods values ('S612', 'Seafood', '톳', '9900', 'Seafood612', '1팩', '500g', 1000);
+insert into goods values ('S613', 'Seafood', '꼬막', '6400', 'Seafood613', '1팩', '500g', 1000);
+insert into goods values ('S614', 'Seafood', '매생이', '5300', 'Seafood614', '1팩', '180g', 1000);
+insert into goods values ('S615', 'Seafood', '슬라이스훈제연어', '23900', 'Seafood615', '1팩', '360g', 1000);
+insert into goods values ('S616', 'Seafood', '홍합살', '5900', 'Seafood616', '1팩', '200g', 1000);
+insert into goods values ('S617', 'Seafood', '모둠해물', '7347', 'Seafood617', '1팩', '250g', 1000);
+insert into goods values ('S618', 'Seafood', '동태살', '5500', 'Seafood618', '1팩', '200g', 1000);
+insert into goods values ('S619', 'Seafood', '석화', '19900', 'Seafood619', '1박스', '2kg', 1000);
+insert into goods values ('S620', 'Seafood', '볶음용멸치', '6900', 'Seafood620', '1봉', '150g', 1000);
+insert into goods values ('S621', 'Seafood', '진미채', '8900', 'Seafood621', '1팩', '300g', 1000);
+insert into goods values ('S622', 'Seafood', '마른노가리', '10900', 'Seafood622', '1팩', '150g', 1000);
+insert into goods values ('S623', 'Seafood', '도미', '24000', 'Seafood623', '1팩', '700g', 1000);
+insert into goods values ('S624', 'Seafood', '반건조박대', '10800', 'Seafood624', '1팩', '200g', 1000);
+insert into goods values ('S625', 'Seafood', '이리', '7080', 'Seafood625', '1팩', '250g', 1000);
+insert into goods values ('S626', 'Seafood', '올갱이', '6600', 'Seafood626', '1팩', '200g', 1000);
+insert into goods values ('S627', 'Seafood', '반건조오징어', '12000', 'Seafood627', '1팩', '440g', 1000);
+insert into goods values ('S628', 'Seafood', '북어포', '3800', 'Seafood628', '1개', '140g', 1000);
+
+--간식/떡/빙과
+insert into goods values ('SN001', 'Snack', '다크초콜릿', '29500', 'Snack001', '5개', '100g', 1000);
+insert into goods values ('SN002', 'Snack', '마시멜로', '8240', 'Snack002', '1개', '800g', 1000);
+insert into goods values ('SN003', 'Snack', '초콜릿', '4140', 'Snack003', '1개', '175g', 1000);
+insert into goods values ('SN004', 'Snack', '미니아이스크림콘', '7880', 'Snack004', '150개', NULL, 1000);
+insert into goods values ('SN005', 'Snack', '가래떡', '12000', 'Snack005', '1박스', '2kg', 1000);
+insert into goods values ('SN006', 'Snack', '조랭이떡', '9600', 'Snack006', '1개', '1kg', 1000);
+insert into goods values ('SN007', 'Snack', '인절미', '10900', 'Snack007', '56알', '20g', 1000);
+insert into goods values ('SN008', 'Snack', '무슬리', '7670', 'Snack008', '1개', '430g', 1000);
+insert into goods values ('SN009', 'Snack', '커스터드크림', '5500', 'Snack009', '1개', '1kg', 1000);
+insert into goods values ('SN010', 'Snack', '밀쿠키', '11900', 'Snack010', '1개', '2kg', 1000);
+insert into goods values ('Sn011', 'Snack', '백설기', '7500', 'Snack011', '1팩', '450g', 1000);
+insert into goods values ('Sn012', 'Snack', '한입떡볶이떡', '7900', 'Snack012', '1팩', '500g', 1000);
+insert into goods values ('Sn013', 'Snack', '초코파이', '3571', 'Snack013', '1통', '480g', 1000);
+insert into goods values ('Sn014', 'Snack', '꿀호떡', '5400', 'Snack014', '1봉', '350g', 1000);
+insert into goods values ('Sn015', 'Snack', '기정떡', '6300', 'Snack015', '1봉', '340g', 1000);
+insert into goods values ('Sn016', 'Snack', '절편', '5200', 'Snack016', '1팩', '300g', 1000);
+insert into goods values ('Sn017', 'Snack', '육포', '7600', 'Snack017', '1팩', '50g', 1000);
+insert into goods values ('Sn018', 'Snack', '사각증편', '15900', 'Snack018', '1박스', '1kg', 1000);
+
+insert into goods values ('SN101', 'Snack', '웨하스', '1180', 'Snack101', '1개', '50g', 1000);
+insert into goods values ('SN102', 'Snack', '스카치캔디', '7900', 'Snack102', '2개', '320g', 1000);
+insert into goods values ('SN103', 'Snack', '레몬제스트', '10900', 'Snack103', '1개', '500g', 1000);
+insert into goods values ('SN104', 'Snack', '쌀과자', '5550', 'Snack104', '2개', '128g', 1000);
+insert into goods values ('SN105', 'Snack', '미니와플', '13500', 'Snack105', '2개', NULL, 1000);
+insert into goods values ('SN106', 'Snack', '몽쉘', '14600', 'Snack106', '1세트', NULL, 1000);
+insert into goods values ('SN107', 'Snack', '크래커', '5160', 'Snack113', '2개', '280g', 1000);
+insert into goods values ('SN108', 'Snack', '치토스', '14530', 'Snack108', '16개', '82g', 1000);
+insert into goods values ('SN109', 'Snack', '홈런볼', '6800', 'Snack109', '5개', '46g', 1000);
+insert into goods values ('SN110', 'Snack', '커피빈초콜릿', '11900', 'Snack110', '1개', '300g', 1000);
+insert into goods values ('SN111', 'Snack', '시리얼', '9620', 'Snack111', '1개', '1320g', 1000);
+insert into goods values ('SN112', 'Snack', '건빵', '19800', 'Snack112', '10개', '30g', 1000);
+
+insert into goods values ('Sn201', 'Snack', '바닐라아이스크림', '6000', 'Snack201', '1통', '900ml', 1000);
+insert into goods values ('Sn202', 'Snack', '초코볼', '3680', 'Snack202', '1봉', '166g/8개입', 1000);
+insert into goods values ('SN203', 'Snack', '돼지껍질튀김', '1370', 'Snack203', '1팩', '70g', 1000);
+insert into goods values ('SN204', 'Snack', '나초', '5790', 'Snack204', '1봉', '454g', 1000);
+insert into goods values ('SN205', 'Snack', '증편', '14700', 'Snack205', '1묶음', '150g/4개입', 1000);
+insert into goods values ('SN206', 'Snack', '치즈아이스크림', '9800', 'Snack206', '1통', '474ml', 1000);
+insert into goods values ('SN207', 'Snack', '현미플레이크', '5900', 'Snack207', '1봉', '550g', 1000);
+insert into goods values ('SN208', 'Snack', '마늘바게트', '8500', 'Snack208', '1팩', '380g', 1000);
+insert into goods values ('SN209', 'Snack', '레이디핑거', '5790', 'Snack209', '1팩', '400g', 1000);
+insert into goods values ('SN210', 'Snack', '마카다미아', '14480', 'Snack210', '1봉', '113g', 1000);
+insert into goods values ('SN211', 'Snack', '밀떡', '3500', 'Snack211', '1봉', '1kg', 1000);
+insert into goods values ('SN212', 'Snack', '녹차아이스크림', '13500', 'Snack212', '1통', '474ml', 1000);
+insert into goods values ('SN213', 'Snack', '예감', '4800', 'Snack213', '1묶음', '64g/5입', 1000);
+insert into goods values ('SN214', 'Snack', '양갱', '12100', 'Snack214', '1박스', '55g/20입', 1000);
+insert into goods values ('SN215', 'Snack', '젤리빈', '2700', 'Snack215', '1봉', '60g', 1000);
+insert into goods values ('SN216', 'Snack', '웨이퍼롤', '5980', 'Snack216', '1통', '400g', 1000);
+
+insert into goods values ('SN601', 'Snack', '오레오', '750', 'Snack601', '1통', '100g', 1000);
+insert into goods values ('SN602', 'Snack', '송편', '11500', 'Snack602', '1팩', '500g', 1000);
+insert into goods values ('SN603', 'Snack', '떡국떡', '6000', 'Snack603', '1팩', '500g', 1000);
+insert into goods values ('SN604', 'Snack', '미니마시멜로', '1000', 'Snack604', '1개', '50g', 1000);
+insert into goods values ('SN605', 'Snack', '막대과자', '7110', 'Snack605', '1통', '150g', 1000);
+insert into goods values ('SN606', 'Snack', '찰떡', '5800', 'Snack606', '1상자', '240g', 1000);
+insert into goods values ('SN607', 'Snack', '감자칩', '7000', 'Snack607', '1봉', '125g', 1000);
+insert into goods values ('SN608', 'Snack', '쿠키크런치', '16900', 'Snack608', '1봉', '1kg', 1000);
+insert into goods values ('SN609', 'Snack', '초코잼', '7400', 'Snack609', '1개', '370g', 1000);
+insert into goods values ('SN610', 'Snack', '캐러멜', '5670', 'Snack610', '1봉', '720g', 1000);
+insert into goods values ('SN611', 'Snack', '딸기아이스크림', '7040', 'Snack611', '1개', '474mL', 1000);
+insert into goods values ('SN612', 'Snack', '말랑카우', '3500', 'Snack612', '1봉', '158g', 1000);
+insert into goods values ('SN613', 'Snack', '원형뻥튀기', '5800', 'Snack613', '1팩', '160g', 1000);
+insert into goods values ('SN614', 'Snack', '배아이스크림', '720', 'Snack614', '1개', '120mL', 1000);
+
+--장/양념/소스/면
+insert into goods values ('SP001', 'Spices', '쌈장', '4260', 'Spice001', '1개', '1kg', 1000);
+insert into goods values ('SP002', 'Spices', '머스터드소스', '5050', 'Spice002', '1개', '925g', 1000);
+insert into goods values ('SP003', 'Spices', '돈가스소스', '3940', 'Spice003', '1개', '455g', 1000);
+insert into goods values ('SP004', 'Spices', '미소된장', '4350', 'Spice004', '1개', '450g', 1000);
+insert into goods values ('SP005', 'Spices', '스리라차', '5960', 'Spice005', '2개', '235g', 1000);
+insert into goods values ('SP006', 'Spices', '허브가루', '6500', 'Spice006', '1개', '80g', 1000);
+insert into goods values ('SP007', 'Spices', '바질페스토', '5150', 'Spice007', '1개', '190g', 1000);
+insert into goods values ('SP008', 'Spices', '황설탕', '10160', 'Spice008', '1개', '5kg', 1000);
+insert into goods values ('SP009', 'Spices', '화이트와인비네거', '4260', 'Spice009', '1개', '500ml', 1000);
+insert into goods values ('SP010', 'Spices', '홀그레인머스터드', '8980', 'Spice011', '1개', '420g', 1000);
+insert into goods values ('SP011', 'Spices', '계핏가루', '4840', 'Spice011', '1개', '60g', 1000);
+insert into goods values ('SP012', 'Spices', '춘장', '1670', 'Spice012', '1개', '300g', 1000);
+insert into goods values ('SP013', 'Spices', '데리야키소스', '3460', 'Spice013', '1개', '240g', 1000);
+insert into goods values ('SP014', 'Spices', '크림소스', '4600', 'Spice014', '1개', '430g', 1000);
+insert into goods values ('SP015', 'Spices', '칠리파우더', '7090', 'Spice015', '1개', '453g', 1000);
+insert into goods values ('SP016', 'Spices', '한천가루', '16900', 'Spices016', '1개', '300g', 1000);
+insert into goods values ('SP017', 'Spices', '조청', '5900', 'Spices017', '1개', '500g', 1000);
+insert into goods values ('SP018', 'Spices', '중면', '3150', 'Spices018', '1봉', '900g', 1000);
+insert into goods values ('SP019', 'Spices', '해물다시팩', '7225', 'Spices019', '1팩', '140g', 1000);
+insert into goods values ('SP020', 'Spices', '펜네', '3240', 'Spices020', '1봉', '500g', 1000);
+insert into goods values ('SP021', 'Spices', '파프리카파우더', '15550', 'Spices021', '1통', '70g', 1000);
+insert into goods values ('SP022', 'Spices', '하프마요네즈', '4270', 'Spices022', '1통', '525g', 1000);
+insert into goods values ('SP023', 'Spices', '화자오', '6750', 'Spices023', '1통', '30g', 1000);
+insert into goods values ('SP024', 'Spices', '홀스래디시', '3020', 'Spices024', '1통', '250g', 1000);
+insert into goods values ('SP025', 'Spices', '케이준파우더', '9330', 'Spices025', '1통', '120g', 1000);
+insert into goods values ('SP026', 'Spices', '캡사이신', '9030', 'Spices026', '1통', '400g', 1000);
+insert into goods values ('SP027', 'Spices', '리가토니', '3560', 'Spices027', '1통', '454g', 1000);
+insert into goods values ('SP028', 'Spices', '레몬청', '8060', 'Spices028', '1병', '950g', 1000);
+insert into goods values ('SP029', 'Spices', '라자냐', '4500', 'Spices029', '1통', '500g', 1000);
+insert into goods values ('SP030', 'Spices', '딸기시럽', '3210', 'Spices030', '1통', '530g', 1000);
+insert into goods values ('SP031', 'Spices', '멸치장국', '7810', 'Spices031', '1병', '360mL', 1000);
+insert into goods values ('SP032', 'Spices', '겨자가루', '2820', 'Spices032', '1봉', '300g', 1000);
+insert into goods values ('SP033', 'Spices', '넛맥가루', '8000', 'Spices033', '1통', '120g', 1000);
+insert into goods values ('SP034', 'Spices', '양파시즈닝', '8730', 'Spices034', '1병', '150g', 1000);
+insert into goods values ('SP035', 'Spices', '아가베시럽', '5500', 'Spices035', '1병', '330g', 1000);
+insert into goods values ('SP036', 'Spices', '조개육수', '14300', 'Spices036', '1병', '1.8L', 1000);
+insert into goods values ('SP037', 'Spices', '잣가루', '12400', 'Spices037', '1팩', '100g', 1000);
+insert into goods values ('SP038', 'Spices', '버미셀리', '1390', 'Spices038', '1봉', '300g', 1000);
+insert into goods values ('SP039', 'Spices', '가람마살라', '12180', 'Spices039', '1병', '90g', 1000);
+insert into goods values ('SP040', 'Spices', '백앙금', '4620', 'Spices040', '1팩', '1kg', 1000);
+
+insert into goods values ('SP101', 'Spices', '다진마늘', '9190', 'Spice101', '1개', '500g', 1000);
+insert into goods values ('SP102', 'Spices', '식초', '3260', 'Spice102', '1개', '500ml', 1000);
+insert into goods values ('SP103', 'Spices', '맛술', '3990', 'Spice103', '1개', '830ml', 1000);
+insert into goods values ('SP104', 'Spices', '마요네즈', '3870', 'Spice104', '1개', '500ml', 1000);
+insert into goods values ('SP105', 'Spices', '들기름', '14090', 'Spice105', '1개', '320ml', 1000);
+insert into goods values ('SP107', 'Spices', '검은깨', '10900', 'Spice106', '1개', '1kg', 1000);
+insert into goods values ('SP107', 'Spices', '포도씨유', '12400', 'Spice107', '1개', '900ml', 1000);
+insert into goods values ('SP108', 'Spices', '살사소스', '9050', 'Spice108', '2개', '450g', 1000);
+insert into goods values ('SP109', 'Spices', '고추기름', '6370', 'Spice109', '2개', '80ml', 1000);
+insert into goods values ('SP110', 'Spices', '맛간장', '8730', 'Spice110', '1개', '1.7L', 1000);
+insert into goods values ('SP111', 'Spices', '미원', '9970', 'Spice111', '1개', '500g', 1000);
+insert into goods values ('SP112', 'Spices', '감자전믹스', '17500', 'Spice112', '5개', '200g', 1000);
+insert into goods values ('SP113', 'Spices', '소갈비양념', '4970', 'Spice113', '1개', '840g', 1000);
+insert into goods values ('SP114', 'Spices', '냉모밀육수', '3120', 'Spice114', '1개', '350ml', 1000);
+insert into goods values ('SP115', 'Spices', '탄두리티카소스', '14200', 'Spice115', '1개', '2kg', 1000);
+insert into goods values ('SP116', 'Spices', '생고추냉이', '15000', 'Spice116', '2개', NULL, 1000);
+insert into goods values ('SP117', 'Spices', '나초치즈소스', '3540', 'Spice117', '2개', '142g', 1000);
+insert into goods values ('SP118', 'Spices', '체다치즈가루', '3900', 'Spice118', '1개', '160g', 1000);
+insert into goods values ('SP119', 'Spices', '초고추장', '3120', 'Spice119', '1개', '500', 1000);
+insert into goods values ('SP120', 'Spices', '치킨스톡', '5610', 'Spice120', '1개', '340g', 1000);
+insert into goods values ('SP121', 'Spices', '발사믹식초', '19900', 'Spice121', '1개', '500ml', 1000);
+insert into goods values ('SP122', 'Spices', '겨자', '4870', 'Spice122', '1개', '410g', 1000);
+insert into goods values ('SP123', 'Spices', '닭육수', '7600', 'Spice123', '1개', '1kg', 1000);
+insert into goods values ('SP124', 'Spices', '연겨자', '4800', 'Spice124', '1병', '410g', 1000);
+insert into goods values ('SP125', 'Spices', '식용유', '5000', 'Spice125', '1개', '900ml', 1000);
+insert into goods values ('SP126', 'Spices', '우스터소스', '4010', 'Spice126', '1개', '415g', 1000);
+insert into goods values ('SP127', 'Spices', '흑설탈', '9760', 'Spice127', '3개', '1kg', 1000);
+insert into goods values ('SP128', 'Spices', '후리카게', '6830', 'Spice128', '1개', '220g', 1000);
+insert into goods values ('SP129', 'Spices', '야채스톡', '5480', 'Spice129', '2개', '250g', 1000);
+insert into goods values ('SP130', 'Spices', '핫소스', '6310', 'Spice130', '1개', '150ml', 1000);
+insert into goods values ('SP131', 'Spices', '옥수수전분', '4200', 'Spice131', '1개', '400g', 1000);
+insert into goods values ('SP132', 'Spices', '오레가노', '6250', 'Spice132', '1개', '70g', 1000);
+insert into goods values ('SP133', 'Spices', '콩가루', '10500', 'Spice133', '1개', '500g', 1000);
+insert into goods values ('SP134', 'Spices', '와사비', '11790', 'Spice134', '2개', '400g', 1000);
+insert into goods values ('SP135', 'Spices', '발사믹크림', '10800', 'Spice135', '1개', '500ml', 1000);
+insert into goods values ('SP136', 'Spices', '바질가루', '7500', 'Spice136', '1개', '280g', 1000);
+
+insert into goods values ('SP201', 'Spices', '소금', '4670', 'Spices201', '1팩', '3kg', 1000);
+insert into goods values ('SP202', 'Spices', '간장', '7500', 'Spices202', '1팩', '860ml', 1000);
+insert into goods values ('SP203', 'Spices', '참깨', '5500', 'Spices203', '1병', '110g', 1000);
+insert into goods values ('SP204', 'Spices', '고추장', '12700', 'Spices204', '1통', '3kg', 1000);
+insert into goods values ('SP205', 'Spices', '올리브유', '4880', 'Spices205', '1병', '250ml', 1000);
+insert into goods values ('SP206', 'Spices', '케첩', '4000', 'Spices206', '1개', '400ml', 1000);
+insert into goods values ('SP207', 'Spices', '멸치액젓', '4580', 'Spices207', '1병', '800ml', 1000);
+insert into goods values ('SP208', 'Spices', '후추', '5980', 'Spices208', '1병', '36g', 1000);
+insert into goods values ('SP209', 'Spices', '매실청', '15000', 'Spices209', '1병', '420g', 1000);
+insert into goods values ('SP210', 'Spices', '까나리액젓', '4580', 'Spices210', '1병', '800g', 1000);
+insert into goods values ('SP211', 'Spices', '들깻가루', '10800', 'Spices211', '1팩', '200g', 1000);
+insert into goods values ('SP212', 'Spices', '월계수잎', '2780', 'Spices212', '1팩', '8g', 1000);
+insert into goods values ('SP213', 'Spices', '페페론치노', '5900', 'Spices213', '1통', '21g', 1000);
+insert into goods values ('SP214', 'Spices', '굵은소금', '5230', 'Spices214', '1개', '1kg', 1000);
+insert into goods values ('SP215', 'Spices', '허니머스터드', '4350', 'Spices215', '1병', '535ml', 1000);
+insert into goods values ('SP216', 'Spices', '피시소스', '3450', 'Spices216', '1병', '295ml', 1000);
+insert into goods values ('SP217', 'Spices', '스테이크소스', '12000', 'Spices217', '1병', '373g', 1000);
+insert into goods values ('SP218', 'Spices', '스위트칠리소스', '2900', 'Spices218', '1병', '250ml', 1000);
+insert into goods values ('SP219', 'Spices', '로즈메리가루', '5700', 'Spices219', '1통', '250g', 1000);
+insert into goods values ('SP220', 'Spices', '시나몬파우더', '3490', 'Spices220', '1통', '40g', 1000);
+insert into goods values ('SP221', 'Spices', '천일염', '2880', 'Spices221', '1봉', '500g', 1000);
+insert into goods values ('SP222', 'Spices', '연고추냉이', '1800', 'Spices222', '1개', '35g', 1000);
+insert into goods values ('SP223', 'Spices', '씨겨자', '14000', 'Spices223', '1병', '250g', 1000);
+insert into goods values ('SP224', 'Spices', '쑥가루', '7930', 'Spices224', '1봉', '300g', 1000);
+insert into goods values ('SP225', 'Spices', '단호박가루', '10450', 'Spices225', '1봉', '300g', 1000);
+insert into goods values ('SP226', 'Spices', '바비큐소스', '4980', 'Spices226', '1개', '355ml', 1000);
+insert into goods values ('SP227', 'Spices', '라임즙', '3500', 'Spices227', '2개', '200ml/2입', 1000);
+insert into goods values ('SP228', 'Spices', '캐러멜시럽', '8160', 'Spices228', '1통', '450g', 1000);
+insert into goods values ('SP229', 'Spices', '한방재료', '4790', 'Spices229', '1팩', '100g', 1000);
+insert into goods values ('SP230', 'Spices', '큐민', '4500', 'Spices230', '1개', '120g', 1000);
+insert into goods values ('SP231', 'Spices', '카이엔페퍼', '7000', 'Spices231', '1통', '150g', 1000);
+insert into goods values ('SP232', 'Spices', '라구소스', '8750', 'Spices232', '1병', '360g', 1000);
+insert into goods values ('SP233', 'Spices', '들깨', '16500', 'Spices233', '1봉', '1kg', 1000);
+insert into goods values ('SP234', 'Spices', '맛소금', '3260', 'Spices234', '1팩', '1kg', 1000);
+insert into goods values ('SP235', 'Spices', '강황분말', '19500', 'Spices235', '1팩', '2kg', 1000);
+insert into goods values ('SP236', 'Spices', '간장소스', '8790', 'Spices236', '1묶음', '150g/3입', 1000);
+insert into goods values ('SP237', 'Spices', '저지방마요네즈', '4270', 'Spices237', '1통', '525g', 1000);
+insert into goods values ('SP238', 'Spices', '자색고구마가루', '6490', 'Spices238', '1봉', '200g', 1000);
+insert into goods values ('SP239', 'Spices', '백년초가루', '12500', 'Spices239', '1병', '150g', 1000);
+insert into goods values ('SP240', 'Spices', '생강술', '2360', 'Spices240', '1병', '500ml', 1000);
+
+insert into goods values ('SP601', 'Spices', '설탕', '3780', 'Spices601', '1팩', '1kg', 1000);
+insert into goods values ('SP602', 'Spices', '고춧가루', '29900', 'Spices602', '1팩', '500g', 1000);
+insert into goods values ('SP603', 'Spices', '청주', '6300', 'Spices603', '1병', '1.5L', 1000);
+insert into goods values ('SP604', 'Spices', '올리고당', '4780', 'Spices604', '1병', '1.2kg', 1000);
+insert into goods values ('SP605', 'Spices', '물엿', '5900', 'Spices605', '1병', '2.4kg', 1000);
+insert into goods values ('SP606', 'Spices', '굴소스', '5480', 'Spices606', '1병', '280g', 1000);
+insert into goods values ('SP607', 'Spices', '녹말', '7000', 'Spices607', '1팩', '1kg', 1000);
+insert into goods values ('SP608', 'Spices', '부침가루', '3380', 'Spices608', '1팩', '1kg', 1000);
+insert into goods values ('SP609', 'Spices', '토마토소스', '3980', 'Spices609', '1병', '600g', 1000);
+insert into goods values ('SP610', 'Spices', '전분', '3990', 'Spices610', '1팩', '1kg', 1000);
+insert into goods values ('SP611', 'Spices', '당면', '3980', 'Spices611', '1봉', '300g', 1000);
+insert into goods values ('SP612', 'Spices', '스파게티', '3190', 'Spices612', '1팩', '500g', 1000);
+insert into goods values ('SP613', 'Spices', '참치액젓', '12000', 'Spices613', '1병', '500g', 1000);
+insert into goods values ('SP614', 'Spices', '땅콩버터', '4450', 'Spices614', '1병', '462g', 1000);
+insert into goods values ('SP615', 'Spices', '우동사리', '850', 'Spices615', '1개', '200g', 1000);
+insert into goods values ('SP616', 'Spices', '토마토페이스트', '5480', 'Spices616', '1병', '190g', 1000);
+insert into goods values ('SP617', 'Spices', '청양고춧가루', '8480', 'Spices617', '1통', '110g', 1000);
+insert into goods values ('SP618', 'Spices', '갈색설탕', '2480', 'Spices618', '1팩', '1kg', 1000);
+insert into goods values ('SP619', 'Spices', '두반장', '3800', 'Spices619', '1병', '226g', 1000);
+insert into goods values ('SP620', 'Spices', '칠리소스', '3500', 'Spices620', '1팩', '300g', 1000);
+insert into goods values ('SP621', 'Spices', '카놀라유', '11730', 'Spices621', '1병', '500g', 1000);
+insert into goods values ('SP622', 'Spices', '코코넛오일', '15800', 'Spices622', '1병', '500g', 1000);
+insert into goods values ('SP623', 'Spices', '피클링스파이스', '3290', 'Spices623', '1통', '40g', 1000);
+insert into goods values ('SP624', 'Spices', '마라소스', '4500', 'Spices624', '1통', '120g', 1000);
+insert into goods values ('SP625', 'Spices', '팥앙금', '12000', 'Spices625', '1팩', '250g', 1000);
+insert into goods values ('SP626', 'Spices', '크러쉬드레드페퍼', '3900', 'Spices626', '1통', '36g', 1000);
+insert into goods values ('SP627', 'Spices', '청국장', '4500', 'Spices627', '1팩', '160g', 1000);
+insert into goods values ('SP628', 'Spices', '진간장', '4880', 'Spices628', '1통', '840g', 1000);
+insert into goods values ('SP629', 'Spices', '오레가노가루', '7600', 'Spices629', '1통', '300g', 1000);
+insert into goods values ('SP630', 'Spices', '거피들깨가루', '11200', 'Spices630', '1통', '100g', 1000);
+insert into goods values ('SP631', 'Spices', '라조장', '9100', 'Spices631', '1통', '730g', 1000);
+insert into goods values ('SP632', 'Spices', '팔각', '5110', 'Spices632', '1통', '60g', 1000);
+insert into goods values ('SP633', 'Spices', '허브솔트', '2280', 'Spices633', '1통', '50g', 1000);
+insert into goods values ('SP634', 'Spices', '오미자청', '13260', 'Spices634', '1병', '500mL', 1000);
+insert into goods values ('SP635', 'Spices', '참깨드레싱', '6910', 'Spices635', '1병', '1040g', 1000);
+insert into goods values ('SP636', 'Spices', '타타르소스', '4500', 'Spices636', '1통', '245g', 1000);
+insert into goods values ('SP637', 'Spices', '핑크페퍼콘', '19900', 'Spices637', '1통', '113g', 1000);
+insert into goods values ('SP638', 'Spices', '치자가루', '12720', 'Spices638', '1팩', '300g', 1000);
+insert into goods values ('SP639', 'Spices', '케이퍼', '3100', 'Spices639', '1병', '96g', 1000);
+insert into goods values ('SP640', 'Spices', '마늘가루', '5900', 'Spices640', '1병', '40g', 1000);
+insert into goods values ('SP641', 'Spices', '레드커리', '4750', 'Spices641', '1통', '400g', 1000);
+insert into goods values ('SP642', 'Spices', '민트젤리', '5720', 'Spices642', '1통', '290g', 1000);
+insert into goods values ('SP643', 'Spices', '미림', '2280', 'Spices643', '1통', '500mL', 1000);
+insert into goods values ('SP644', 'Spices', '도토리가루', '18670', 'Spices644', '1팩', '250mL', 1000);
+insert into goods values ('SP645', 'Spices', '강된장', '6780', 'Spices645', '1통', '500g', 1000);
+insert into goods values ('SP646', 'Spices', '가쓰오육수', '2680', 'Spices646', '1병', '350mL', 1000);
+insert into goods values ('SP647', 'Spices', '농축쯔유', '5780', 'Spices647', '1병', '500mL', 1000);
+insert into goods values ('SP648', 'Spices', '노두유', '3600', 'Spices648', '1병', '500mL', 1000);
+insert into goods values ('SP649', 'Spices', '깔루아', '13770', 'Spices649', '1병', '1000mL', 1000);
+insert into goods values ('SP650', 'Spices', '오뚜기엔초비스파게티소스', '7700', 'Spices650', '1병', '320g', 1000);
+insert into goods values ('SP651', 'Spices', '엑스트라버진올리브유', '9900', 'Spices651', '1병', '500mL', 1000);
+insert into goods values ('SP652', 'Spices', '에그누들', '2600', 'Spices652', '1봉', '500g', 1000);
+insert into goods values ('SP653', 'Spices', '쌀조청', '5900', 'Spices653', '1개', '500g', 1000);
+insert into goods values ('SP654', 'Spices', '정향', '6000', 'Spices654', '1통', '80g', 1000);
+insert into goods values ('SP655', 'Spices', '볶음춘장', '10370', 'Spices655', '1봉', '2kg', 1000);
+insert into goods values ('SP656', 'Spices', '비트가루', '9370', 'Spices656', '1통', '100g', 1000);
+insert into goods values ('SP657', 'Spices', '생소면', '3980', 'Spices657', '1봉', '600g', 1000);
+insert into goods values ('SP658', 'Spices', '산초가루', '8900', 'Spices658', '1병', '12g', 1000);
+
+
+--채소
+insert into goods values ('V001', 'Vegetable', '콩나물', '2280', 'Vegetable001', '1개', '340g', 1000);
+insert into goods values ('V002', 'Vegetable', '느타리버섯', '2790', 'Vegetable002', '1개', '500g', 1000);
+insert into goods values ('V003', 'Vegetable', '가지', '4070', 'Vegetable003', '1봉', NULL, 1000);
+insert into goods values ('V004', 'Vegetable', '고구마', '9390', 'Vegetable004', '1박스', '1.5kg', 1000);
+insert into goods values ('V005', 'Vegetable', '양상추', '1990', 'Vegetable005', '1개', '250g', 1000);
+insert into goods values ('V006', 'Vegetable', '시금치', '3870', 'Vegetable006', '1봉', '300g', 1000);
+insert into goods values ('V007', 'Vegetable', '어린잎채소', '6250', 'Vegetable007', '1팩', '350g', 1000);
+insert into goods values ('V008', 'Vegetable', '파프리카', '5800', 'Vegetable008', '1봉', '600g', 1000);
+insert into goods values ('V009', 'Vegetable', '홍피망', '3500', 'Vegetable009', '1박스', '1kg', 1000);
+insert into goods values ('V010', 'Vegetable', '무순', '4900', 'Vegetable010', '1팩', '500g', 1000);
+insert into goods values ('V011', 'Vegetable', '고수', '1970', 'Vegetable011', '1팩', '30g', 1000);
+insert into goods values ('V012', 'Vegetable', '계피', '15900', 'Vegetable012', '1개', '1.5kg', 1000);
+insert into goods values ('V013', 'Vegetable', '고사리', '9050', 'Vegetable013', '1개', '450g', 1000);
+insert into goods values ('V014', 'Vegetable', '고구마줄기', '3590', 'Vegetable014', '1봉', '300g', 1000);
+insert into goods values ('V015', 'Vegetable', '오이고추', '8400', 'Vegetable015', '1박스', '1kg', 1000);
+insert into goods values ('V016', 'Vegetable', '목이버섯', '14500', 'Vegetable016', '1개', '500g', 1000);
+insert into goods values ('V017', 'Vegetable', '적채', '2780', 'Vegetable017', '1개', '700g', 1000);
+insert into goods values ('V018', 'Vegetable', '무말랭이', '11200', 'Vegetable018', '1개', '800g', 1000);
+insert into goods values ('V019', 'Vegetable', '마', '7790', 'Vegetable019', '1봉', '500g', 1000);
+insert into goods values ('V020', 'Vegetable', '호박고구마', '3780', 'Vegetable020', '1봉', '800g', 1000);
+insert into goods values ('V021', 'Vegetable', '호박고지', '6990', 'Vegetable021', '1봉', '150g', 1000);
+insert into goods values ('V022', 'Vegetable', '그린빈', '4990', 'Vegetable022', '1봉', '600g', 1000);
+insert into goods values ('V023', 'Vegetable', '이탈리안파슬리', '3920', 'Vegetable023', '1봉', '30g', 1000);
+insert into goods values ('V024', 'Vegetable', '황금송이버섯', '1970', 'Vegetable024', '1봉', '200g', 1000);
+insert into goods values ('V025', 'Vegetable', '호박', '1990', 'Vegetable025', '1개', '300g', 1000);
+insert into goods values ('V026', 'Vegetable', '렌틸콩', '2990', 'Vegetable026', '1통', '500g', 1000);
+insert into goods values ('V027', 'Vegetable', '미니단호박', '4290', 'Vegetable027', '1개', '300g', 1000);
+insert into goods values ('V028', 'Vegetable', '건목이버섯', '3990', 'Vegetable028', '1개', '30g', 1000);
+insert into goods values ('V029', 'Vegetable', '강낭콩', '14990', 'Vegetable029', '1봉', '500g', 1000);
+insert into goods values ('V030', 'Vegetable', '근대', '2890', 'Vegetable030', '1봉', '200g', 1000);
+insert into goods values ('V031', 'Vegetable', '옥수수수염', '14350', 'Vegetable031', '1봉', '200g', 1000);
+
+insert into goods values ('V101', 'Vegetable', '대파', '4800', 'Vegetable101', '1개', '800g', 1000);
+insert into goods values ('V102', 'Vegetable', '생강', '4980', 'Vegetable102', '1개', '1kg', 1000);
+insert into goods values ('V103', 'Vegetable', '당근', '3980', 'Vegetable103', '1봉', '1kg', 1000);
+insert into goods values ('V104', 'Vegetable', '쪽파', '15500', 'Vegetable104', '1개', '1kg', 1000);
+insert into goods values ('V105', 'Vegetable', '파슬리', '9260', 'Vegetable105', '1개', '500g', 1000);
+insert into goods values ('V106', 'Vegetable', '표고버섯', '5480', 'Vegetable106', '1팩', '300g', 1000);
+insert into goods values ('V107', 'Vegetable', '양배추', '3680', 'Vegetable107', '1개', NULL, 1000);
+insert into goods values ('V108', 'Vegetable', '미나리', '10900', 'Vegetable108', '1개', '1kg', 1000);
+insert into goods values ('V109', 'Vegetable', '양송이버섯', '5950', 'Vegetable109', '1팩', '300g', 1000);
+insert into goods values ('V110', 'Vegetable', '단호박', '9980', 'Vegetable110', '1개', '3입', 1000);
+insert into goods values ('V111', 'Vegetable', '배추', '3980', 'Vegetable111', '1통', NULL, 1000);
+insert into goods values ('V112', 'Vegetable', '돌미나리', '13900', 'Vegetable112', '1개', '500g', 1000);
+insert into goods values ('V113', 'Vegetable', '손두부', '5500', 'Vegetable113', '3개', '500g', 1000);
+insert into goods values ('V114', 'Vegetable', '마른곤드레나물', '12900', 'Vegetable114', '1팩', '800g', 1000);
+insert into goods values ('V115', 'Vegetable', '적근대', '5190', 'Vegetable115', '1봉', '300g', 1000);
+insert into goods values ('V116', 'Vegetable', '자숙노랑옥수수', '11050', 'Vegetable116', '10개', NULL, 1000);
+insert into goods values ('V117', 'Vegetable', '생강슬라이스', '7500', 'Vegetable117', '1개', '500g', 1000);
+insert into goods values ('V118', 'Vegetable', '브로콜리', '5980', 'Vegetable118', '1봉', '500g', 1000);
+insert into goods values ('V119', 'Vegetable', '딜', '350000', 'Vegetable119', '1개', '1kg', 1000);
+insert into goods values ('V120', 'Vegetable', '공심채', '3790', 'Vegetable120', '1봉', '150g', 1000);
+insert into goods values ('V121', 'Vegetable', '풋호박', '24300', 'Vegetable121', '1개', '2kg', 1000);
+insert into goods values ('V122', 'Vegetable', '아스파라거스', '11170', 'Vegetable122', '1팩', '500g', 1000);
+insert into goods values ('V123', 'Vegetable', '베트남고추', '10000', 'Vegetable123', '1개', '500g', 1000);
+insert into goods values ('V124', 'Vegetable', '로즈메리', '8500', 'Vegetable124', '1개', '50g', 1000);
+insert into goods values ('V125', 'Vegetable', '민트', '4000', 'Vegetable125', '1봉', '50g', 1000);
+insert into goods values ('V126', 'Vegetable', '치커리', '12000', 'Vegetable126', '1개', '1kg', 1000);
+insert into goods values ('V127', 'Vegetable', '꽈리고추', '4110', 'Vegetable127', '1팩', '300g', 1000);
+insert into goods values ('V128', 'Vegetable', '죽순', '9150', 'Vegetable128', '1개', '300g', 1000);
+insert into goods values ('V129', 'Vegetable', '파채', '3690', 'Vegetable129', '1개', '300g', 1000);
+insert into goods values ('V130', 'Vegetable', '청경채', '8160', 'Vegetable130', '1팩', '1kg', 1000);
+insert into goods values ('V131', 'Vegetable', '더덕', '15900', 'Vegetable131', '1개', '650g', 1000);
+insert into goods values ('V132', 'Vegetable', '새싹채소', '6530', 'Vegetable132', '1팩', '500g', 1000);
+insert into goods values ('V133', 'Vegetable', '노각', '8900', 'Vegetable133', '1박스(2~3개입)', NULL, 1000);
+insert into goods values ('V134', 'Vegetable', '마늘종', '3200', 'Vegetable134', '1봉', '200g', 1000);
+insert into goods values ('V135', 'Vegetable', '영양부추', '3250', 'Vegetable135', '1개', '200g', 1000);
+insert into goods values ('V136', 'Vegetable', '바질', '2420', 'Vegetable136', '1개', '20g', 1000);
+insert into goods values ('V137', 'Vegetable', '얼갈이배추', '3400', 'Vegetable137', '1봉', '800g', 1000);
+insert into goods values ('V138', 'Vegetable', '쑥', '10900', 'Vegetable138', '1개', '1kg', 1000);
+insert into goods values ('V139', 'Vegetable', '쌈채소', '13500', 'Vegetable139', '1박스', '1kg', 1000);
+insert into goods values ('V140', 'Vegetable', '두릅', '17500', 'Vegetable140', '1개', '1kg', 1000);
+insert into goods values ('V141', 'Vegetable', '적양파', '6710', 'Vegetable141', '1개', '3kg', 1000);
+insert into goods values ('V142', 'Vegetable', '애느타리버섯', '13500', 'Vegetable142', '1팩', '2kg', 1000);
+insert into goods values ('V143', 'Vegetable', '우엉', '9900', 'Vegetable143', '1개', '2kg', 1000);
+insert into goods values ('V144', 'Vegetable', '연두부', '8900', 'Vegetable144', '6개', '150g', 1000);
+insert into goods values ('V145', 'Vegetable', '달래', '2490', 'Vegetable145', '1팩', '120g', 1000);
+insert into goods values ('V146', 'Vegetable', '라벤더잎', '2000', 'Vegetable146', '1개', '50g', 1000);
+insert into goods values ('V147', 'Vegetable', '토란', '14980', 'Vegetable147', '1개', '1kg', 1000);
+insert into goods values ('V147', 'Vegetable', '노란파프리카', '7180', 'Vegetable147', '1개', '1kg', 1000);
+
+insert into goods values ('V201', 'Vegetable', '청양고추', '1500', 'Vegetable201', '1봉지', '80g', 1000);
+insert into goods values ('V202', 'Vegetable', '감자', '12900', 'Vegetable202', '1봉', '2kg', 1000);
+insert into goods values ('V203', 'Vegetable', '깻잎', '1990', 'Vegetable203', '1봉', '30입', 1000);
+insert into goods values ('V204', 'Vegetable', '토마토', '4500', 'Vegetable204', '1팩', '1kg', 1000);
+insert into goods values ('V205', 'Vegetable', '새송이버섯', '1990', 'Vegetable205', '1봉', '2입', 1000);
+insert into goods values ('V206', 'Vegetable', '건표고버섯', '6990', 'Vegetable206', '1팩', '100g', 1000);
+insert into goods values ('V207', 'Vegetable', '주키니호박', '2990', 'Vegetable207', '1개', '1개', 1000);
+insert into goods values ('V208', 'Vegetable', '상추', '1990', 'Vegetable208', '1봉', '100g', 1000);
+insert into goods values ('V209', 'Vegetable', '쑥갓', '1990', 'Vegetable209', '1봉', '150g', 1000);
+insert into goods values ('V210', 'Vegetable', '청오이', '2800', 'Vegetable210', '1팩', '1kg', 1000);
+insert into goods values ('V211', 'Vegetable', '시래기', '3990', 'Vegetable211', '1봉', '100g', 1000);
+insert into goods values ('V212', 'Vegetable', '알배추', '4290', 'Vegetable212', '1봉', '1통', 1000);
+insert into goods values ('V213', 'Vegetable', '열무', '1990', 'Vegetable213', '1봉', '300g', 1000);
+insert into goods values ('V214', 'Vegetable', '청고추', '2990', 'Vegetable214', '1팩', '300g', 1000);
+insert into goods values ('V215', 'Vegetable', '아욱', '11800', 'Vegetable215', '1봉', '200g', 1000);
+insert into goods values ('V216', 'Vegetable', '애플민트', '1990', 'Vegetable216', '1팩', '10g', 1000);
+insert into goods values ('V217', 'Vegetable', '모둠채소', '3190', 'Vegetable217', '1팩', '200g', 1000);
+insert into goods values ('V218', 'Vegetable', '타임', '1590', 'Vegetable218', '1봉', '10g', 1000);
+insert into goods values ('V219', 'Vegetable', '도라지', '17900', 'Vegetable219', '1팩', '2000g', 1000);
+insert into goods values ('V220', 'Vegetable', '참나물', '2490', 'Vegetable220', '1봉', '150g', 1000);
+insert into goods values ('V221', 'Vegetable', '케일', '1990', 'Vegetable221', '1봉', '100g', 1000);
+insert into goods values ('V222', 'Vegetable', '절인배추', '15900', 'Vegetable222', '1봉', '3000g', 1000);
+insert into goods values ('V223', 'Vegetable', '취나물', '3290', 'Vegetable223', '1봉', '150g', 1000);
+insert into goods values ('V224', 'Vegetable', '세발나물', '25000', 'Vegetable224', '1봉', '1kg', 1000);
+insert into goods values ('V225', 'Vegetable', '프리세', '6500', 'Vegetable225', '1봉', '100g', 1000);
+insert into goods values ('V226', 'Vegetable', '콜리플라워', '4980', 'Vegetable226', '1개', '400g', 1000);
+insert into goods values ('V227', 'Vegetable', '풋마늘대', '4265', 'Vegetable227', '1팩', '200g', 1000);
+insert into goods values ('V228', 'Vegetable', '황기', '7490', 'Vegetable228', '1봉', '100g', 1000);
+insert into goods values ('V229', 'Vegetable', '미니아스파라거스', '4410', 'Vegetable229', '1봉', '100g', 1000);
+insert into goods values ('V230', 'Vegetable', '곰취잎', '9950', 'Vegetable230', '1봉', '250g', 1000);
+insert into goods values ('V231', 'Vegetable', '엔다이브', '11700', 'Vegetable231', '1팩', '500g', 1000);
+insert into goods values ('V232', 'Vegetable', '실파', '9400', 'Vegetable232', '1박스', '1kg', 1000);
+insert into goods values ('V233', 'Vegetable', '사천건고추', '11000', 'Vegetable233', '1봉', '250g', 1000);
+
+insert into goods values ('V601', 'Vegetable', '양파', '1990', 'Vegetable601', '1팩', '350g', 1000);
+insert into goods values ('V602', 'Vegetable', '무', '2990', 'Vegetable602', '1개', '1kg', 1000);
+insert into goods values ('V603', 'Vegetable', '애호박', '3190', 'Vegetable603', '1개', '500g', 1000);
+insert into goods values ('V604', 'Vegetable', '부추', '1460', 'Vegetable604', '1팩', '200g', 1000);
+insert into goods values ('V605', 'Vegetable', '청피망', '8900', 'Vegetable605', '1팩', '1kg', 1000);
+insert into goods values ('V606', 'Vegetable', '빨간파프리카', '3960', 'Vegetable606', '1봉', '540g', 1000);
+insert into goods values ('V607', 'Vegetable', '팽이버섯', '2990', 'Vegetable607', '1봉', '720g', 1000);
+insert into goods values ('V608', 'Vegetable', '땅콩', '7400', 'Vegetable608', '1봉', '200g', 1000);
+insert into goods values ('V609', 'Vegetable', '건고추', '2690', 'Vegetable609', '1봉', '40g', 1000);
+insert into goods values ('V610', 'Vegetable', '연근', '4490', 'Vegetable610', '1팩', '300g', 1000);
+insert into goods values ('V611', 'Vegetable', '냉이', '14980', 'Vegetable611', '1팩', '20g', 1000);
+insert into goods values ('V612', 'Vegetable', '셀러리', '3990', 'Vegetable612', '1봉', '550g', 1000);
+insert into goods values ('V613', 'Vegetable', '수삼', '12900', 'Vegetable613', '1팩', '200g', 1000);
+insert into goods values ('V614', 'Vegetable', '늙은호박', '7900', 'Vegetable614', '1팩', '500g', 1000);
+insert into goods values ('V615', 'Vegetable', '비트', '2190', 'Vegetable615', '1개', '400g', 1000);
+insert into goods values ('V616', 'Vegetable', '백오이', '1390', 'Vegetable616', '1개', '200g', 1000);
+insert into goods values ('V617', 'Vegetable', '숙주나물', '1450', 'Vegetable617', '1봉', '380g', 1000);
+insert into goods values ('V618', 'Vegetable', '방울양배추', '8410', 'Vegetable618', '1봉', '500g', 1000);
+insert into goods values ('V619', 'Vegetable', '돌나물', '3520', 'Vegetable619', '1봉', '250g', 1000);
+insert into goods values ('V620', 'Vegetable', '미니새송이버섯', '1790', 'Vegetable620', '1봉', '300g', 1000);
+insert into goods values ('V621', 'Vegetable', '래디시', '2690', 'Vegetable621', '1팩', '100g', 1000);
+insert into goods values ('V622', 'Vegetable', '우거지', '7780', 'Vegetable622', '1봉', '200g', 1000);
+insert into goods values ('V623', 'Vegetable', '적양배추', '2790', 'Vegetable623', '1통', '500g', 1000);
+insert into goods values ('V624', 'Vegetable', '로메인', '1990', 'Vegetable624', '1봉', '100g', 1000);
+insert into goods values ('V625', 'Vegetable', '봄동', '25000', 'Vegetable625', '1통', '1kg', 1000);
+insert into goods values ('V626', 'Vegetable', '청갓', '17500', 'Vegetable626', '1단', '2.5kg', 1000);
+insert into goods values ('V627', 'Vegetable', '바질잎', '1990', 'Vegetable627', '1팩', '10g', 1000);
+insert into goods values ('V628', 'Vegetable', '방풍나물', '2390', 'Vegetable628', '1봉', '150g', 1000);
+insert into goods values ('V629', 'Vegetable', '주황파프리카', '5500', 'Vegetable629', '1팩', '1kg', 1000);
+insert into goods values ('V630', 'Vegetable', '호박잎', '2780', 'Vegetable630', '1봉', '150g', 1000);
+insert into goods values ('V631', 'Vegetable', '콜라비', '2190', 'Vegetable631', '1봉', '300g', 1000);
+insert into goods values ('V632', 'Vegetable', '청상추', '1990', 'Vegetable632', '1봉', '200g', 1000);
+insert into goods values ('V633', 'Vegetable', '루꼴라', '1400', 'Vegetable633', '1봉', '30g', 1000);
+insert into goods values ('V634', 'Vegetable', '겨자잎', '1690', 'Vegetable634', '1봉', '100g', 1000);
+insert into goods values ('V635', 'Vegetable', '알감자', '3750', 'Vegetable635', '1봉', '1kg', 1000);
+insert into goods values ('V636', 'Vegetable', '비름나물', '6900', 'Vegetable636', '1봉', '1kg', 1000);
+insert into goods values ('V637', 'Vegetable', '샐러드채소', '1500', 'Vegetable637', '1팩', '40g', 1000);
