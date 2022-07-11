@@ -1,3 +1,19 @@
+-- 기존 Goods 테이블 삭제
+drop table goods purge;
+
+-- Goods 테이블 생성
+create table goods 
+	( gCode varchar2(20) PRIMARY KEY, -- 상품코드
+	gCategory varchar2(20) not null,   -- 상품 카테고리 (fruit, )
+	gName varchar2(50) not null,   -- 상품 이름 (본래 식재료 이름만 표기 원산지, 생산자 제외)
+	gPrice NUMBER(6) not null,     -- 상품 가격
+	gImage varchar2(20) not null,   -- 상품 이미지
+	gUnit varchar2(20),     -- 판매단위 (기재된 것이 없을 경우 NULL)
+	gWeight varchar2(20),   -- 중량 (기재된 것이 없을 경우 NULL)
+	gStock NUMBER(20)   -- 재고
+);
+
+-- Insert
 --베이커리
 insert into goods values ('B001', 'Bakery', '식빵', '4960', 'bakery001', '2개', '330g', 1000);
 insert into goods values ('B002', 'Bakery', '튀김가루', '5300', 'bakery002', '1개', '2kg', 1000);
