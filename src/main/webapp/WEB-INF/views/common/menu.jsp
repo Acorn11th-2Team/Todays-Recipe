@@ -20,7 +20,7 @@
 </a>&nbsp;&nbsp;
 <a href="goodsList?gCategory=Kimchi" style="text-decoration: none;">
 	김치·반찬 
-</a>&nbsp;&nbsp;
+</a><br>
 <a href="goodsList?gCategory=Meat" style="text-decoration: none;">
 	<img src="images/Meat.png" style=" height: 30px;">
 </a>&nbsp;&nbsp;
