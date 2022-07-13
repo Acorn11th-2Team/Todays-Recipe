@@ -26,8 +26,8 @@
 							<table style='padding: 15px'>
 								<tr>
 									<td><a href="goodsRetrieve?gCode=${dto.gCode }"> <img
-											src="images/items/${dto.gImage}.png" border="0" height="300"
-											width="200" align="center" width="200">
+											src="images/items/${dto.gImage}.png" border="0" height="210"
+											width="140" align="center" width="200">
 									</a></td>
 								</tr>
 								<tr>
@@ -53,7 +53,7 @@
 							</table>
 						</td>
 						<!-- 한 줄에4개씩 -->
-						<c:if test="${status.count%3 ==0 }">
+						<c:if test="${status.count%5 ==0 }">
 							<tr>
 								<td height="10"></td>
 							</tr>
