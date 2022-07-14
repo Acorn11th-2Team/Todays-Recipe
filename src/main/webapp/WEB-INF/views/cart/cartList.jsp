@@ -81,9 +81,36 @@ $(function() {
 			return false;
 		}
 		
-		$("form").attr("action", "loginCheck/orderAllCart");
+		$("form").attr("action", "recipeRecomm");
 		$("form").submit();	
 	});
+	
+	/* //레시피 추천받기 버튼 클릭
+	$("#recipeBtn").on("click", function () {
+		$(this).toggleClass('is-checked');
+		var cnt = 0;
+		var num=$(this).attr("data-num");
+		$(".check").each(function(idx, data) {
+			if(this.checked == true){
+				cnt ++; // 
+			}
+			
+		});
+		
+		if(cnt == 0){	// 아무것도 선택되지 않았을때
+			alert('주문하실 항목을 선택해 주세요');
+		 	return false;
+		}
+		
+		// 수량에 0보다 큰 수만 입력 가능하도록
+		if($(".changeAmount").val() == 0){
+			alert('수량을 조정해 주세요');
+			return false;
+		}
+		
+		$("form").attr("action", "recipeRecomm")
+		$("form").submit();	
+	}) */
 	
 	//전체삭제
 	$("#delAllCart").on("click", function() {
@@ -418,6 +445,9 @@ $(function() {
 			</td>
 
 			<td colspan="7" align="right">
+				<!-- <button id="recipeBtn" style="border: none; background: none">
+					<img src="images/recipeBtn.png" width="300" height="60">
+				</button> -->
 				<button id="orderAllBtn" style="border: none; background: none">
 					<img src="images/order.png" width="300" height="60">
 				</button>

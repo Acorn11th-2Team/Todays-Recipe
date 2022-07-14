@@ -30,6 +30,8 @@
 <mvc:view-controller path="/orderCheck" view-name="orderCheck"/><!-- orderCheck.jsp -->
 <!-- orderCheckAdmin -->
 <mvc:view-controller path="/orderCheckAdmin" view-name="orderCheckAdmin"/><!-- orderCheckAdmin.jsp -->
+<mvc:view-controller path="/recipeRecomm" view-name="recipeRecomm"/><!-- recipeRecomm.jsp -->
+<mvc:view-controller path="/recipeIngred" view-name="recipeIngred"/>
 
 <mvc:resources location="/WEB-INF/views/images/" mapping="/images/**"/>
 <mvc:resources location="/WEB-INF/views/css/" mapping="/css/**"/>
