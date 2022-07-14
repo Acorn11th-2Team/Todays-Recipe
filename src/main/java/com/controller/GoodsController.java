@@ -1,5 +1,6 @@
 package com.controller;
 
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -124,7 +125,22 @@ public class GoodsController {
 		mDTO = mService.myPage(userid); // 사용자 정보 가져오기
 		List<CartDTO> cart_list = service.orderConfirmByCheck(list); // 장바구니 정보가져오기
 		System.out.println(cart_list);
+		
+		String path = "C:\\eclipes\\Project\\Todays-Recipe\\Cart_list_data\\"+ cart_list.get(0).getNum() +".txt";
+		
+		try (
+                FileWriter fw = new FileWriter(path);
+            ){
+            for (CartDTO cart : cart_list) {
+                fw.write(cart.getgName() + '\n');
+            }
 
+            System.out.println("Successfully wrote to the file.");
+        } catch (Exception e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+		
 		xxx.addFlashAttribute("mDTO", mDTO); // request에 회원정보저장
 		xxx.addFlashAttribute("cDTO_list", cart_list); // request에 카트정보저장
 
@@ -236,5 +252,6 @@ public class GoodsController {
 		mav.setViewName("main"); // main.jsp
 		return mav;
 	}
+
 
 }

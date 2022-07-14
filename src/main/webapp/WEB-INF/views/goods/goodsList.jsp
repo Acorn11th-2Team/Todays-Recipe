@@ -26,8 +26,15 @@
 							<table style='padding: 15px'>
 								<tr>
 									<td><a href="goodsRetrieve?gCode=${dto.gCode }"> <img
-											src="images/items/${dto.gImage}.png" border="0" height="210"
-											width="140" align="center" width="200">
+											src="images/items/${dto.gImage}.png" border="0" height="300"
+											width="200" align="center" width="200"
+											style="
+											border: 1px solid;
+											border-radius: 7px;
+											-moz-border-radius: 7px;
+											-khtml-border-radius: 7px;
+											-webkit-border-radius: 7px;
+											">
 									</a></td>
 								</tr>
 								<tr>
@@ -35,8 +42,8 @@
 									<td height="10">
 								</tr>
 								<tr>
-									<td class="td_default" align="left"><font size="4.5">
-											${dto.gName } ${dto.gWeight }</font>
+									<td class="td_default" align="left"><font size="3">
+											${dto.gName }</font>
 									</h3></td>
 
 								</tr>
@@ -53,7 +60,7 @@
 							</table>
 						</td>
 						<!-- 한 줄에4개씩 -->
-						<c:if test="${status.count%5 ==0 }">
+						<c:if test="${status.count%4 ==0 }">
 							<tr>
 								<td height="10"></td>
 							</tr>
