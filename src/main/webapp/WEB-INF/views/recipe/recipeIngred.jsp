@@ -14,7 +14,27 @@
 		<c:forEach var="x" items="${cartNum}">
 			<input type="hidden" value="${x}" name="check" class="check">
 		</c:forEach>
-		<input type="text" value="${code}">
+		<%-- <input type="text" value="${code}"> --%>
+		<table border="1" align="center" cellspacing="0" cellpadding="0">
+		<c:forEach var="ing" items="${ingred}">
+			<tr>
+				<td id="gName" name="gName">${ing.gName}</td>
+				<td id="gPrice" name="gPrice">${ing.gPrice}</td>
+				<td id="gAmount" name="gAmount">
+					<c:forEach var="cart" items="${cartInfo}">
+						<c:if test="${cart.gName eq ing.gName}">
+							${cart.gAmount}
+						</c:if>
+						<input type="hidden" id="num" name="num" value="${cart.num}">
+						<input type="hidden" id="userid" name="num" value="${cart.num}">
+						<input type="hidden" id="gCode" name="num" value="${cart.num}">
+						<input type="hidden" id="gImage" name="num" value="${cart.num}">
+						<input type="hidden" id="gCategory" name="num" value="${cart.num}">
+					</c:forEach>
+				</td>
+			</tr>
+		</c:forEach>
+		</table>
 	</form>
 </body>
 </html>

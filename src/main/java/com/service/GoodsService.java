@@ -100,4 +100,9 @@ public class GoodsService {
 	public void goodsRemoveAll(ArrayList<String> list) throws Exception {
 		dao.goodsRemoveAll(list);
 	}
+
+	public GoodsDTO ingredients(String i) throws Exception {
+		// TODO 재료에 해당하는 상품 dto 가져오기
+		return dao.ingredients(i);
+	}
 }

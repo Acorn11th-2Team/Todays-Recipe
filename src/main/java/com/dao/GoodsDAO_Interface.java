@@ -47,5 +47,7 @@ public interface GoodsDAO_Interface {
 
 	void goodsUpdate(GoodsDTO dto) throws Exception;
 
-	void goodsAdd(GoodsDTO dto) throws Exception;									
+	void goodsAdd(GoodsDTO dto) throws Exception;
+
+	GoodsDTO ingredients(String i) throws Exception;									
 }

@@ -123,4 +123,10 @@ public class GoodsDAO implements GoodsDAO_Interface {
 		int n = template.update("GoodsMapper.goodsUpdate", dto);
 		System.out.println(n);
 	}
+	
+	@Override
+	public GoodsDTO ingredients(String i) throws Exception {
+		GoodsDTO dto = template.selectOne("GoodsMapper.getIngredient", i);
+		return dto;
+	}
 }

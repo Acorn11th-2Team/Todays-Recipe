@@ -114,4 +114,10 @@ public class GoodsDAO_mySQL_Impl implements GoodsDAO_Interface {
 	public void goodsAdd(GoodsDTO dto) throws Exception {
 		// TODO Auto-generated method stub
 	}
+	
+	@Override
+	public GoodsDTO ingredients(String i) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

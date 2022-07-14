@@ -58,4 +58,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		gPrice= #{gPrice}, gStock= #{gStock}
 		where gCode= #{gCode}
 	</update>
+	
+	<select id="getIngredient" parameterType="string" resultType="GoodsDTO">
+		select *
+		from goods
+		where gName like #{i}
+	</select>
 </mapper>
