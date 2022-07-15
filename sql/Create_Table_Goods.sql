@@ -917,7 +917,6 @@ insert into goods values ('V028', 'Vegetable', '건목이버섯', '3990', 'veget
 insert into goods values ('V029', 'Vegetable', '강낭콩', '14990', 'vegetable029', '1봉', '500g', 1000);
 insert into goods values ('V030', 'Vegetable', '근대', '2890', 'vegetable030', '1봉', '200g', 1000);
 insert into goods values ('V031', 'Vegetable', '옥수수수염', '14350', 'vegetable031', '1봉', '200g', 1000);
-
 insert into goods values ('V032', 'Vegetable', '마늘', '2470', 'vegetable032', '1봉', '200g', 1000);
 insert into goods values ('V033', 'Vegetable', '홍고추', '3450', 'vegetable033', '1봉', '200g', 1000);
 insert into goods values ('V034', 'Vegetable', '오이', '29500', 'vegetable034', '20개', '3kg', 1000);
