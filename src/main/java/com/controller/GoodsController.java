@@ -10,9 +10,11 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -20,8 +22,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.dto.CartDTO;
 import com.dto.GoodsDTO;
+import com.dto.GoodsPagingDTO;
 import com.dto.MemberDTO;
+import com.dto.NoticePagingDTO;
 import com.dto.OrderDTO;
+import com.service.GoodsListService;
 import com.service.GoodsService;
 import com.service.MemberService;
 
@@ -29,6 +34,8 @@ import com.service.MemberService;
 public class GoodsController {
 	@Autowired
 	GoodsService service;
+	@Autowired
+	GoodsListService lService;
 	@Autowired
 	MemberService mService;
 
@@ -239,19 +246,30 @@ public class GoodsController {
 		mav.setViewName("adminGedit"); // main.jsp
 		return mav;
 	}
-	
-	@RequestMapping("/goodsList")
-	public ModelAndView goodsList(@RequestParam("gCategory") String gCategory) throws Exception {
+		
+	@RequestMapping(value = "goodsList", method = RequestMethod.GET)
+	public String goodsList(Model model, HttpSession session,
+			GoodsPagingDTO gDTO
+			, @RequestParam("gCategory") String gCategory
+			, @RequestParam(value="nowPage", required=false)String nowPage
+			, @RequestParam(value="countPerPage", required=false)String countPerPage) throws Exception {
 		if (gCategory == null) {
 			gCategory = "Vegetable";
 		}
-		List<GoodsDTO> list = service.goodsList(gCategory);
-		ModelAndView mav = new ModelAndView();
-		mav.addObject("goodsList", list);
-		// request.setAttribute("goodsList", list)와 동일
-		mav.setViewName("main"); // main.jsp
-		return mav;
+		int total = lService.countGoods(gCategory);
+		System.out.println("nowPage = " + nowPage);
+		if(nowPage == null && countPerPage == null) {
+				nowPage = "1";
+				countPerPage = "20";
+		} else if (nowPage ==null) {
+				nowPage = "1";
+		} else if (countPerPage == null) {
+				countPerPage = "20";
+		}
+		gDTO = new GoodsPagingDTO(gCategory, total, Integer.parseInt(nowPage), Integer.parseInt(countPerPage));
+		model.addAttribute("paging", gDTO);
+		model.addAttribute("goodsList", lService.selectGoodsList(gDTO));
+		return "main";
 	}
-
 
 }

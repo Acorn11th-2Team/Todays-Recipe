@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 
 import com.dto.CartDTO;
 import com.dto.GoodsDTO;
+import com.dto.NoticeDTO;
+import com.dto.NoticePagingDTO;
 import com.dto.OrderDTO;
 
 //@Repository

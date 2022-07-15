@@ -7,6 +7,9 @@ import java.util.Map;
 
 import com.dto.CartDTO;
 import com.dto.GoodsDTO;
+import com.dto.GoodsPagingDTO;
+import com.dto.NoticeDTO;
+import com.dto.NoticePagingDTO;
 import com.dto.OrderDTO;
 
 public interface GoodsDAO_Interface {
@@ -49,5 +52,5 @@ public interface GoodsDAO_Interface {
 
 	void goodsAdd(GoodsDTO dto) throws Exception;
 
-	GoodsDTO ingredients(String i) throws Exception;									
+	GoodsDTO ingredients(String i) throws Exception;			
 }

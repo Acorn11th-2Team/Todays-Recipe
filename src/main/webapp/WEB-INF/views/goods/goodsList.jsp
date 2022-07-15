@@ -21,20 +21,14 @@
 				<tr>
 
 					<!-- 반복시작 -->
-					<c:forEach var="dto" items="${goodsList }" varStatus="status">
+					<c:forEach var="dto" items="${goodsList}" varStatus="status">
 						<td>
 							<table style='padding: 15px'>
 								<tr>
-									<td><a href="goodsRetrieve?gCode=${dto.gCode }"> <img
+									<td><a href="goodsRetrieve?gCode=${dto.gCode}"> <img
 											src="images/items/${dto.gImage}.png" border="0" height="300"
 											width="200" align="center" width="200"
-											style="
-											border: 1px solid;
-											border-radius: 7px;
-											-moz-border-radius: 7px;
-											-khtml-border-radius: 7px;
-											-webkit-border-radius: 7px;
-											">
+											style="border: 1px solid; border-radius: 7px; -moz-border-radius: 7px; -khtml-border-radius: 7px; -webkit-border-radius: 7px;">
 									</a></td>
 								</tr>
 								<tr>
@@ -43,14 +37,14 @@
 								</tr>
 								<tr>
 									<td class="td_default" align="left"><font size="3">
-											${dto.gName }</font>
-									</h3></td>
+											${dto.gName}</font>
+										</h3></td>
 
 								</tr>
 
 								<tr>
 									<td class="td_default" align="left"><strong> <fmt:formatNumber
-												value="${dto.gPrice }" pattern="#,###" />원
+												value="${dto.gPrice}" pattern="#,###" />원
 									</strong></td>
 								</tr>
 								<tr>
@@ -60,7 +54,7 @@
 							</table>
 						</td>
 						<!-- 한 줄에4개씩 -->
-						<c:if test="${status.count%4 ==0 }">
+						<c:if test="${status.count%4 ==0}">
 							<tr>
 								<td height="10"></td>
 							</tr>
@@ -75,3 +69,25 @@
 		<td height="10">
 	</tr>
 </table>
+
+<div style="display: block; text-align: center;">
+	<c:if test="${paging.startPage != 1 }">
+		<a
+			href="goodsList?gCategory=${paging.gCategory}&nowPage=${paging.startPage - 1 }&countPerPage=${paging.countPerPage}">&lt;</a>
+	</c:if>
+	<c:forEach begin="${paging.startPage }" end="${paging.endPage }"
+		var="p">
+		<c:choose>
+			<c:when test="${p == paging.nowPage }">
+				<b>${p}</b>
+			</c:when>
+			<c:when test="${p != paging.nowPage }">
+				<a href="goodsList?gCategory=${paging.gCategory}&nowPage=${p }&countPerPage=${paging.countPerPage}">${p }</a>
+			</c:when>
+		</c:choose>
+	</c:forEach>
+	<c:if test="${paging.endPage != paging.lastPage}">
+		<a
+			href="goodsList?gCategory=${paging.gCategory}&nowPage=${paging.endPage+1 }&countPerPage=${paging.countPerPage}">&gt;</a>
+	</c:if>
+</div>

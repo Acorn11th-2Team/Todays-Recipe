@@ -3,6 +3,24 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="GoodsMapper">
+	<select id="countGoods" parameterType="string" resultType="int">
+		select count(*)
+		from goods
+		where gCategory= #{gCategory}
+	</select>
+
+	<select id="selectGoodsList" resultType="GoodsListDTO">
+		select B.rn rownumber, gImage, gName, gPrice, gCode
+		from (
+			select rownum rn, A.*
+				from (
+					select * from goods
+					where gCategory= #{gCategory}
+					order by gCode desc
+				) A
+			) B
+		where rn between #{start} and #{end}
+	</select>
 
 	<select id="goodsRetrieve" resultType="GoodsDTO"
 		parameterType="string">
@@ -58,8 +76,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		gPrice= #{gPrice}, gStock= #{gStock}
 		where gCode= #{gCode}
 	</update>
-	
-	<select id="getIngredient" parameterType="string" resultType="GoodsDTO">
+
+	<select id="getIngredient" parameterType="string"
+		resultType="GoodsDTO">
 		select *
 		from goods
 		where gName like #{i}

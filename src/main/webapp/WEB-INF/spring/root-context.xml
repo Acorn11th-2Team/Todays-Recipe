@@ -45,6 +45,8 @@
 				<value>com.dto.OrderDTO</value>
 				<!-- QA -->
 				<value>com.dto.QaDTO</value>
+				<value>com.dto.GoodsListDTO</value>
+				<value>com.dto.GoodsPagingDTO</value>
 				<value>com.dto.NoticeDTO</value> <!-- Notice -->
 				<value>com.dto.NoticePagingDTO</value>	<!-- Notice -->
 				<value>com.dto.DashBoardDTO</value>
