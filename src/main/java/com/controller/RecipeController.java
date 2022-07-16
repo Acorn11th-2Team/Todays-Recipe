@@ -61,7 +61,7 @@ public class RecipeController {
 
 	@RequestMapping(value = "/recipeIngred")
 	public String recipeIngred(@RequestParam("check") ArrayList<String> list, @RequestParam("code") String code, HttpSession session, Model model) throws Exception {
-		System.out.println("레시피에서 받아온 정보" + list);
+		System.out.println("레시피에서 받아온 레시피번호 : " + list);
 		
 		session.setAttribute("cartNum", list);
 		session.setAttribute("code", code);
@@ -98,7 +98,7 @@ public class RecipeController {
 				}
 			}
 			
-			System.out.println(ingred);
+			System.out.println("재료들 리스트 확인하기 : " + ingred);
 			
 			// 재료와 일치하는 상품 정보 가져오기
 			for (String i : ingred) {
@@ -106,12 +106,12 @@ public class RecipeController {
 				recipeGoods.add(dto);
 			}
 			
-//			System.out.println(recipeGoods);
+			System.out.println("***receipeGoods 안의 내용 확인하기 : " + recipeGoods);
 			session.setAttribute("ingred", recipeGoods);
 			
 			// 주문정보 가져오기
 			List<CartDTO> cartList = service.orderConfirmByCheck(list);
-			
+			System.out.println("cartList 내용 확인하기 : " + cartList);
 			session.setAttribute("cartInfo", cartList);
 			
 		} catch (IOException e) {
