@@ -37,8 +37,7 @@
 								</tr>
 								<tr>
 									<td class="td_default" align="left"><font size="3">
-											${dto.gName}</font>
-										</h3></td>
+											${dto.gName}</font></td>
 
 								</tr>
 
@@ -82,7 +81,8 @@
 				<b>${p}</b>
 			</c:when>
 			<c:when test="${p != paging.nowPage }">
-				<a href="goodsList?gCategory=${paging.gCategory}&nowPage=${p }&countPerPage=${paging.countPerPage}">${p }</a>
+				<a
+					href="goodsList?gCategory=${paging.gCategory}&nowPage=${p }&countPerPage=${paging.countPerPage}">${p }</a>
 			</c:when>
 		</c:choose>
 	</c:forEach>

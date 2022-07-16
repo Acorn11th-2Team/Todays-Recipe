@@ -5,7 +5,11 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 
+<<<<<<< HEAD
 <c:if test="${!empty mesg }">
+=======
+<%-- <c:if test="${!empty mesg }">
+>>>>>>> 7adecd830bece7045dd4f9731764fc43efad822c
 	<script>
 		alert('${mesg}');
 	</script>
@@ -16,7 +20,11 @@
 		alert('장바구니가 비었습니다');
 		location.href="goodsList?gCategory=Vegetable";
 	</script>
+<<<<<<< HEAD
 </c:if>
+=======
+</c:if> --%>
+>>>>>>> 7adecd830bece7045dd4f9731764fc43efad822c
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 
@@ -81,7 +89,11 @@ $(function() {
 			return false;
 		}
 		
+<<<<<<< HEAD
 		$("form").attr("action", "loginCheck/orderAllCart");
+=======
+		$("form").attr("action", "recipeRecomm");
+>>>>>>> 7adecd830bece7045dd4f9731764fc43efad822c
 		$("form").submit();	
 	});
 	
@@ -357,10 +369,18 @@ $(function() {
 	
 	
 	
+<<<<<<< HEAD
 		<form name="myForm">
 
 	<!-- 반복시작 -->
 	<c:forEach var="x" items="${cartList}">
+=======
+	<form action="loginCheck/orderAllCart">
+
+	<!-- 반복시작 -->
+
+	<c:forEach var="ing" items="${ingred}">
+>>>>>>> 7adecd830bece7045dd4f9731764fc43efad822c
 			<tr>
 				<td height="10">
 			</tr>
@@ -372,6 +392,7 @@ $(function() {
 					따라서 value에 삭제할 num값을 설정한다. -->
 					<input type="checkbox"
 						name="check" id="check81" class="check" 
+<<<<<<< HEAD
 						value="${x.num}">
 				</td>
 				
@@ -390,11 +411,32 @@ $(function() {
 				<td>
 					<img src="images/minus.png" id="down${x.num}" class="downbutton" 
 					data-num="${x.num}" data-price="${x.gPrice}"
+=======
+						value="${ing.num}">
+				</td>
+				
+				<td class="td_default" width="110">
+					<img src="images/items/${ing.gImage}.png" border="0" align="right" width="80" />
+				</td>
+				
+				<td class="td_default" width="200" style='padding-left: 30px'>
+				${ing.gName}
+					</td>
+				<td class="td_default" align="center" width="110">
+					<span id="ggPrice${ing.num}">
+						<fmt:formatNumber value="${ing.gPrice}" pattern="#,###"/>원
+					</span>
+				</td>
+				<td>
+					<img src="images/minus.png" id="down${ing.num}" class="downbutton" 
+					data-num="${ing.num}" data-price="${ing.gPrice}"
+>>>>>>> 7adecd830bece7045dd4f9731764fc43efad822c
 					width="30" height="30">&nbsp;
 				</td>
 				<td width="70">
 					<div class="input_gAmount">
 						 <input class="changeAmount" type="text" name="cartAmount"
+<<<<<<< HEAD
 						id="cartAmount${x.num}" style="text-align: right" maxlength="3"
 						size="2" value="${x.gAmount}" data-num="${x.num}" data-price="${x.gPrice}" numberOnly> 
 					</div>
@@ -407,14 +449,33 @@ $(function() {
 				<td class="td_default" align="center" width="100"
 					style='padding-left: 5px'><span id="sum${x.num}" class="sum">
 					<fmt:formatNumber value="${x.gPrice * x.gAmount}" pattern="#,###"/>원
+=======
+						id="cartAmount${ing.num}" style="text-align: right" maxlength="3"
+						size="2" value="${ing.gAmount}" data-num="${ing.num}" data-price="${ing.gPrice}" numberOnly> 
+					</div>
+				</td>
+				<td>
+					&nbsp;<img src="images/plus.png" id="up${ing.num}" class="upbutton" 
+					data-num="${ing.num}" data-price="${ing.gPrice}"
+					width="30" height="30"> 
+				</td>
+				<td class="td_default" align="center" width="100"
+					style='padding-left: 5px'><span id="sum${ing.num}" class="sum">
+					<fmt:formatNumber value="${ing.gPrice * ing.gAmount}" pattern="#,###"/>원
+>>>>>>> 7adecd830bece7045dd4f9731764fc43efad822c
 					</span></td>
 <%-- 				<td><input type="button" value="주문" class="orderBtn"
 					data-num="${x.num}"></td> --%>
 				<td class="td_default" align="center" width="30"
 					style='padding-left: 10px'>
 					<img src="images/x.png" class="deleteBtn"
+<<<<<<< HEAD
 					data-num="${x.num }" width="20" height="20">
 				</td>
+=======
+					data-num="${ing.num }" width="20" height="20">
+				</td>			
+>>>>>>> 7adecd830bece7045dd4f9731764fc43efad822c
 				<td height="10"></td>
 			</tr>
 			

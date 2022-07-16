@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: thdwl
 Build-Jdk: 1.8.0_251
+=======
+Built-By: acorn
+Build-Jdk: 1.8.0_333
+>>>>>>> 7adecd830bece7045dd4f9731764fc43efad822c
 Created-By: Maven Integration for Eclipse
 
