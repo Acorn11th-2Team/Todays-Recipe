@@ -61,19 +61,10 @@ public class RecipeController {
 	}
 
 	@RequestMapping(value = "/recipeIngred")
-<<<<<<< HEAD
 	public String recipeIngred(RedirectAttributes attr, @RequestParam("check") ArrayList<String> list, @RequestParam("code") String code,
 			HttpSession session, Model model) throws Exception {
 		System.out.println("레시피에서 받아온 정보" + list);
 
-=======
-	public String recipeIngred(@RequestParam("check") ArrayList<String> list, @RequestParam("code") String code, HttpSession session, Model model) throws Exception {
-		System.out.println("레시피에서 받아온 레시피번호 : " + list);
-		
-		session.setAttribute("cartNum", list);
-		session.setAttribute("code", code);
-		
->>>>>>> 7adecd830bece7045dd4f9731764fc43efad822c
 		System.out.println("code=" + code);
 
 		// json 받아와서 코드, 이미지, 유알엘 넘겨주기
@@ -104,7 +95,6 @@ public class RecipeController {
 				}
 			}
 			
-<<<<<<< HEAD
 			// 재료 목록을 해쉬셋으로(json을 해쉬셋으로 직접 저장 불가, 원소 하나씩 해쉬셋에 추가해야 함)
 			for (String i : ing) {
 				ingred.add(i);
@@ -118,9 +108,6 @@ public class RecipeController {
 
 			// cartList에 일치하는 재료를 빼기(해시셋 차집합)
 			ingred.removeAll(ingred2);
-=======
-			System.out.println("재료들 리스트 확인하기 : " + ingred);
->>>>>>> 7adecd830bece7045dd4f9731764fc43efad822c
 			
 			// 재료와 일치하는 상품 정보 가져오기
 			for (String i : ingred) {
@@ -152,22 +139,11 @@ public class RecipeController {
 				service.cartAdd(cartDto);
 			}
 			
-<<<<<<< HEAD
 			String userid = cartList.get(0).getUserid();
 			List<CartDTO> list2 = service.cartList(userid);
 			session.setAttribute("cartList", list2);
 			session.setAttribute("firstCartList", ingred2); // 장바구니에 원래 있던 상품은 cartList.jsp에서 체크하게 하기 위해서 전달
 
-=======
-			System.out.println("***receipeGoods 안의 내용 확인하기 : " + recipeGoods);
-			session.setAttribute("ingred", recipeGoods);
-			
-			// 주문정보 가져오기
-			List<CartDTO> cartList = service.orderConfirmByCheck(list);
-			System.out.println("cartList 내용 확인하기 : " + cartList);
-			session.setAttribute("cartInfo", cartList);
-			
->>>>>>> 7adecd830bece7045dd4f9731764fc43efad822c
 		} catch (IOException e) {
 			// TODO: handle exception
 			e.printStackTrace();
