@@ -16,12 +16,27 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 				from (
 					select * from goods
 					where gCategory= #{gCategory}
-					order by gCode desc
+					order by gCode
 				) A
 			) B
 		where rn between #{start} and #{end}
 	</select>
-
+	
+	<select id="countSearchGoods" parameterType="string" resultType="int">
+		select count(*)
+		from goods
+		where gName
+		like '%' || #{key} || '%'
+	</select>
+	
+	<select id="searchGoodsList" parameterType="string"
+		resultType="GoodsListDTO">
+		select gImage, gName, gPrice, gCode
+		from goods
+		where gName
+		like '%' || #{key} || '%'
+	</select>
+	
 	<select id="goodsRetrieve" resultType="GoodsDTO"
 		parameterType="string">
 		select *

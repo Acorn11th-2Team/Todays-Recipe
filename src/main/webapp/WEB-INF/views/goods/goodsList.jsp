@@ -1,9 +1,15 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
+<div style="display: block; text-align: center;">
+	<c:if test="${isSearch != null}">
+		총 ${searchCount}건의 검색 결과
+	</c:if>
+</div>
+
 <table width="100%" cellspacing="0" cellpadding="0">
 	<tr>
 		<td>
@@ -69,25 +75,28 @@
 	</tr>
 </table>
 
+
 <div style="display: block; text-align: center;">
-	<c:if test="${paging.startPage != 1 }">
-		<a
-			href="goodsList?gCategory=${paging.gCategory}&nowPage=${paging.startPage - 1 }&countPerPage=${paging.countPerPage}">&lt;</a>
-	</c:if>
-	<c:forEach begin="${paging.startPage }" end="${paging.endPage }"
-		var="p">
-		<c:choose>
-			<c:when test="${p == paging.nowPage }">
-				<b>${p}</b>
-			</c:when>
-			<c:when test="${p != paging.nowPage }">
-				<a
-					href="goodsList?gCategory=${paging.gCategory}&nowPage=${p }&countPerPage=${paging.countPerPage}">${p }</a>
-			</c:when>
-		</c:choose>
-	</c:forEach>
-	<c:if test="${paging.endPage != paging.lastPage}">
-		<a
-			href="goodsList?gCategory=${paging.gCategory}&nowPage=${paging.endPage+1 }&countPerPage=${paging.countPerPage}">&gt;</a>
+	<c:if test="${isSearch == null}">
+		<c:if test="${paging.startPage != 1}">
+			<a
+				href="goodsList?gCategory=${paging.gCategory}&nowPage=${paging.startPage - 1}&countPerPage=${paging.countPerPage}">&lt;</a>
+		</c:if>
+		<c:forEach begin="${paging.startPage }" end="${paging.endPage}"
+			var="p">
+			<c:choose>
+				<c:when test="${p == paging.nowPage }">
+					<b>${p}</b>
+				</c:when>
+				<c:when test="${p != paging.nowPage }">
+					<a
+						href="goodsList?gCategory=${paging.gCategory}&nowPage=${p}&countPerPage=${paging.countPerPage}">${p }</a>
+				</c:when>
+			</c:choose>
+		</c:forEach>
+		<c:if test="${paging.endPage != paging.lastPage}">
+			<a
+				href="goodsList?gCategory=${paging.gCategory}&nowPage=${paging.endPage+1 }&countPerPage=${paging.countPerPage}">&gt;</a>
+		</c:if>
 	</c:if>
 </div>

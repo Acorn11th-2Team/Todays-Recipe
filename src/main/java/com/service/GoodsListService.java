@@ -22,4 +22,12 @@ public class GoodsListService {
 	public List<GoodsListDTO> selectGoodsList(GoodsPagingDTO gdto){
 		return dao.selectGoodsList(gdto);
 	}
+	
+	public List<GoodsListDTO> searchGoodsList(String key){
+		return dao.searchGoodsList(key);
+	}
+
+	public int countSearchGoods(String key) {
+		return dao.countSearchGoods(key);
+	}
 }

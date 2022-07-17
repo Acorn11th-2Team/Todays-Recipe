@@ -14,17 +14,22 @@ import com.dto.GoodsPagingDTO;
 public class GoodsListDAO {
 	
 	@Autowired
-	SqlSessionTemplate	template;
-
+	SqlSessionTemplate template;
+	
+	public List<GoodsListDTO> searchGoodsList(String key) {
+		return template.selectList("GoodsMapper.searchGoodsList", key);
+	}
+	
 	public List<GoodsListDTO> selectGoodsList(GoodsPagingDTO gDTO) {
 		return template.selectList("GoodsMapper.selectGoodsList", gDTO);
 	}
-
+	
 	public int countGoods(String gCategory) {
 		return template.selectOne("GoodsMapper.countGoods", gCategory);
 	}
 
-
-
+	public int countSearchGoods(String key) {
+		return template.selectOne("GoodsMapper.countSearchGoods", key);
+	}
 
 }

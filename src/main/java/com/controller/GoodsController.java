@@ -271,5 +271,15 @@ public class GoodsController {
 		model.addAttribute("goodsList", lService.selectGoodsList(gDTO));
 		return "main";
 	}
-
+	
+	@RequestMapping(value = "search", method = RequestMethod.GET)
+	public String searchList(Model model, HttpSession session, @RequestParam("key") String key) throws Exception {
+		if (key == null) {
+			System.out.println("검색어가 없습니다");			;
+		}
+		model.addAttribute("searchCount", lService.countSearchGoods(key));
+		model.addAttribute("goodsList", lService.searchGoodsList(key));
+		model.addAttribute("isSearch", true);
+		return "main";
+	}
 }
