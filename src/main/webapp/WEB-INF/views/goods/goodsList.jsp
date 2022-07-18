@@ -4,11 +4,10 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<div style="display: block; text-align: center;">
-	<c:if test="${isSearch != null}">
-		총 ${searchCount}건의 검색 결과
-	</c:if>
-</div>
+<c:if test="${isSearch != null}">
+	<div style="display: block; text-align: center;">총
+		${searchCount}건의 검색 결과</div>
+</c:if>
 
 <table width="100%" cellspacing="0" cellpadding="0">
 	<tr>

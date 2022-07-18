@@ -49,6 +49,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select *
 		from goods
 		where gCategory= #{gCategory}
+		order by gCode
 	</select>
 
 	<select id="goodsByCheck" parameterType="arraylist"

@@ -2,12 +2,18 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 	$(function() {
 		$(".submit").on("click", function() {
-			var key = $(this).attr("search_key");
+			var key = $(this).attr("data-gCode");
 			console.log(key);
 			if (key != "") {
 				$.ajax({
@@ -28,14 +34,9 @@
 				return false
 			}
 		}); //end click
-	})
+	});
 </script>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
 <c:if test="${!empty success }">
 	<!-- 회원가입 성공 후 -->
 	<script>
@@ -55,9 +56,9 @@
 		<img src="images/Main_Logo.png"
 		style="display: block; margin: 0 auto;">
 	</a>
-	<form id="search" action="search" align="center">
-		<input type="text" name="key" placeholder="검색어를 입력하세요" /> <input
-			type="submit" value="검색" />
+	<form id="search_area" action="search" align="center">
+		<input type="text" id="search_key" name="key" placeholder="검색어를 입력하세요" /> 
+		<button>검색</button>
 	</form>
 
 	<div align="center">
