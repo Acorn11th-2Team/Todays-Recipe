@@ -175,7 +175,7 @@
 </head>
 <form action="memberAdd" method="get" id="signup">
 	<div class="wrap">
-        <div class="login">
+        <div class="login" style="margin-top: 0px; margin-bottom: 100px;">
             <h2>회원가입</h2>
             <div class="login_id">
                 <h4>아이디</h4>

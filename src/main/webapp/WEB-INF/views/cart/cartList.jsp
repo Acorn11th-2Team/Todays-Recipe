@@ -81,7 +81,7 @@ $(function() {
 			return false;
 		}
 		
-		$("form").attr("action", "recipeRecomm");
+		$("form").attr("action", "loginCheck/recipeRecomm");
 		$("form").submit();	
 	});
 	

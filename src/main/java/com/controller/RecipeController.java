@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -33,11 +34,26 @@ public class RecipeController {
 		return "error/error";// error/error.jsp
 	}
 
-	@RequestMapping(value = "/recipeRecomm")
-	public String recipeRecomm(@RequestParam("check") ArrayList<String> list, HttpSession session, Model model)
-			throws Exception {
+	@RequestMapping(value = "/loginCheck/recipeRecomm")
+	public String recipeRecomm(@RequestParam("check") ArrayList<String> list, HttpSession session,
+			RedirectAttributes attr) throws Exception {
 		System.out.println("장바구니에서 받아온 정보" + list);
 		session.setAttribute("cartNum", list);
+
+		List<CartDTO> cartList = service.orderConfirmByCheck(list);
+
+		String path = "C:\\GitTeam\\" + cartList.get(0).getNum() + ".txt";
+
+		try (FileWriter fw = new FileWriter(path);) {
+			for (CartDTO cart : cartList) {
+				fw.write(cart.getgName() + '\n');
+			}
+
+			System.out.println("Successfully wrote to the file.");
+		} catch (Exception e) {
+			System.out.println("An error occurred.");
+			e.printStackTrace();
+		}
 
 		// json 받아와서 코드, 이미지, 유알엘 넘겨주기
 		JSONParser parser = new JSONParser();
@@ -51,18 +67,18 @@ public class RecipeController {
 
 			System.out.println(jsonObject);
 
-			model.addAttribute("recipe", jsonObject.get("data"));
+			attr.addFlashAttribute("recipe", jsonObject.get("data"));
 
 		} catch (IOException e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		return "recipeRecomm";
+		return "redirect:../recipeRecomm";
 	}
 
 	@RequestMapping(value = "/recipeIngred")
-	public String recipeIngred(RedirectAttributes attr, @RequestParam("check") ArrayList<String> list, @RequestParam("code") String code,
-			HttpSession session, Model model) throws Exception {
+	public String recipeIngred(RedirectAttributes attr, @RequestParam("check") ArrayList<String> list,
+			@RequestParam("code") String code, HttpSession session, Model model) throws Exception {
 		System.out.println("레시피에서 받아온 정보" + list);
 
 		System.out.println("code=" + code);
@@ -94,12 +110,12 @@ public class RecipeController {
 					ing = (ArrayList<String>) j.get("ingredients");
 				}
 			}
-			
+
 			// 재료 목록을 해쉬셋으로(json을 해쉬셋으로 직접 저장 불가, 원소 하나씩 해쉬셋에 추가해야 함)
 			for (String i : ing) {
 				ingred.add(i);
 			}
-		
+
 			// 주문정보 가져와서 해쉬셋에 추가
 			List<CartDTO> cartList = service.orderConfirmByCheck(list);
 			for (CartDTO dto : cartList) {
@@ -108,14 +124,14 @@ public class RecipeController {
 
 			// cartList에 일치하는 재료를 빼기(해시셋 차집합)
 			ingred.removeAll(ingred2);
-			
+
 			// 재료와 일치하는 상품 정보 가져오기
 			for (String i : ingred) {
 				// userid, gName 기준으로 insert문 실행 > 수량은 1
 				GoodsDTO dto = service.ingredients(i);
-				
+
 				recipeGoods.add(dto);
-				
+
 				// 같은 재료는 삭제하고 없는 재료만 추가
 				String gCategory = dto.getgCategory();
 				String gName = dto.getgName();
@@ -124,10 +140,10 @@ public class RecipeController {
 				String userid = cartList.get(0).getUserid();
 				int gAmount = 1;
 				String gImage = dto.getgImage();
-				
+
 				// CartDTO에 값 넣기
 				CartDTO cartDto = new CartDTO();
-				
+
 				cartDto.setgAmount(gAmount);
 				cartDto.setgCategory(gCategory);
 				cartDto.setgCode(gCode);
@@ -135,10 +151,10 @@ public class RecipeController {
 				cartDto.setgName(gName);
 				cartDto.setgPrice(gPrice);
 				cartDto.setUserid(userid);
-				
+
 				service.cartAdd(cartDto);
 			}
-			
+
 			String userid = cartList.get(0).getUserid();
 			List<CartDTO> list2 = service.cartList(userid);
 			session.setAttribute("cartList", list2);
